@@ -1,7 +1,7 @@
 //Imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import GlobalStyle from './utils/style/globalStyle';
 import App from './components/App';
 import './i18n';
@@ -13,10 +13,10 @@ import { Provider } from 'react-redux';
 //Render
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
-    <BrowserRouter>
+    <HashRouter>
         <Provider store={store}>
             <GlobalStyle />
             <App />
         </Provider>
-    </BrowserRouter>
+    </HashRouter>
 );
