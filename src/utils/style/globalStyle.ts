@@ -11,3 +11,7 @@ export default createGlobalStyle`
         color: white;
     }
 `;
+
+export const breakpoints = {
+    desktopMinWidth: 500,
+};

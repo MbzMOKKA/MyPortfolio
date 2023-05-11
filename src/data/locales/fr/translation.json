@@ -1,5 +1,9 @@
 {
     "welcome": "Bienvenue dans mon e-Portfolio!",
     "languageSelected": "Français",
-    "changeLanguage": "Changer de langue"
+    "changeLanguage": "Changer de langue",
+    "pageHome": "Accueil",
+    "pageWorks": "Travaux",
+    "pageSkills": "Compétences",
+    "pageContact": "Contact"
 }
