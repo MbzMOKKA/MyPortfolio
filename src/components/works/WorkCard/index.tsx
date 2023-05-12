@@ -1,6 +1,6 @@
 //Imports
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { StyledCard } from './style';
 
 //Types
 type WorkCardProps = {
@@ -11,5 +11,5 @@ type WorkCardProps = {
 export default function WorkCard(props: WorkCardProps) {
     const { id } = props;
 
-    return <Link to={`/work/${id}`}>work card {id}</Link>;
+    return <StyledCard to={`/work/${id}`}>work card {id}</StyledCard>;
 }

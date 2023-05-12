@@ -1,10 +1,19 @@
 //Imports
 import { createSlice } from '@reduxjs/toolkit';
 
+//Types
+type Language = {
+    selected: 'fr' | 'en';
+};
+
 //Slice
+const initialState: Language = {
+    selected: 'en',
+};
+
 const languageSlice = createSlice({
     name: 'language',
-    initialState: { selected: 'en' },
+    initialState,
     reducers: {
         setLanguage: (state, action) => {
             state.selected = action.payload;

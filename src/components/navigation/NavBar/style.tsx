@@ -18,7 +18,7 @@ export const StyledButtonContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 42px;
+    padding: 0px 28px;
     width: 100%;
     height: 100%;
     border-top: 6px ${colorNavButtonSelected} solid;

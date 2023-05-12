@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectLanguage, setLanguage } from '../../features/language/languageSlice';
+import { selectLanguage, setLanguage } from '../../features/languageSlice';
 
 //Component of the homepage
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
     return (
         <main>
             <p>{t('welcome')}</p>
+            <p>{window.innerWidth}</p>
             <button onClick={changeLanguage}>{t('changeLanguage')}</button>
         </main>
     );

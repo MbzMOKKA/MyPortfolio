@@ -5,10 +5,11 @@ import { StyledAppContainer } from './style';
 import Home from '../../pages/Home';
 import ErrorNotFound from '../../pages/ErrorNotFound';
 import { useTranslation } from 'react-i18next';
-import { selectLanguage } from '../../features/language/languageSlice';
+import { selectLanguage } from '../../features/languageSlice';
 import { useSelector } from 'react-redux';
 import Work from '../../pages/Works';
 import Nav from '../navigation/NavBar';
+import ContentModal from '../ContentModal';
 
 //Component of the web application
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
                 <Route path="*" element={<ErrorNotFound />}></Route>
             </Routes>
             <Nav />
+            <ContentModal />
         </StyledAppContainer>
     );
 }
