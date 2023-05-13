@@ -1,5 +1,6 @@
 //Imports
 import { createGlobalStyle } from 'styled-components';
+import colors from './colors';
 
 //Global styles
 export default createGlobalStyle`
@@ -8,7 +9,7 @@ export default createGlobalStyle`
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        color: white;
+        color: ${colors.neutral.textDefault};
     }
 `;
 
