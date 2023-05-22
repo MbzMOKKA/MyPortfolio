@@ -1,11 +1,11 @@
 //Imports
 import React from 'react';
 import { StyledModal, StyledClose } from './style';
-import { MODAL_TYPES, selectContentModal } from '../../features/modalsSlice';
+import { MODAL_TYPES, selectContentModal } from '../../../features/modalsSlice';
 import { useSelector } from 'react-redux';
 
-import usePage from '../../utils/hooks/usePage';
-import WorkModal from '../works/WorkModal';
+import usePage from '../../../utils/hooks/usePage';
+import WorkModal from '../../works/WorkModal';
 
 //Component of modals of skills and works
 export default function ContentModal() {

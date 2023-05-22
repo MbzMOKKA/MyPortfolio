@@ -11,15 +11,15 @@ export const StyledNavBar = styled.nav`
     width: 100%;
     height: ${navBarHeight}px;
     bottom: 0;
-    border-top: 6px ${adjustColor(colors.support.notSelected, 0.5)} solid;
+    border-top: 4px ${adjustColor(colors.support.notSelected, 0.5)} solid;
 `;
 
 export const StyledButtonContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 28px;
+    padding: 0px 6%;
     width: 100%;
     height: 100%;
-    border-top: 6px ${colors.support.selected} solid;
+    border-top: 4px ${colors.support.selected} solid;
 `;

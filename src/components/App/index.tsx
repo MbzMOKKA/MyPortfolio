@@ -9,7 +9,9 @@ import { selectLanguage } from '../../features/languageSlice';
 import { useSelector } from 'react-redux';
 import Work from '../../pages/Works';
 import Nav from '../navigation/NavBar';
-import ContentModal from '../ContentModal';
+import ContentModal from '../modals/ContentModal';
+import SettingsButton from '../buttons/SettingsButton';
+import SettingsModal from '../modals/settings/SettingsModal';
 
 //Component of the web application
 export default function App() {
@@ -27,7 +29,9 @@ export default function App() {
                 <Route path="/work/:id?" element={<Work />}></Route>
                 <Route path="*" element={<ErrorNotFound />}></Route>
             </Routes>
+            <SettingsButton />
             <Nav />
+            <SettingsModal />
             <ContentModal />
         </StyledAppContainer>
     );

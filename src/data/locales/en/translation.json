@@ -5,5 +5,7 @@
     "pageHome": "Home",
     "pageWorks": "Works",
     "pageSkills": "Skills",
-    "pageContact": "Contact"
+    "pageContact": "Contact",
+    "settings": "Preferences",
+    "language": "Language"
 }

@@ -5,5 +5,7 @@
     "pageHome": "Accueil",
     "pageWorks": "Travaux",
     "pageSkills": "Compétences",
-    "pageContact": "Contact"
+    "pageContact": "Contact",
+    "settings": "Préférences",
+    "language": "Langue"
 }

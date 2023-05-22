@@ -13,13 +13,13 @@ interface ContentModal {
     params: any;
 }
 
-interface PrefModal {
+interface SettingsModal {
     opened: boolean;
 }
 
 interface InitialState {
     contentModal: ContentModal;
-    prefModal: PrefModal;
+    settingsModal: SettingsModal;
 }
 
 //Slice
@@ -29,7 +29,7 @@ const initialState: InitialState = {
         type: MODAL_TYPES.work,
         params: {},
     },
-    prefModal: {
+    settingsModal: {
         opened: false,
     },
 };
@@ -44,14 +44,21 @@ const modalSlice = createSlice({
             state.contentModal.params = action.payload.params;
         },
         closeModals: (state) => {
-            state.prefModal.opened = false;
+            state.settingsModal.opened = false;
             state.contentModal.opened = false;
+        },
+        openSettings: (state) => {
+            state.settingsModal.opened = true;
+        },
+        closeSettings: (state) => {
+            state.settingsModal.opened = false;
         },
     },
 });
 
-export const { openContentModal, closeModals } = modalSlice.actions;
+export const { openContentModal, closeModals, openSettings, closeSettings } = modalSlice.actions;
 export default modalSlice.reducer;
 
 //Selectors
 export const selectContentModal = (state: any) => state.modals.contentModal;
+export const selectSettingsModal = (state: any) => state.modals.settingsModal;

@@ -6,4 +6,6 @@ export const STRING_IDS = {
     pageWorks: 'pageWorks',
     pageSkills: 'pageSkills',
     pageContact: 'pageContact',
+    settings: 'settings',
+    language: 'language',
 };
