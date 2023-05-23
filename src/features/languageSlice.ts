@@ -1,14 +1,10 @@
 //Imports
 import { createSlice } from '@reduxjs/toolkit';
-
-//Types
-type Language = {
-    selected: 'fr' | 'en';
-};
+import { LANG } from '../data/locales/stringIds';
 
 //Slice
-const initialState: Language = {
-    selected: 'en',
+const initialState = {
+    selected: LANG.en,
 };
 
 const languageSlice = createSlice({

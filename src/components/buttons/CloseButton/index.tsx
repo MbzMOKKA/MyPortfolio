@@ -1,6 +1,7 @@
 //Imports
 import React from 'react';
 import { StyledButton } from './style';
+import iconCross from '../../../assets/images/icons/cross.png';
 
 //Types
 type CloseButtonProps = {
@@ -11,5 +12,9 @@ type CloseButtonProps = {
 export default function CloseButton(props: CloseButtonProps) {
     const { onClick } = props;
 
-    return <StyledButton onClick={onClick}>x</StyledButton>;
+    return (
+        <StyledButton onClick={onClick}>
+            <img src={iconCross} alt="close" />
+        </StyledButton>
+    );
 }

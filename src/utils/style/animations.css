@@ -1,3 +1,35 @@
-/* @keyframes placeholder {
-    
-} */
+@keyframes modalBgAppear {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes modalBgDisappear {
+    0% {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes modalSettingsOpen {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes modalSettingsClose {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -100%;
+    }
+}

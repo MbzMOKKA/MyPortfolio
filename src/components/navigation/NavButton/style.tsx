@@ -21,13 +21,13 @@ export const StyledNavButton = styled(Link)<StyledNavButtonProps>`
     padding: 8px 0px;
     border-right: 1px solid ${borderColor};
     ${({ index }) => (index === 0 ? `border-left: 1px solid ${borderColor};` : null)};
-    ${({ selected }) => (selected ? `background-color:${colors.support.selected}` : null)};
+    ${({ selected }) => (selected ? `background-color:${colors.support.navButtonSelected}` : null)};
     text-decoration: none;
     img {
-        height: 42px;
+        height: 34px;
     }
     p {
-        padding: 6px 0px;
-        font-size: 18px;
+        padding: 7px 0px;
+        font-size: 14px;
     }
 `;

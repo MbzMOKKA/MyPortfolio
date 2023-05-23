@@ -1,3 +1,8 @@
+export const LANG = {
+    fr: 'fr',
+    en: 'en',
+};
+
 export const STRING_IDS = {
     welcome: 'welcome',
     languageSelected: 'languageSelected',
@@ -8,4 +13,6 @@ export const STRING_IDS = {
     pageContact: 'pageContact',
     settings: 'settings',
     language: 'language',
+    french: 'french',
+    english: 'english',
 };

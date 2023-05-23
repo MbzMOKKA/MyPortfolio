@@ -8,7 +8,8 @@ const colors = {
     },
     support: {
         notSelected: '#282927',
-        selected: '?',
+        selected: '#5736B8',
+        navButtonSelected: '?',
         informative: '#5BA6E0',
         warning: '#EDDF09',
         negative: '#EC622F',
@@ -17,11 +18,11 @@ const colors = {
     neutral: {
         button: '#353A2E',
         textDefault: '#FFF',
-        modalBgTop: '#424C6B',
-        modalBgBottom: '#181A24',
+        settingsBg: '#545454',
+        bodyBgColor: '#424838',
     },
 };
 
-colors.support.selected = adjustColor(colors.support.notSelected, 2);
+colors.support.navButtonSelected = adjustColor(colors.support.notSelected, 2);
 
 export default colors;

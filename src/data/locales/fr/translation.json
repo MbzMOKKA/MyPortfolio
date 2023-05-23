@@ -7,5 +7,7 @@
     "pageSkills": "Compétences",
     "pageContact": "Contact",
     "settings": "Préférences",
-    "language": "Langue"
+    "language": "Langue",
+    "french": "Français",
+    "english": "English"
 }

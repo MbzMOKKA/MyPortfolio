@@ -6,22 +6,24 @@ export const StyledSetting = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 32px;
+    margin: 12px 0px;
+    .option {
+        margin: 5px 0px;
+    }
 `;
 
 export const StyledName = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     label {
-        margin-left: 8px;
-        margin-right: 16px;
+        margin-right: 15px;
         font-size: 20px;
     }
     div {
         flex: 1;
         height: 2px;
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(255, 255, 255, 0.15);
     }
 `;

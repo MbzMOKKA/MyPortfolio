@@ -1,31 +1,49 @@
 //Imports
-import React from 'react';
-import { StyledBackground, StyledModal, StyledSeparator } from './style';
+import React, { useEffect, useState } from 'react';
+import { StyledBackground, StyledLanguageOption, StyledModal, StyledSeparator } from './style';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeSettings, selectSettingsModal } from '../../../../features/modalsSlice';
 import CloseButton from '../../../buttons/CloseButton';
 import { useTranslation } from 'react-i18next';
-import { STRING_IDS } from '../../../../data/locales/stringIds';
+import { LANG, STRING_IDS } from '../../../../data/locales/stringIds';
 import { selectLanguage, setLanguage } from '../../../../features/languageSlice';
 import SettingsInput from '../SettingsInput';
 
 //Component of the settings modal
 export default function SettingsModal() {
+    const [rendered, setRendered] = useState(false);
     const { t } = useTranslation();
     const dispatch = useDispatch();
     const { opened } = useSelector(selectSettingsModal);
     const language = useSelector(selectLanguage);
-    if (opened === false) {
+
+    useEffect(() => {
+        if (opened) {
+            setRendered(true);
+        }
+    }, [opened]);
+
+    if (rendered === false) {
         return null;
     }
 
-    function changeLanguage() {
-        dispatch(setLanguage(language === 'fr' ? 'en' : 'fr'));
+    function setLanguageToFrench() {
+        dispatch(setLanguage(LANG.fr));
+    }
+    function setLanguageToEnglish() {
+        dispatch(setLanguage(LANG.en));
     }
 
     return (
-        <StyledBackground>
-            <StyledModal>
+        <StyledBackground
+            className={`${opened ? 'shown' : 'hidden'}`}
+            onAnimationEnd={(e) => {
+                if (e.animationName === 'modalBgDisappear') {
+                    setRendered(false);
+                }
+            }}
+        >
+            <StyledModal className={`${opened ? 'shown' : 'hidden'}`}>
                 <header>
                     <h2>{t(STRING_IDS.settings)}</h2>
                     <CloseButton
@@ -36,7 +54,14 @@ export default function SettingsModal() {
                 </header>
                 <StyledSeparator />
                 <section>
-                    <SettingsInput nameId={STRING_IDS.language} buttonTxtId={STRING_IDS.changeLanguage} onClick={changeLanguage}></SettingsInput>
+                    <SettingsInput nameId={STRING_IDS.language}>
+                        <StyledLanguageOption className="option" onClick={setLanguageToEnglish} selected={language === LANG.en}>
+                            {t(STRING_IDS.english)}
+                        </StyledLanguageOption>
+                        <StyledLanguageOption className="option" onClick={setLanguageToFrench} selected={language === LANG.fr}>
+                            {t(STRING_IDS.french)}
+                        </StyledLanguageOption>
+                    </SettingsInput>
                 </section>
             </StyledModal>
         </StyledBackground>

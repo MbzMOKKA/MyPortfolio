@@ -3,6 +3,7 @@ import React from 'react';
 import { StyledButton } from './style';
 import { openSettings } from '../../../features/modalsSlice';
 import { useDispatch } from 'react-redux';
+import iconSettings from '../../../assets/images/icons/settings.png';
 
 //Component of a close button
 export default function CloseButton() {
@@ -14,7 +15,7 @@ export default function CloseButton() {
                 dispatch(openSettings());
             }}
         >
-            {'{PREFERENCES}'}
+            <img src={iconSettings} alt="close" />
         </StyledButton>
     );
 }

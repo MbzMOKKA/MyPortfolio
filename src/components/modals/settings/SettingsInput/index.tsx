@@ -6,13 +6,12 @@ import { useTranslation } from 'react-i18next';
 //Types
 type SettingsInputProps = {
     nameId: string;
-    buttonTxtId: string;
-    onClick: () => void;
+    children: any;
 };
 
 //Component of a settings input
 export default function SettingsInput(props: SettingsInputProps) {
-    const { nameId, buttonTxtId, onClick } = props;
+    const { nameId, children } = props;
     const { t } = useTranslation();
 
     return (
@@ -21,7 +20,7 @@ export default function SettingsInput(props: SettingsInputProps) {
                 <label>{t(nameId)}</label>
                 <div />
             </StyledName>
-            <button onClick={onClick}>{t(buttonTxtId)}</button>
+            {children}
         </StyledSetting>
     );
 }

@@ -13,11 +13,11 @@ export default createGlobalStyle`
     }
     h1{ /*Page title*/
         font-weight: bold;
-        font-size: 40px;
+        font-size: 30px;
     }
     h2{ /*Modal title*/
         font-weight: bold;
-        font-size: 30px;
+        font-size: 24px;
     }
     button{
         border: none;
@@ -25,8 +25,8 @@ export default createGlobalStyle`
         padding: 10px;
         background-color: ${colors.neutral.button};
         border: 1px rgba(255, 255, 255, 0.3) solid;
-        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.75);
-        font-size: 18px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.65);
+        font-size: 16px;
     }
 `;
 
