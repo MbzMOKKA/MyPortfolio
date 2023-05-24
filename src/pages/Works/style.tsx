@@ -8,7 +8,6 @@ const cardsMargin = 20;
 export const StyledMain = styled.main`
     position: relative;
     min-height: 300vh;
-    background-color: red;
 `;
 
 export const StyledList = styled.ul`

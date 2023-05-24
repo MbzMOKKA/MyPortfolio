@@ -6,7 +6,6 @@ import colors from '../../utils/style/colors';
 //Local styles
 export const StyledAppContainer = styled.div`
     position: relative;
-    min-height: 100vh;
     padding-bottom: ${navBarHeight}px;
     background-color: ${colors.neutral.bodyBgColor};
 `;
