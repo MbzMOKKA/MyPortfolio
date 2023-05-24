@@ -1,9 +1,9 @@
 //Imports
-import React from 'react';
-import { StyledNavButton } from './style';
-import { useTranslation } from 'react-i18next';
-import capString from '../../../utils/misc/capString';
-import usePage from '../../../utils/hooks/usePage';
+import React from "react";
+import { StyledNavButton } from "./style";
+import { useTranslation } from "react-i18next";
+import { capString } from "../../../utils/misc";
+import { usePage } from "../../../utils/hooks";
 
 //Types
 type NavButtonProps = {
@@ -20,7 +20,11 @@ export default function NavButton(props: NavButtonProps) {
     const { t } = useTranslation();
 
     return (
-        <StyledNavButton to={'/' + pathname} index={index} selected={currentPagename === pathname}>
+        <StyledNavButton
+            to={"/" + pathname}
+            index={index}
+            selected={currentPagename === pathname}
+        >
             <img src={icon} alt="" />
             <p>{capString(t(nameId), 7)}</p>
         </StyledNavButton>

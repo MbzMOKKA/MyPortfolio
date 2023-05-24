@@ -1,13 +1,13 @@
 //Imports
-import React, { useEffect } from 'react';
-import { StyledMain, StyledList, StyledTest } from './style';
-import WorkCard from '../../components/works/WorkCard';
-import { useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { MODAL_TYPES, closeModals, openContentModal } from '../../features/modalsSlice';
+import React, { useEffect } from "react";
+import { StyledMain, StyledList, StyledTest } from "./style";
+import { WorkCard } from "../../components/content";
+import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { MODAL_TYPES, closeModals, openContentModal } from "../../features";
 
 //Component of a works's page
-export default function Works() {
+export default function WorksPage() {
     const { id } = useParams();
     const dispatch = useDispatch();
 
@@ -15,7 +15,9 @@ export default function Works() {
         if (id === undefined) {
             dispatch(closeModals());
         } else {
-            dispatch(openContentModal({ type: MODAL_TYPES.work, params: { id } }));
+            dispatch(
+                openContentModal({ type: MODAL_TYPES.work, params: { id } })
+            );
         }
     }, [dispatch, id]);
 

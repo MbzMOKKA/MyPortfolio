@@ -1,5 +1,5 @@
 //Imports
-import styled from 'styled-components';
+import styled from "styled-components";
 
 //Local styles
 const cardsPerLine = 2;

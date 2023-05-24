@@ -1,7 +1,7 @@
 //Imports
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import colors from '../../../utils/style/colors';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { colors } from "../../../utils/style";
 
 //Types
 type StyledNavButtonProps = {
@@ -10,7 +10,7 @@ type StyledNavButtonProps = {
 };
 
 //Local styles
-const borderColor = 'black';
+const borderColor = "black";
 
 export const StyledNavButton = styled(Link)<StyledNavButtonProps>`
     width: 100%;
@@ -20,8 +20,12 @@ export const StyledNavButton = styled(Link)<StyledNavButtonProps>`
     align-items: center;
     padding: 8px 0px;
     border-right: 1px solid ${borderColor};
-    ${({ index }) => (index === 0 ? `border-left: 1px solid ${borderColor};` : null)};
-    ${({ selected }) => (selected ? `background-color:${colors.support.navButtonSelected}` : null)};
+    ${({ index }) =>
+        index === 0 ? `border-left: 1px solid ${borderColor};` : null};
+    ${({ selected }) =>
+        selected
+            ? `background-color:${colors.support.navButtonSelected}`
+            : null};
     text-decoration: none;
     img {
         height: 34px;

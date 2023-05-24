@@ -1,8 +1,8 @@
 //Imports
-import styled from 'styled-components';
-import colors from '../../../utils/style/colors';
-import adjustColor from '../../../utils/misc/adjustColor';
-import { navBarHeight } from '../../../utils/globalConstants';
+import styled from "styled-components";
+import { colors } from "../../../utils/style";
+import { adjustColor } from "../../../utils/misc";
+import { navBarHeight } from "../../../utils/globalConstants";
 
 //Local styles
 export const StyledNavBar = styled.nav`

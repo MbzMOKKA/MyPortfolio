@@ -1,6 +1,6 @@
 //Imports
-import { createSlice } from '@reduxjs/toolkit';
-import { LANG } from '../data/locales/stringIds';
+import { createSlice } from "@reduxjs/toolkit";
+import { LANG } from "../data/locales/stringIds";
 
 //Slice
 const initialState = {
@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const languageSlice = createSlice({
-    name: 'language',
+    name: "language",
     initialState,
     reducers: {
         setLanguage: (state, action) => {

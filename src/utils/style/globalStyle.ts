@@ -1,6 +1,7 @@
 //Imports
-import { createGlobalStyle } from 'styled-components';
-import colors from './colors';
+import { createGlobalStyle } from "styled-components";
+import { colors } from "./";
+import { navBarHeight } from "../globalConstants";
 
 //Global styles
 export default createGlobalStyle`
@@ -10,6 +11,10 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         color: ${colors.neutral.textDefault};
+    }
+    #root{
+        position: relative;
+        padding-bottom: ${navBarHeight}px;
     }
     h1{ /*Page title*/
         font-weight: bold;
@@ -29,7 +34,3 @@ export default createGlobalStyle`
         font-size: 16px;
     }
 `;
-
-export const breakpoints = {
-    desktopMinWidth: 500,
-};

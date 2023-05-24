@@ -1,5 +1,5 @@
 //Imports
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 //Types
 export enum MODAL_TYPES {
@@ -35,7 +35,7 @@ const initialState: InitialState = {
 };
 
 const modalSlice = createSlice({
-    name: 'modals',
+    name: "modals",
     initialState,
     reducers: {
         openContentModal: (state, action) => {
@@ -56,7 +56,8 @@ const modalSlice = createSlice({
     },
 });
 
-export const { openContentModal, closeModals, openSettings, closeSettings } = modalSlice.actions;
+export const { openContentModal, closeModals, openSettings, closeSettings } =
+    modalSlice.actions;
 export default modalSlice.reducer;
 
 //Selectors

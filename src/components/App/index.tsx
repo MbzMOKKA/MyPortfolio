@@ -1,17 +1,19 @@
 //Imports
-import React, { useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { StyledAppContainer } from './style';
-import Home from '../../pages/Home';
-import ErrorNotFound from '../../pages/ErrorNotFound';
-import { useTranslation } from 'react-i18next';
-import { selectLanguage } from '../../features/languageSlice';
-import { useSelector } from 'react-redux';
-import Work from '../../pages/Works';
-import Nav from '../navigation/NavBar';
-import ContentModal from '../modals/ContentModal';
-import SettingsButton from '../buttons/SettingsButton';
-import SettingsModal from '../modals/settings/SettingsModal';
+import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { selectLanguage } from "../../features";
+import { useSelector } from "react-redux";
+import { ContentModal } from "../content";
+import { SettingsButton, SettingsModal } from "../settings";
+import {
+    HomePage,
+    ErrorNotFoundPage,
+    WorksPage,
+    ContactPage,
+} from "../../pages";
+import { StyledBackground } from "./style";
+import { NavBar } from "../navigation";
 
 //Component of the web application
 export default function App() {
@@ -23,16 +25,18 @@ export default function App() {
     }, [i18n, language]);
 
     return (
-        <StyledAppContainer>
+        <>
             <Routes>
-                <Route path="/" element={<Home />}></Route>
-                <Route path="/work/:id?" element={<Work />}></Route>
-                <Route path="*" element={<ErrorNotFound />}></Route>
+                <Route path="/" element={<HomePage />}></Route>
+                <Route path="/work/:id?" element={<WorksPage />}></Route>
+                <Route path="/contact" element={<ContactPage />}></Route>
+                <Route path="*" element={<ErrorNotFoundPage />}></Route>
             </Routes>
             <SettingsButton />
-            <Nav />
+            <NavBar />
             <SettingsModal />
             <ContentModal />
-        </StyledAppContainer>
+            <StyledBackground />
+        </>
     );
 }

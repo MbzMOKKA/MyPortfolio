@@ -11,9 +11,9 @@ export default function adjustColor(hex: string, brightnessFactor: number) {
     g = Math.min(255, g);
     b = Math.min(255, b);
 
-    const finalR = r.toString(16).padStart(2, '0');
-    const finalG = g.toString(16).padStart(2, '0');
-    const finalB = b.toString(16).padStart(2, '0');
+    const finalR = r.toString(16).padStart(2, "0");
+    const finalG = g.toString(16).padStart(2, "0");
+    const finalB = b.toString(16).padStart(2, "0");
 
     return `#${finalR}${finalG}${finalB}`;
 }

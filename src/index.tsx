@@ -1,17 +1,17 @@
 //Imports
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import GlobalStyle from './utils/style/globalStyle';
-import App from './components/App';
-import './i18n';
-import './utils/style/fonts.css';
-import './utils/style/animations.css';
-import store from './utils/store';
-import { Provider } from 'react-redux';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { globalStyle as GlobalStyle } from "./utils/style/";
+import App from "./components/App";
+import "./i18n";
+import "./utils/style/fonts.css";
+import "./utils/style/animations.css";
+import store from "./utils/store";
+import { Provider } from "react-redux";
 
 //Render
-const root = ReactDOM.createRoot(document.getElementById('root')!);
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
     <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Provider store={store}>
