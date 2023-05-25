@@ -20,6 +20,8 @@ const colors = {
         textDefault: "#FFF",
         settingsBg: "#545454",
         bodyBgColor: "#424838",
+        semiOpaqueBlack: "rgba(0, 0, 0, 0.15)",
+        semiOpaqueWhite: "rgba(255, 255, 255, 0.15)",
     },
 };
 

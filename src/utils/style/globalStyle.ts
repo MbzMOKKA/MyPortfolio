@@ -1,6 +1,6 @@
 //Imports
 import { createGlobalStyle } from "styled-components";
-import { colors } from "./";
+import { borders, colors, paddings, shadows } from "./";
 import { navBarHeight } from "../globalConstants";
 
 //Global styles
@@ -13,6 +13,8 @@ export default createGlobalStyle`
         color: ${colors.neutral.textDefault};
     }
     #root{
+        display: flex;
+        flex-direction: column;
         position: relative;
         padding-bottom: ${navBarHeight}px;
     }
@@ -25,12 +27,11 @@ export default createGlobalStyle`
         font-size: 24px;
     }
     button{
-        border: none;
-        border-radius: 8px;
-        padding: 10px;
+        border: ${borders.common.button};
+        border-radius: ${borders.radius.normal};
+        padding: ${paddings.common.button};
         background-color: ${colors.neutral.button};
-        border: 1px rgba(255, 255, 255, 0.3) solid;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.65);
+        box-shadow: ${shadows.common.button};
         font-size: 16px;
     }
 `;

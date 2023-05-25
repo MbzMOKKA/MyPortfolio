@@ -1,6 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { colors } from "../../../utils/style";
+import { borders, colors, shadows } from "../../../utils/style";
 
 //Common constants
 const buttonSize = "40px";
@@ -12,14 +12,14 @@ export const StyledButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.15);
-    border: 3px ${colors.support.negative} solid;
+    background-color: ${colors.neutral.semiOpaqueBlack};
+    border: ${borders.special.closeBtn};
     border-radius: 50%;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: ${shadows.special.closeBtnNormal};
     img {
         width: 18px;
     }
     :hover {
-        box-shadow: 0px 0px 8px ${colors.support.negative};
+        box-shadow: ${shadows.special.closeBtnHover};
     }
 `;

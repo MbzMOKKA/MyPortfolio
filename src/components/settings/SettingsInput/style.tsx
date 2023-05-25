@@ -1,14 +1,15 @@
 //Imports
 import styled from "styled-components";
+import { colors, margins } from "../../../utils/style";
 
 //Local styles
 export const StyledSetting = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 12px 0px;
+    margin: ${margins.special.settingsInput};
     .option {
-        margin: 5px 0px;
+        margin: ${margins.common.option};
     }
 `;
 
@@ -16,14 +17,14 @@ export const StyledName = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: ${margins.common.nameBottom};
     label {
-        margin-right: 15px;
+        margin-right: ${margins.common.nameSeparatorRight};
         font-size: 20px;
     }
     div {
         flex: 1;
         height: 2px;
-        background-color: rgba(255, 255, 255, 0.15);
+        background-color: ${colors.neutral.semiOpaqueWhite};
     }
 `;

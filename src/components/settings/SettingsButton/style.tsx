@@ -1,6 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { colors } from "../../../utils/style";
+import { borders, colors } from "../../../utils/style";
 
 //Common constants
 const buttonSize = "45px";
@@ -17,7 +17,7 @@ export const StyledButton = styled.button`
     align-items: center;
     background-color: ${colors.neutral.settingsBg};
     border: none;
-    border-radius: 25%;
+    border-radius: ${borders.radius.normal};
     img {
         transition: transform 600ms;
         width: 34px;

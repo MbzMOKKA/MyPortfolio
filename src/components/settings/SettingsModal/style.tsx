@@ -1,14 +1,11 @@
 //Imports
 import styled from "styled-components";
-import { colors } from "../../../utils/style";
+import { borders, colors, paddings, shadows } from "../../../utils/style";
 
 //Types
 type StyledLanguageOptionProps = {
     selected: boolean;
 };
-
-//Common constants
-const modalBottomRadius = "14px";
 
 //Local styles
 export const StyledBackground = styled.div`
@@ -21,10 +18,10 @@ export const StyledBackground = styled.div`
     flex-direction: column;
     align-items: center;
     &.shown {
-        animation: modalBgAppear 500ms forwards;
+        animation: modalBgAppear 600ms forwards;
     }
     &.hidden {
-        animation: modalBgDisappear 250ms forwards;
+        animation: modalBgDisappear 400ms forwards;
     }
 `;
 
@@ -36,18 +33,18 @@ export const StyledModal = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     background-color: ${colors.neutral.settingsBg};
-    border: 1px rgba(255, 255, 255, 0.3) solid;
+    border: ${borders.common.modal};
     border-top: none;
-    border-bottom-left-radius: ${modalBottomRadius};
-    border-bottom-right-radius: ${modalBottomRadius};
-    box-shadow: 0px 4px 8px black;
+    border-bottom-left-radius: ${borders.radius.modal};
+    border-bottom-right-radius: ${borders.radius.modal};
+    box-shadow: ${shadows.common.modal};
     overflow: hidden;
     &.shown {
-        animation: modalSettingsOpen 500ms forwards
+        animation: modalSettingsOpen 600ms forwards
             cubic-bezier(0.1, 0.98, 0.41, 0.98);
     }
     &.hidden {
-        animation: modalSettingsClose 250ms forwards;
+        animation: modalSettingsClose 400ms forwards;
     }
     header {
         width: 100%;
@@ -55,8 +52,7 @@ export const StyledModal = styled.div`
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 8px;
-        padding-left: 16px;
+        padding: ${paddings.common.modalHeader};
         background-color: rgba(255, 255, 255, 0.125);
     }
     main {
@@ -65,15 +61,15 @@ export const StyledModal = styled.div`
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: 10px 20px;
+        padding: ${paddings.common.modalMain};
     }
 `;
 
 export const StyledSeparator = styled.div`
     width: 100%;
     height: 8px;
-    border-top: 2px rgba(255, 255, 255, 0.5) solid;
-    border-bottom: 1px rgba(255, 255, 255, 0.25) solid;
+    border-top: ${borders.special.separatorTop};
+    border-bottom: ${borders.special.separatorBottom};
 `;
 
 export const StyledLanguageOption = styled.button<StyledLanguageOptionProps>`
