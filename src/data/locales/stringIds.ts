@@ -4,7 +4,7 @@ export const LANG = {
 };
 
 export const STRING_IDS = {
-    welcome: "welcome",
+    placeholder: "placeholder",
     languageSelected: "languageSelected",
     changeLanguage: "changeLanguage",
     pageHome: "pageHome",
@@ -16,5 +16,12 @@ export const STRING_IDS = {
     french: "french",
     english: "english",
     contactPageTitle: "contactPageTitle",
+    worksPageTitle: "worksPageTitle",
     phone: "phone",
+    email: "email",
+    linkedin: "linkedin",
+    twitter: "twitter",
+    openLink: "openLink",
+    call: "call",
+    sendEmail: "sendEmail",
 };

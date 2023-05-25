@@ -1,5 +1,5 @@
 {
-    "welcome": "Bienvenue dans mon e-Portfolio!",
+    "placeholder": "{PLACEHOLDER}",
     "languageSelected": "Français",
     "changeLanguage": "Changer de langue",
     "pageHome": "Accueil",
@@ -10,6 +10,13 @@
     "language": "Langue",
     "french": "Français",
     "english": "English",
-    "contactPageTitle": "Me contacter",
-    "phone": "Téléphone"
+    "contactPageTitle": "Besoin de me joindre ?",
+    "worksPageTitle": "Mes travaux",
+    "phone": "Téléphone",
+    "email": "E-mail",
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "openLink": "Ouvrir le lien",
+    "call": "Appeler",
+    "sendEmail": "Envoyer un e-mail"
 }

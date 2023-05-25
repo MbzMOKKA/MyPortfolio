@@ -1,9 +1,12 @@
 //Imports
 import React from "react";
-import { useTranslation } from "react-i18next";
-import { StyledMain, StyledMethods } from "./style";
+import { StyledMain, StyledPageTitle, StyledMethods } from "./style";
 import { ContactMethod } from "../../components/contact/";
-import { STRING_IDS } from "../../data/locales/stringIds";
+import { STRING_IDS, contactMethods } from "../../data";
+import AreaSeparator, {
+    AREA_SEPARATOR_TYPES,
+} from "../../components/other/AreaSeparator";
+import { useTranslation } from "react-i18next";
 
 //Component of the contact page
 export default function ContactPage() {
@@ -11,9 +14,24 @@ export default function ContactPage() {
 
     return (
         <StyledMain>
-            <h1>{t("contactPageTitle")}</h1>
+            <StyledPageTitle>
+                <h1>{t(STRING_IDS.contactPageTitle)}</h1>
+                <AreaSeparator type={AREA_SEPARATOR_TYPES.pageTitle} />
+            </StyledPageTitle>
             <StyledMethods>
-                <ContactMethod nameId={STRING_IDS.phone} />
+                {contactMethods.map((method, index) => {
+                    return (
+                        <ContactMethod
+                            key={index}
+                            backgroundColor={method.backgroundColor}
+                            nameId={method.nameId}
+                            descriptionId={method.descriptionId}
+                            contactInfo={method.contactInfo}
+                            ctaNameId={method.ctaNameId}
+                            ctaUrl={method.ctaUrl}
+                        />
+                    );
+                })}
             </StyledMethods>
         </StyledMain>
     );

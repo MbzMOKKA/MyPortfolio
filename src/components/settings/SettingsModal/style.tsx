@@ -65,13 +65,6 @@ export const StyledModal = styled.div`
     }
 `;
 
-export const StyledSeparator = styled.div`
-    width: 100%;
-    height: 8px;
-    border-top: ${borders.special.separatorTop};
-    border-bottom: ${borders.special.separatorBottom};
-`;
-
 export const StyledLanguageOption = styled.button<StyledLanguageOptionProps>`
     background-color: ${({ selected }) =>
         selected ? colors.support.selected : colors.support.notSelected};

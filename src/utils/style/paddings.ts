@@ -12,6 +12,8 @@ const paddings = {
         navBar: `${0}px ${5}%`,
         navBtnItself: `${8}px ${0}px`,
         navBtnTxt: `${8}px ${0}px`,
+        contactMethod: `${6}px`,
+        contactInfo: `${12}px`,
     },
 };
 

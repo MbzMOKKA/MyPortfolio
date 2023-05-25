@@ -1,15 +1,8 @@
 //Imports
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { StyledMain } from "./style";
 
-//Component of the homepage
+//Component of the home page
 export default function HomePage() {
-    const { t } = useTranslation();
-
-    return (
-        <main>
-            <p>{t("welcome")}</p>
-            <p>{window.innerWidth}</p>
-        </main>
-    );
+    return <StyledMain></StyledMain>;
 }

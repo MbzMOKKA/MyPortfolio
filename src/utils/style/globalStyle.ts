@@ -22,11 +22,13 @@ export default createGlobalStyle`
         font-weight: bold;
         font-size: 30px;
     }
-    h2{ /*Modal title*/
+    h2{ /*Name of something major (modal, project, contact...)*/
         font-weight: bold;
         font-size: 24px;
     }
-    button{
+    button,.button{
+        text-decoration: none;
+        text-align: center;
         border: ${borders.common.button};
         border-radius: ${borders.radius.normal};
         padding: ${paddings.common.button};

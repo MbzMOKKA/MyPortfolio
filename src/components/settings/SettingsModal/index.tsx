@@ -1,18 +1,14 @@
 //Imports
 import React, { useEffect, useState } from "react";
-import {
-    StyledBackground,
-    StyledLanguageOption,
-    StyledModal,
-    StyledSeparator,
-} from "./style";
+import { StyledBackground, StyledLanguageOption, StyledModal } from "./style";
 import { useDispatch, useSelector } from "react-redux";
 import { closeSettings, selectSettingsModal } from "../../../features";
-import { CloseButton } from "../../other";
+import { AreaSeparator, CloseButton } from "../../other";
 import { useTranslation } from "react-i18next";
 import { LANG, STRING_IDS } from "../../../data/locales/stringIds";
 import { selectLanguage, setLanguage } from "../../../features";
 import { SettingsInput } from "../";
+import { AREA_SEPARATOR_TYPES } from "../../other/AreaSeparator";
 
 //Component of the settings modal
 export default function SettingsModal() {
@@ -57,7 +53,7 @@ export default function SettingsModal() {
                         }}
                     />
                 </header>
-                <StyledSeparator />
+                <AreaSeparator type={AREA_SEPARATOR_TYPES.modalHeader} />
                 <main>
                     <SettingsInput nameId={STRING_IDS.language}>
                         <StyledLanguageOption

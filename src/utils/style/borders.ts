@@ -11,8 +11,8 @@ const borders = {
     special: {
         closeBtn: `3px ${colors.support.negative} solid`,
         navBarTop: `4px ${colors.support.navButtonSelected} solid`,
-        separatorTop: `2px rgba(255, 255, 255, 0.5) solid`,
-        separatorBottom: `1px rgba(255, 255, 255, 0.25) solid`,
+        modalHeaderSeparatorTop: `2px rgba(255, 255, 255, 0.5) solid`,
+        modalHeaderSeparatorBottom: `1px rgba(255, 255, 255, 0.25) solid`,
     },
     radius: {
         normal: `${8}px`,

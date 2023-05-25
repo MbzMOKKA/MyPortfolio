@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { MODAL_TYPES, closeModals, openContentModal } from "../../features";
 
-//Component of a works's page
+//Component of the works page
 export default function WorksPage() {
     const { id } = useParams();
     const dispatch = useDispatch();
@@ -23,13 +23,11 @@ export default function WorksPage() {
 
     return (
         <StyledMain>
-            <p>WORKS PAGE</p>
             <StyledList>
                 <WorkCard id={0} />
                 <WorkCard id={1} />
                 <WorkCard id={2} />
             </StyledList>
-
             <StyledTest>COUCOU</StyledTest>
         </StyledMain>
     );
