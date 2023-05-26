@@ -1,10 +1,10 @@
 //Imports
 import { configureStore } from "@reduxjs/toolkit";
-import { languageReducer, modalsReducer } from "../features";
+import { settingReducer, modalsReducer } from "../features";
 
 export default configureStore({
     reducer: {
-        language: languageReducer,
+        settings: settingReducer,
         modals: modalsReducer,
     },
 });

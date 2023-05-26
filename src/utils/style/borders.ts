@@ -1,5 +1,4 @@
 //Imports
-import colors from "./colors";
 
 //Exports
 const borders = {
@@ -8,21 +7,15 @@ const borders = {
         modal: `1px rgba(255, 255, 255, 0.3) solid`,
         button: `1px rgba(255, 255, 255, 0.2) solid`,
     },
-    special: {
-        closeBtn: `3px ${colors.support.negative} solid`,
-        navBarTop: `4px ${colors.support.navButtonSelected} solid`,
-        modalHeaderSeparatorTop: `2px rgba(255, 255, 255, 0.5) solid`,
-        modalHeaderSeparatorBottom: `1px rgba(255, 255, 255, 0.25) solid`,
-    },
     radius: {
         normal: `${8}px`,
         modal: `${14}px`,
         round: `${50}%`,
     },
     debug: {
-        red: `${1}px solid red`,
-        green: `${1}px solid green`,
-        blue: `${1}px solid blue`,
+        red: `border: 1px solid red`,
+        green: `border: 1px solid green`,
+        blue: `border: 1px solid blue`,
     },
 };
 

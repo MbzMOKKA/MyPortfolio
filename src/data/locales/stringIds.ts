@@ -24,4 +24,5 @@ export const STRING_IDS = {
     openLink: "openLink",
     call: "call",
     sendEmail: "sendEmail",
+    scanQrCode: "scanQrCode",
 };

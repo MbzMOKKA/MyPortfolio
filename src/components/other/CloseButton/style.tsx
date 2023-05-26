@@ -13,13 +13,13 @@ export const StyledButton = styled.button`
     justify-content: center;
     align-items: center;
     background-color: ${colors.neutral.semiOpaqueBlack};
-    border: ${borders.special.closeBtn};
+    border: 3px ${colors.support.negative} solid;
     border-radius: 50%;
-    box-shadow: ${shadows.special.closeBtnNormal};
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
     img {
         width: 18px;
     }
     :hover {
-        box-shadow: ${shadows.special.closeBtnHover};
+        box-shadow: 0px 0px 8px ${colors.support.negative};
     }
 `;

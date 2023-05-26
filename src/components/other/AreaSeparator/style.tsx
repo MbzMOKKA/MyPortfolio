@@ -1,12 +1,12 @@
 //Imports
 import styled from "styled-components";
-import { borders, shadows } from "../../../utils/style";
+import { borders } from "../../../utils/style";
 
 export const StyledModalHeaderSeparator = styled.div`
     width: 100%;
     height: 8px;
-    border-top: ${borders.special.modalHeaderSeparatorTop};
-    border-bottom: ${borders.special.modalHeaderSeparatorBottom};
+    border-top: 2px rgba(255, 255, 255, 0.5) solid;
+    border-bottom: 1px rgba(255, 255, 255, 0.25) solid;
 `;
 
 export const StyledPageTitleSeparator = styled.div`

@@ -8,8 +8,8 @@ const buttonSize = "45px";
 //Local styles
 export const StyledButton = styled.button`
     position: fixed;
-    top: 6px;
-    right: 6px;
+    top: 7px;
+    right: 7px;
     width: ${buttonSize};
     height: ${buttonSize};
     display: flex;

@@ -1,7 +1,7 @@
 //Imports
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { borders, colors, paddings } from "../../../utils/style";
+import { borders, colors } from "../../../utils/style";
 
 //Types
 type StyledNavButtonProps = {
@@ -16,7 +16,7 @@ export const StyledNavButton = styled(Link)<StyledNavButtonProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: ${paddings.special.navBtnItself};
+    padding: 8px 0px;
     text-decoration: none;
     border-right: ${borders.common.blackSlim};
     border-left: ${({ index }) =>
@@ -29,7 +29,7 @@ export const StyledNavButton = styled(Link)<StyledNavButtonProps>`
         height: 34px;
     }
     p {
-        padding: ${paddings.special.navBtnTxt};
-        font-size: 14px;
+        padding: 8px 0px;
+        font-size: 15px;
     }
 `;

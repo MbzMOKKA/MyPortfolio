@@ -1,5 +1,11 @@
 //Imports
-import languageReducer, { selectLanguage, setLanguage } from "./languageSlice";
+import settingReducer, {
+    selectSettingsLoaded,
+    selectSettings,
+    selectLanguage,
+    setLanguage,
+    localStorageLoaded,
+} from "./settingSlice";
 import modalsReducer, {
     openContentModal,
     closeModals,
@@ -12,7 +18,7 @@ import modalsReducer, {
 
 //Fast-to-import modules
 export {
-    languageReducer,
+    settingReducer,
     selectLanguage,
     setLanguage,
     MODAL_TYPES,
@@ -23,4 +29,7 @@ export {
     closeSettings,
     selectContentModal,
     selectSettingsModal,
+    selectSettingsLoaded,
+    selectSettings,
+    localStorageLoaded,
 };

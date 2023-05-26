@@ -37,7 +37,7 @@ export const StyledModal = styled.div`
     border-top: none;
     border-bottom-left-radius: ${borders.radius.modal};
     border-bottom-right-radius: ${borders.radius.modal};
-    box-shadow: ${shadows.common.modal};
+    box-shadow: ${shadows.modal};
     overflow: hidden;
     &.shown {
         animation: modalSettingsOpen 600ms forwards
@@ -52,7 +52,7 @@ export const StyledModal = styled.div`
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: ${paddings.common.modalHeader};
+        padding: ${paddings.modalHeader};
         background-color: rgba(255, 255, 255, 0.125);
     }
     main {
@@ -61,7 +61,7 @@ export const StyledModal = styled.div`
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: ${paddings.common.modalMain};
+        padding: ${paddings.modalMain};
     }
 `;
 

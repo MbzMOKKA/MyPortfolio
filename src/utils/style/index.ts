@@ -3,8 +3,7 @@ import breakpoints from "./breakpoints";
 import colors from "./colors";
 import borders from "./borders";
 import shadows from "./shadows";
-import margins from "./margins";
-import paddings from "./paddings";
+import { margins, paddings } from "./spacings";
 import globalStyle from "./globalStyle";
 
 //Fast-to-import modules

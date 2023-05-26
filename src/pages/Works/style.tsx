@@ -14,7 +14,7 @@ export const StyledList = styled.ul`
     border: 1px black solid;
     display: grid;
     grid-template-columns: repeat(${cardsPerLine}, 1fr);
-    grid-gap: ${margins.common.grid};
+    grid-gap: ${margins.grid};
 `;
 
 export const StyledTest = styled.p`

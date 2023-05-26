@@ -7,9 +7,9 @@ export const StyledSetting = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: ${margins.special.settingsInput};
+    margin: 12px 0px;
     .option {
-        margin: ${margins.common.option};
+        margin: ${margins.option};
     }
 `;
 
@@ -17,10 +17,10 @@ export const StyledName = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: ${margins.common.nameBottom};
+    margin-bottom: ${margins.nameBottom};
     label {
-        margin-right: ${margins.common.nameSeparatorRight};
-        font-size: 20px;
+        margin-right: ${margins.nameSeparatorRight};
+        font-size: 18px;
     }
     div {
         flex: 1;

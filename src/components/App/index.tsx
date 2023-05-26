@@ -2,8 +2,13 @@
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { selectLanguage } from "../../features";
-import { useSelector } from "react-redux";
+import {
+    selectLanguage,
+    selectSettingsLoaded,
+    selectSettings,
+    localStorageLoaded,
+} from "../../features";
+import { useDispatch, useSelector } from "react-redux";
 import { ContentModal } from "../content";
 import { SettingsButton, SettingsModal } from "../settings";
 import {
@@ -18,11 +23,32 @@ import { NavBar } from "../navigation";
 //Component of the web application
 export default function App() {
     const { i18n } = useTranslation();
+    const settings = useSelector(selectSettings);
+    const settingsLoaded = useSelector(selectSettingsLoaded);
     const language = useSelector(selectLanguage);
+    const dispatch = useDispatch();
 
+    //applying new language
     useEffect(() => {
         i18n.changeLanguage(language);
     }, [i18n, language]);
+
+    //loading settings
+    useEffect(() => {
+        if (settingsLoaded === false) {
+            dispatch(localStorageLoaded(localStorage.getItem("settings")));
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    //saving settings
+    useEffect(() => {
+        if (settingsLoaded) {
+            let settingsCopy = { ...settings };
+            delete settingsCopy.loaded;
+            localStorage.setItem("settings", JSON.stringify(settingsCopy));
+        }
+    }, [settingsLoaded, settings]);
 
     return (
         <>

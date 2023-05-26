@@ -20,20 +20,20 @@ export default createGlobalStyle`
     }
     h1{ /*Page title*/
         font-weight: bold;
-        font-size: 30px;
+        font-size: 28px;
     }
     h2{ /*Name of something major (modal, project, contact...)*/
         font-weight: bold;
-        font-size: 24px;
+        font-size: 20px;
     }
     button,.button{
         text-decoration: none;
         text-align: center;
         border: ${borders.common.button};
         border-radius: ${borders.radius.normal};
-        padding: ${paddings.common.button};
+        padding: ${paddings.button};
         background-color: ${colors.neutral.button};
-        box-shadow: ${shadows.common.button};
-        font-size: 16px;
+        box-shadow: ${shadows.button};
+        font-size: 14px;
     }
 `;

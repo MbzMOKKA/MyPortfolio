@@ -18,5 +18,6 @@
     "twitter": "Twitter",
     "openLink": "Ouvrir le lien",
     "call": "Appeler",
-    "sendEmail": "Envoyer un e-mail"
+    "sendEmail": "Envoyer un e-mail",
+    "scanQrCode": "Scanne-moi pour ouvrir le Portfolio sur un autre appareil !"
 }
