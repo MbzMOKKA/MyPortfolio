@@ -36,7 +36,10 @@ export default function App() {
     //loading settings
     useEffect(() => {
         if (settingsLoaded === false) {
-            dispatch(localStorageLoaded(localStorage.getItem("settings")));
+            const settingsInStorage = localStorage.getItem("settings");
+            if (settingsInStorage !== null) {
+                dispatch(localStorageLoaded(settingsInStorage));
+            }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
