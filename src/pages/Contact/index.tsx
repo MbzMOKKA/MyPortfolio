@@ -16,7 +16,7 @@ export default function ContactPage() {
         <StyledMain>
             <StyledPageTitle>
                 <h1>{t(STRING_IDS.contactPageTitle)}</h1>
-                <AreaSeparator type={AREA_SEPARATOR_TYPES.pageTitle} />
+                <AreaSeparator type={AREA_SEPARATOR_TYPES.pageHeader} />
             </StyledPageTitle>
             <StyledMethods>
                 {contactMethods.map((method, index) => {

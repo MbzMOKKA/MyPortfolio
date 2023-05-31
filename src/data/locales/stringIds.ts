@@ -25,4 +25,8 @@ export const STRING_IDS = {
     call: "call",
     sendEmail: "sendEmail",
     scanQrCode: "scanQrCode",
+    iAm: "iAm",
+    selfPic: "selfPic",
+    avatarImg: "avatarImg",
+    myCareer: "myCareer",
 };

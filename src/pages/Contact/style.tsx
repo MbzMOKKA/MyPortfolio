@@ -10,7 +10,7 @@ export const StyledMain = styled.main`
 export const StyledPageTitle = styled.section`
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.4);
     h1 {
         margin-top: 70px;
         margin-bottom: 4px;

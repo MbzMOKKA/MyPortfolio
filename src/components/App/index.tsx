@@ -6,6 +6,7 @@ import {
     selectLanguage,
     selectSettingsLoaded,
     selectSettings,
+    localStorageLoad,
     localStorageLoaded,
 } from "../../features";
 import { useDispatch, useSelector } from "react-redux";
@@ -38,8 +39,9 @@ export default function App() {
         if (settingsLoaded === false) {
             const settingsInStorage = localStorage.getItem("settings");
             if (settingsInStorage !== null) {
-                dispatch(localStorageLoaded(settingsInStorage));
+                dispatch(localStorageLoad(settingsInStorage));
             }
+            dispatch(localStorageLoaded());
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -47,9 +49,9 @@ export default function App() {
     //saving settings
     useEffect(() => {
         if (settingsLoaded) {
-            let settingsCopy = { ...settings };
-            delete settingsCopy.loaded;
-            localStorage.setItem("settings", JSON.stringify(settingsCopy));
+            let savedSettings = { ...settings };
+            delete savedSettings.loaded;
+            localStorage.setItem("settings", JSON.stringify(savedSettings));
         }
     }, [settingsLoaded, settings]);
 

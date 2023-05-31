@@ -17,6 +17,7 @@ export const StyledBackground = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 100;
     &.shown {
         animation: modalBgAppear 600ms forwards;
     }

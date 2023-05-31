@@ -4,6 +4,7 @@ import settingReducer, {
     selectSettings,
     selectLanguage,
     setLanguage,
+    localStorageLoad,
     localStorageLoaded,
 } from "./settingSlice";
 import modalsReducer, {
@@ -31,5 +32,6 @@ export {
     selectSettingsModal,
     selectSettingsLoaded,
     selectSettings,
+    localStorageLoad,
     localStorageLoaded,
 };

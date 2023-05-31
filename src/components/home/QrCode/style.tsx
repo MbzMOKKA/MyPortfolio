@@ -1,6 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { borders, colors, margins, paddings } from "../../../utils/style";
+import { borders, colors, paddings } from "../../../utils/style";
 
 //Local styles
 export const StyledSection = styled.section`
@@ -20,7 +20,7 @@ export const StyledSection = styled.section`
     img {
         width: 50%;
         border-radius: ${borders.radius.normal};
-        box-shadow: 0px 4px 30px ${colors.identity.primary};
+        box-shadow: 0px 4px 48px ${colors.identity.bright};
         margin-top: 30px;
     }
 `;

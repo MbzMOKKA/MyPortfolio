@@ -18,6 +18,7 @@ export const StyledButton = styled.button`
     background-color: ${colors.neutral.settingsBg};
     border: none;
     border-radius: ${borders.radius.normal};
+    z-index: 90;
     img {
         transition: transform 600ms;
         width: 34px;

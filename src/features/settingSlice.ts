@@ -12,9 +12,11 @@ const settingSlice = createSlice({
     name: "language",
     initialState,
     reducers: {
-        localStorageLoaded: (state, action) => {
+        localStorageLoad: (state, action) => {
             const settings = JSON.parse(action.payload);
             state.language = settings.language;
+        },
+        localStorageLoaded: (state) => {
             state.loaded = true;
         },
         setLanguage: (state, action) => {
@@ -23,7 +25,8 @@ const settingSlice = createSlice({
     },
 });
 
-export const { setLanguage, localStorageLoaded } = settingSlice.actions;
+export const { setLanguage, localStorageLoad, localStorageLoaded } =
+    settingSlice.actions;
 export default settingSlice.reducer;
 
 //Selectors

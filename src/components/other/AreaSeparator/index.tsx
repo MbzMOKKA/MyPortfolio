@@ -5,7 +5,7 @@ import { StyledModalHeaderSeparator, StyledPageTitleSeparator } from "./style";
 //Types
 export enum AREA_SEPARATOR_TYPES {
     modalHeader,
-    pageTitle,
+    pageHeader,
 }
 
 type AreaSeparatorProps = {
@@ -19,7 +19,7 @@ export default function AreaSeparator(props: AreaSeparatorProps) {
     switch (type) {
         case AREA_SEPARATOR_TYPES.modalHeader:
             return <StyledModalHeaderSeparator />;
-        case AREA_SEPARATOR_TYPES.pageTitle:
+        case AREA_SEPARATOR_TYPES.pageHeader:
             return <StyledPageTitleSeparator />;
     }
 

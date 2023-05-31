@@ -19,5 +19,9 @@
     "openLink": "Ouvrir le lien",
     "call": "Appeler",
     "sendEmail": "Envoyer un e-mail",
-    "scanQrCode": "Scanne-moi pour ouvrir le Portfolio sur un autre appareil !"
+    "scanQrCode": "Scanne-moi pour ouvrir le Portfolio sur un autre appareil !",
+    "iAm": "Je suis",
+    "selfPic": "Photo de moi",
+    "avatarImg": "Mon avatar",
+    "myCareer": "Mon parcours"
 }

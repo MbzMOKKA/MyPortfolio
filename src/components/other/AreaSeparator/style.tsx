@@ -1,6 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { borders } from "../../../utils/style";
+import { borders, colors } from "../../../utils/style";
 
 export const StyledModalHeaderSeparator = styled.div`
     width: 100%;
