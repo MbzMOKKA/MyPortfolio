@@ -20,11 +20,15 @@ export default createGlobalStyle`
     }
     h1{ /*Name of something major (page title, section name...*/
         font-weight: bold;
-        font-size: 28px;
+        font-size: 26px;
     }
     h2{ /*Name of something important (modal, project, contact...)*/
         font-weight: bold;
-        font-size: 20px;
+        font-size: 18px;
+    }
+    p{
+        font-size: 15px;
+        line-height: 1.4;
     }
     button,.button{
         text-decoration: none;

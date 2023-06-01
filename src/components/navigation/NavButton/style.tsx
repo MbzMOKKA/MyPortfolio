@@ -26,7 +26,7 @@ export const StyledNavButton = styled(Link)<StyledNavButtonProps>`
             ? `background-color:${colors.support.navButtonSelected}`
             : null};
     img {
-        height: 34px;
+        height: 28px;
     }
     p {
         padding: 8px 0px;

@@ -5,7 +5,7 @@ import { adjustColor } from "../misc";
 const colors = {
     identity: {
         primary: "#5411E3",
-        bright: "#5F14FF",
+        bright: "#6E0AF7",
     },
     support: {
         notSelected: "#1C1D1E",

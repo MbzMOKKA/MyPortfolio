@@ -3,14 +3,12 @@ import styled from "styled-components";
 import { colors, margins, paddings } from "../../../../utils/style";
 
 //Local styles
-const timelineLeftPadding = `calc(${paddings.mainHorizontal} + 10px)`;
-
 export const StyledSection = styled.section`
-    padding-top: 24px;
+    padding-top: 64px;
     h1 {
         margin-left: ${margins.mainHorizontal};
         margin-right: ${margins.mainHorizontal};
-        margin-bottom: 8px;
+        margin-bottom: 24px;
     }
 `;
 
@@ -19,15 +17,15 @@ export const StyledStepList = styled.ul`
     background-color: ${colors.neutral.semiOpaqueBlack};
     display: flex;
     flex-direction: column;
-    padding-left: ${timelineLeftPadding};
-    padding-right: ${paddings.mainHorizontal};
+    padding-top: 24px;
+    padding-bottom: 24px;
 `;
 
 export const StyledTimeline = styled.div`
     position: absolute;
     top: 0;
-    left: ${timelineLeftPadding};
+    left: 10px;
     bottom: 0;
     flex: 1;
-    border-left: 2px white dashed;
+    border-left: 2px ${colors.identity.bright} dashed;
 `;

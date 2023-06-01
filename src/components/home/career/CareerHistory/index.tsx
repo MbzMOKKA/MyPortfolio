@@ -3,7 +3,7 @@ import React from "react";
 import CareerStep from "../CareerStep";
 import { StyledSection, StyledStepList, StyledTimeline } from "./style";
 import { useTranslation } from "react-i18next";
-import { STRING_IDS } from "../../../../data";
+import { STRING_IDS, careerSteps } from "../../../../data";
 
 //Component of the career section in the home page
 export default function CareerHistory() {
@@ -14,11 +14,15 @@ export default function CareerHistory() {
             <h1>{t(STRING_IDS.myCareer)}</h1>
             <StyledStepList>
                 <StyledTimeline />
-                <CareerStep />
-                <CareerStep />
-                <CareerStep />
-                <CareerStep />
-                <CareerStep />
+                {careerSteps.map((step) => {
+                    return (
+                        <CareerStep
+                            date={step.date}
+                            nameId={step.nameId}
+                            textId={step.textId}
+                        />
+                    );
+                })}
             </StyledStepList>
         </StyledSection>
     );
