@@ -4,23 +4,22 @@ import { adjustColor } from "../misc";
 //Exports
 const colors = {
     identity: {
-        primary: "#5906B7",
-        bright: "#8300FF",
+        primary: "#5411E3",
+        bright: "#5F14FF",
     },
     support: {
-        notSelected: "#282927",
-        selected: "#5736B8",
+        notSelected: "#1C1D1E",
+        selected: "#332944",
         navButtonSelected: "?",
         informative: "#5BA6E0",
         warning: "#EDDF09",
-        negative: "#EC622F",
+        negative: "#DC441B",
         positive: "#ADFD48",
     },
     neutral: {
-        button: "#353A2E",
         textDefault: "#FFF",
         settingsBg: "#545454",
-        bodyBgColor: "#424838",
+        bodyBgColor: "#2F3342",
         semiOpaqueBlack: "rgba(0, 0, 0, 0.25)",
         semiOpaqueWhite: "rgba(255, 255, 255, 0.125)",
     },

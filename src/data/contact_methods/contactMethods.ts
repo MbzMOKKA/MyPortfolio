@@ -3,7 +3,6 @@ import { STRING_IDS } from "../locales/stringIds";
 
 //Types
 type ContactMethod = {
-    backgroundColor: string;
     nameId: string;
     descriptionId: string;
     contactInfo: string;
@@ -15,7 +14,6 @@ type ContactMethod = {
 const contactMethods: ContactMethod[] = [
     //Phone
     {
-        backgroundColor: "#6F866F",
         nameId: STRING_IDS.phone,
         descriptionId: STRING_IDS.placeholder,
         contactInfo: "06.38.93.16.19",
@@ -24,7 +22,6 @@ const contactMethods: ContactMethod[] = [
     },
     //Mail
     {
-        backgroundColor: "#C77758",
         nameId: STRING_IDS.email,
         descriptionId: STRING_IDS.placeholder,
         contactInfo: "dylanpean.pro@gmail.com",
@@ -33,7 +30,6 @@ const contactMethods: ContactMethod[] = [
     },
     //LinkedIn
     {
-        backgroundColor: "#405BE1",
         nameId: STRING_IDS.linkedin,
         descriptionId: STRING_IDS.placeholder,
         contactInfo: "Dylan Pean",
@@ -42,7 +38,6 @@ const contactMethods: ContactMethod[] = [
     },
     //Twitter
     {
-        backgroundColor: "#68D9E8",
         nameId: STRING_IDS.twitter,
         descriptionId: STRING_IDS.placeholder,
         contactInfo: "@MbzMokka",

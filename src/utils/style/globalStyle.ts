@@ -18,21 +18,21 @@ export default createGlobalStyle`
         position: relative;
         padding-bottom: ${navBarHeight}px;
     }
-    h1{ /*Page title*/
+    h1{ /*Name of something major (page title, section name...*/
         font-weight: bold;
         font-size: 28px;
     }
-    h2{ /*Name of something major (modal, project, contact...)*/
+    h2{ /*Name of something important (modal, project, contact...)*/
         font-weight: bold;
         font-size: 20px;
     }
     button,.button{
         text-decoration: none;
         text-align: center;
-        border: ${borders.common.button};
+        border: none;
         border-radius: ${borders.radius.normal};
         padding: ${paddings.button};
-        background-color: ${colors.neutral.button};
+        background-color: ${colors.identity.primary};
         box-shadow: ${shadows.button};
         font-size: 14px;
     }

@@ -23,7 +23,6 @@ export default function ContactPage() {
                     return (
                         <ContactMethod
                             key={index}
-                            backgroundColor={method.backgroundColor}
                             nameId={method.nameId}
                             descriptionId={method.descriptionId}
                             contactInfo={method.contactInfo}

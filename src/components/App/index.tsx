@@ -32,6 +32,7 @@ export default function App() {
     //applying new language
     useEffect(() => {
         i18n.changeLanguage(language);
+        document.documentElement.lang = language;
     }, [i18n, language]);
 
     //loading settings

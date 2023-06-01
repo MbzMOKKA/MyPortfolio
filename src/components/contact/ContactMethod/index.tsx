@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 
 //Types
 type ContactMethodProps = {
-    backgroundColor: string;
     nameId: string;
     descriptionId: string;
     contactInfo: string;
@@ -15,18 +14,11 @@ type ContactMethodProps = {
 
 //Component of a close button
 export default function ContactMethod(props: ContactMethodProps) {
-    const {
-        backgroundColor,
-        nameId,
-        descriptionId,
-        contactInfo,
-        ctaNameId,
-        ctaUrl,
-    } = props;
+    const { nameId, descriptionId, contactInfo, ctaNameId, ctaUrl } = props;
     const { t } = useTranslation();
 
     return (
-        <StyledMethod backgroundColor={backgroundColor}>
+        <StyledMethod>
             <StyledHeader>
                 <h2>{t(nameId)}</h2>
                 {/* <p>{t(descriptionId)}</p> */}

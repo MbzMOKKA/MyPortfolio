@@ -2,21 +2,15 @@
 import styled from "styled-components";
 import { borders, colors, margins } from "../../../utils/style";
 
-//Types
-type StyledMethodProps = {
-    backgroundColor: string;
-};
-
 //Local styles
-export const StyledMethod = styled.div<StyledMethodProps>`
+export const StyledMethod = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
     padding: 6px;
     border-radius: ${borders.radius.normal};
-    background-color: ${({ backgroundColor }) => backgroundColor};
+    background-color: ${colors.neutral.semiOpaqueWhite};
     margin-bottom: 18px;
-    box-shadow: 0px 0px 5px black;
 `;
 
 export const StyledHeader = styled.header`

@@ -69,4 +69,9 @@ export const StyledModal = styled.div`
 export const StyledLanguageOption = styled.button<StyledLanguageOptionProps>`
     background-color: ${({ selected }) =>
         selected ? colors.support.selected : colors.support.notSelected};
+    //background-color: ${colors.support.notSelected};
+    border: ${({ selected }) =>
+        selected
+            ? borders.common.optionSelected
+            : borders.common.optionNotSelected};
 `;
