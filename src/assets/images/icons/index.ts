@@ -1,8 +1,8 @@
 const ICONS = {
-    home: require("./blue_repicthousebase_1484336386-1.png"),
-    works: require("./folder-icon-512x410-jvths5l6.png"),
-    skills: require("./icone-de-service-violette.png"),
-    contact: require("./phone-icon-1024x1024-bn4mirqi.png"),
+    home: require("./home.png"),
+    works: require("./works.png"),
+    skills: require("./skills.png"),
+    contact: require("./contact.png"),
     cross: require("./cross.png"),
     settings: require("./settings.png"),
     link: require("./link.png"),
