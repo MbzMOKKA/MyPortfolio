@@ -7,7 +7,7 @@ import App from "./components/App";
 import "./i18n";
 import "./utils/style/fonts.css";
 import "./utils/style/animations.css";
-import store from "./utils/store";
+import store from "./redux_toolkit/store";
 import { Provider } from "react-redux";
 
 //Render

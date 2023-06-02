@@ -23,6 +23,7 @@ export const StyledMethods = styled.section`
     display: flex;
     flex-direction: column;
     padding-top: 10px;
+    margin-bottom: 12px;
     padding-left: ${paddings.mainHorizontal};
     padding-right: ${paddings.mainHorizontal};
 `;

@@ -1,7 +1,7 @@
 //Imports
 import React from "react";
 import { StyledModal, StyledClose } from "./style";
-import { MODAL_TYPES, selectContentModal } from "../../../features";
+import { MODAL_TYPES, selectContentModal } from "../../../redux_toolkit";
 import { useSelector } from "react-redux";
 import { usePage } from "../../../utils/hooks";
 import { WorkModal } from "../";

@@ -1,7 +1,7 @@
 //Imports
 import React from "react";
 import { StyledButton } from "./style";
-import { ICONS } from "../../../assets/images/icons";
+import { ICONS } from "../../../assets/images";
 
 //Types
 type CloseButtonProps = {

@@ -4,7 +4,11 @@ import { StyledMain, StyledList, StyledTest } from "./style";
 import { WorkCard } from "../../components/content";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { MODAL_TYPES, closeModals, openContentModal } from "../../features";
+import {
+    MODAL_TYPES,
+    closeModals,
+    openContentModal,
+} from "../../redux_toolkit";
 
 //Component of the works page
 export default function WorksPage() {

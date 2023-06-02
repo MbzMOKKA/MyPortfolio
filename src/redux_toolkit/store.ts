@@ -1,6 +1,7 @@
 //Imports
 import { configureStore } from "@reduxjs/toolkit";
-import { settingReducer, modalsReducer } from "../features";
+import settingReducer from "./settingSlice";
+import modalsReducer from "./modalsSlice";
 
 export default configureStore({
     reducer: {

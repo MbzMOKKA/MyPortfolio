@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from "react";
 import { StyledBackground, StyledLanguageOption, StyledModal } from "./style";
 import { useDispatch, useSelector } from "react-redux";
-import { closeSettings, selectSettingsModal } from "../../../features";
+import { closeSettings, selectSettingsModal } from "../../../redux_toolkit";
 import { AreaSeparator, CloseButton } from "../../other";
 import { useTranslation } from "react-i18next";
 import { LANG, STRING_IDS } from "../../../data/locales/stringIds";
-import { selectLanguage, setLanguage } from "../../../features";
+import { selectLanguage, setLanguage } from "../../../redux_toolkit";
 import { SettingsInput } from "../";
 import { AREA_SEPARATOR_TYPES } from "../../other/AreaSeparator";
 

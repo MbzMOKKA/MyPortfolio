@@ -3,7 +3,7 @@ import React from "react";
 import { StyledNavBar, StyledButtonContainer } from "./style";
 import { NavButton } from "../";
 import { STRING_IDS } from "../../../data/locales/stringIds";
-import { ICONS } from "../../../assets/images/icons";
+import { ICONS } from "../../../assets/images";
 
 //Component of the site navigation bar
 export default function NavBar() {

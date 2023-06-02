@@ -5,7 +5,10 @@ const ICONS = {
     contact: require("./phone-icon-1024x1024-bn4mirqi.png"),
     cross: require("./cross.png"),
     settings: require("./settings.png"),
+    link: require("./link.png"),
+    call: require("./call.png"),
+    email: require("./email.png"),
 };
 
 //Fast-to-import modules
-export { ICONS };
+export default ICONS;

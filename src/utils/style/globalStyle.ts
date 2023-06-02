@@ -31,6 +31,10 @@ export default createGlobalStyle`
         line-height: 1.4;
     }
     button,.button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         text-decoration: none;
         text-align: center;
         border: none;

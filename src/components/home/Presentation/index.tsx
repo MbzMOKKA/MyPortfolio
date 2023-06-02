@@ -10,10 +10,9 @@ import {
     StyledNamePart,
     StyledSummary,
 } from "./style";
-import irlPic from "../../../assets/images/irl_pic.jpg";
-import avatar from "../../../assets/images/heavy_dev_cup.png";
 import { useTranslation } from "react-i18next";
 import { STRING_IDS } from "../../../data";
+import { heavyDevCup, irlPic } from "../../../assets/images";
 
 //Component of the presentation section in the home page
 export default function Presentation() {
@@ -29,7 +28,7 @@ export default function Presentation() {
                 <StyledLight2 />
                 <StyledProfilePics>
                     <StyledSelfPic src={irlPic} alt={altSelfPic} />
-                    <StyledAvatar src={avatar} alt={altAvatar} />
+                    <StyledAvatar src={heavyDevCup} alt={altAvatar} />
                 </StyledProfilePics>
             </StyledPicPart>
             <StyledNamePart>

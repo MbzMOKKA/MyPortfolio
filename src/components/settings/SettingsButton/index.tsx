@@ -1,9 +1,9 @@
 //Imports
 import React from "react";
 import { StyledButton } from "./style";
-import { openSettings } from "../../../features";
+import { openSettings } from "../../../redux_toolkit";
 import { useDispatch } from "react-redux";
-import { ICONS } from "../../../assets/images/icons";
+import { ICONS } from "../../../assets/images";
 
 //Component of a close button
 export default function CloseButton() {

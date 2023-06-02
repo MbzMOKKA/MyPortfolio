@@ -8,7 +8,7 @@ import {
     selectSettings,
     localStorageLoad,
     localStorageLoaded,
-} from "../../features";
+} from "../../redux_toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import { ContentModal } from "../content";
 import { SettingsButton, SettingsModal } from "../settings";

@@ -14,9 +14,10 @@ export default function CareerHistory() {
             <h1>{t(STRING_IDS.myCareer)}</h1>
             <StyledStepList>
                 <StyledTimeline />
-                {careerSteps.map((step) => {
+                {careerSteps.map((step, index) => {
                     return (
                         <CareerStep
+                            key={index}
                             date={step.date}
                             nameId={step.nameId}
                             textId={step.textId}

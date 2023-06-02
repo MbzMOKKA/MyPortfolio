@@ -1,5 +1,4 @@
 //Imports
-
 import colors from "./colors";
 
 //Exports

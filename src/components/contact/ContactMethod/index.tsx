@@ -1,39 +1,37 @@
 //Imports
 import React from "react";
-import { StyledMethod, StyledHeader, StyledInfo } from "./style";
+import { StyledMethod, StyledHeader, StyledInfo, StyledMain } from "./style";
 import { useTranslation } from "react-i18next";
-
-//Types
-type ContactMethodProps = {
-    nameId: string;
-    descriptionId: string;
-    contactInfo: string;
-    ctaNameId: string;
-    ctaUrl: string;
-};
+import { ContactMethod as ContactMethodProps } from "../../../data/contact_methods/contactMethods";
 
 //Component of a close button
 export default function ContactMethod(props: ContactMethodProps) {
-    const { nameId, descriptionId, contactInfo, ctaNameId, ctaUrl } = props;
+    const { logo, nameId, /*descriptionId,*/ contactInfo, ctaType, ctaUrl } =
+        props;
     const { t } = useTranslation();
+
+    const ctaAltTxt = t(ctaType.nameId);
 
     return (
         <StyledMethod>
             <StyledHeader>
+                <img src={logo} alt="logo" />
                 <h2>{t(nameId)}</h2>
                 {/* <p>{t(descriptionId)}</p> */}
             </StyledHeader>
-            <StyledInfo>
-                <p>{contactInfo}</p>
+            <StyledMain>
+                <StyledInfo>
+                    <p>{contactInfo}</p>
+                </StyledInfo>
                 <a
                     className="button"
                     href={ctaUrl}
                     target="_blank"
                     rel="noreferrer"
                 >
-                    {t(ctaNameId)}
+                    <img src={ctaType.icon} alt={ctaAltTxt} />
                 </a>
-            </StyledInfo>
+            </StyledMain>
         </StyledMethod>
     );
 }

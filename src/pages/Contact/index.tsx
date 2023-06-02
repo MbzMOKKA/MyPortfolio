@@ -23,10 +23,11 @@ export default function ContactPage() {
                     return (
                         <ContactMethod
                             key={index}
+                            logo={method.logo}
                             nameId={method.nameId}
                             descriptionId={method.descriptionId}
                             contactInfo={method.contactInfo}
-                            ctaNameId={method.ctaNameId}
+                            ctaType={method.ctaType}
                             ctaUrl={method.ctaUrl}
                         />
                     );
