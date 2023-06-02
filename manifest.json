@@ -1,5 +1,5 @@
 {
-    "short_name": "M.O.K.K.A.'s Portfolio",
+    "short_name": "Portfolio",
     "name": "M.O.K.K.A.'s Portfolio",
     "icons": [
         {
@@ -11,5 +11,5 @@
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#000000",
-    "background_color": "#000"
+    "background_color": "#000000"
 }
