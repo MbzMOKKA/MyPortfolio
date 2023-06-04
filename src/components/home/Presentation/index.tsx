@@ -13,10 +13,12 @@ import {
 import { useTranslation } from "react-i18next";
 import { STRING_IDS } from "../../../data";
 import { heavyDevCup, irlPic } from "../../../assets/images";
+import { useText } from "../../../utils/hooks";
 
 //Component of the presentation section in the home page
 export default function Presentation() {
     const { t } = useTranslation();
+    const { renderText } = useText();
 
     const altSelfPic = t(STRING_IDS.selfPic);
     const altAvatar = t(STRING_IDS.selfPic);
@@ -32,12 +34,12 @@ export default function Presentation() {
                 </StyledProfilePics>
             </StyledPicPart>
             <StyledNamePart>
-                <p>{t(STRING_IDS.iAm)}</p>
+                <p>{renderText(STRING_IDS.iAm)}</p>
                 <h1>M.O.K.K.A.</h1>
                 <h2>(Dylan Pean)</h2>
             </StyledNamePart>
             <StyledSummary>
-                <p>Lorem ipsum</p>
+                <p>{renderText(STRING_IDS.presentationParagraph)}</p>
             </StyledSummary>
         </section>
     );

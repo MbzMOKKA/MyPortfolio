@@ -21,5 +21,5 @@ export const StyledButtonContainer = styled.div`
     padding: 0px 5%;
     width: 100%;
     height: 100%;
-    border-top: 4px ${colors.support.navButtonSelected} solid;
+    border-top: 4px ${colors.support.navBarSelection} solid;
 `;

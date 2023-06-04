@@ -1,7 +1,7 @@
 //Imports
 import React from "react";
 import { StyledSetting, StyledName } from "./style";
-import { useTranslation } from "react-i18next";
+import { useText } from "../../../utils/hooks";
 
 //Types
 type SettingsInputProps = {
@@ -12,12 +12,12 @@ type SettingsInputProps = {
 //Component of a settings input
 export default function SettingsInput(props: SettingsInputProps) {
     const { nameId, children } = props;
-    const { t } = useTranslation();
+    const { renderText } = useText();
 
     return (
         <StyledSetting>
             <StyledName>
-                <label>{t(nameId)}</label>
+                <label>{renderText(nameId)}</label>
                 <div />
             </StyledName>
             {children}

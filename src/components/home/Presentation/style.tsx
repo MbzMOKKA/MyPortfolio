@@ -63,7 +63,7 @@ export const StyledAvatar = styled.img`
 `;
 
 export const StyledNamePart = styled.div`
-    margin-bottom: 24px;
+    margin-bottom: 48px;
     p {
         text-align: center;
         font-size: 34px;

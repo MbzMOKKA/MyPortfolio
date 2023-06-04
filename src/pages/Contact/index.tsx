@@ -6,16 +6,16 @@ import { STRING_IDS, contactMethods } from "../../data";
 import AreaSeparator, {
     AREA_SEPARATOR_TYPES,
 } from "../../components/other/AreaSeparator";
-import { useTranslation } from "react-i18next";
+import { useText } from "../../utils/hooks";
 
 //Component of the contact page
 export default function ContactPage() {
-    const { t } = useTranslation();
+    const { renderText } = useText();
 
     return (
         <StyledMain>
             <StyledPageTitle>
-                <h1>{t(STRING_IDS.contactPageTitle)}</h1>
+                <h1>{renderText(STRING_IDS.contactPageTitle)}</h1>
                 <AreaSeparator type={AREA_SEPARATOR_TYPES.pageHeader} />
             </StyledPageTitle>
             <StyledMethods>

@@ -29,6 +29,7 @@ export const STRING_IDS = {
     selfPic: "selfPic",
     avatarImg: "avatarImg",
     myCareer: "myCareer",
+    presentationParagraph: "presentationParagraph",
     stepMiddleschoolName: "stepMiddleschoolName",
     stepMiddleschoolText: "stepMiddleschoolText",
 };

@@ -1,7 +1,7 @@
 //Imports
 import React from "react";
 import { StyledContainer, StyledBubble } from "./style";
-import { useTranslation } from "react-i18next";
+import { useText } from "../../../../utils/hooks";
 
 //Types
 type CarrerStepProps = {
@@ -13,29 +13,17 @@ type CarrerStepProps = {
 //Component of a career step in the home page
 export default function CareerStep(props: CarrerStepProps) {
     const { date, nameId, textId } = props;
-    const { t } = useTranslation();
-
-    function renderText(stringWithNewLines: string) {
-        const newText = stringWithNewLines
-            .split("\n")
-            .map((str, index, arr) => (
-                <React.Fragment key={index}>
-                    {str}
-                    {index !== arr.length - 1 && <br />}
-                </React.Fragment>
-            ));
-        return newText;
-    }
+    const { renderText } = useText();
 
     return (
         <StyledContainer>
             <StyledBubble>
                 <header>
                     <p>{date}</p>
-                    <h2>{renderText(t(nameId))}</h2>
+                    <h2>{renderText(nameId)}</h2>
                 </header>
                 <main>
-                    <p>{renderText(t(textId))}</p>
+                    <p>{renderText(textId)}</p>
                 </main>
             </StyledBubble>
         </StyledContainer>

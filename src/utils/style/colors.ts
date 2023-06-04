@@ -10,7 +10,7 @@ const colors = {
     support: {
         notSelected: "#1C1D1E",
         selected: "#332944",
-        navButtonSelected: "?",
+        navBarSelection: "",
         informative: "#5BA6E0",
         warning: "#EDDF09",
         negative: "#DC441B",
@@ -25,6 +25,6 @@ const colors = {
     },
 };
 
-colors.support.navButtonSelected = adjustColor(colors.support.notSelected, 2);
+colors.support.navBarSelection = adjustColor(colors.identity.primary, 0.75);
 
 export default colors;

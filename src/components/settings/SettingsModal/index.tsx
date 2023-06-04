@@ -4,16 +4,16 @@ import { StyledBackground, StyledLanguageOption, StyledModal } from "./style";
 import { useDispatch, useSelector } from "react-redux";
 import { closeSettings, selectSettingsModal } from "../../../redux_toolkit";
 import { AreaSeparator, CloseButton } from "../../other";
-import { useTranslation } from "react-i18next";
 import { LANG, STRING_IDS } from "../../../data/locales/stringIds";
 import { selectLanguage, setLanguage } from "../../../redux_toolkit";
 import { SettingsInput } from "../";
 import { AREA_SEPARATOR_TYPES } from "../../other/AreaSeparator";
+import { useText } from "../../../utils/hooks";
 
 //Component of the settings modal
 export default function SettingsModal() {
     const [rendered, setRendered] = useState(false);
-    const { t } = useTranslation();
+    const { renderText } = useText();
     const dispatch = useDispatch();
     const { opened } = useSelector(selectSettingsModal);
     const language = useSelector(selectLanguage);
@@ -46,7 +46,7 @@ export default function SettingsModal() {
         >
             <StyledModal className={`${opened ? "shown" : "hidden"}`}>
                 <header>
-                    <h2>{t(STRING_IDS.settings)}</h2>
+                    <h2>{renderText(STRING_IDS.settings)}</h2>
                     <CloseButton
                         onClick={() => {
                             dispatch(closeSettings());
@@ -61,14 +61,14 @@ export default function SettingsModal() {
                             onClick={setLanguageToEnglish}
                             selected={language === LANG.en}
                         >
-                            {t(STRING_IDS.english)}
+                            {renderText(STRING_IDS.english)}
                         </StyledLanguageOption>
                         <StyledLanguageOption
                             className="option"
                             onClick={setLanguageToFrench}
                             selected={language === LANG.fr}
                         >
-                            {t(STRING_IDS.french)}
+                            {renderText(STRING_IDS.french)}
                         </StyledLanguageOption>
                     </SettingsInput>
                 </main>
