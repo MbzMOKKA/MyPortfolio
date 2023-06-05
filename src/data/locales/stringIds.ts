@@ -32,4 +32,12 @@ export const STRING_IDS = {
     presentationParagraph: "presentationParagraph",
     stepMiddleschoolName: "stepMiddleschoolName",
     stepMiddleschoolText: "stepMiddleschoolText",
+    stepHighschoolName: "stepHighschoolName",
+    stepHighschoolText: "stepHighschoolText",
+    stepSabbaticalTimeName: "stepSabbaticalTimeName",
+    stepSabbaticalTimeText: "stepSabbaticalTimeText",
+    stepBackToEducationName: "stepBackToEducationName",
+    stepBackToEducationText: "stepBackToEducationText",
+    stepInternshipName: "stepInternshipName",
+    stepInternshipText: "stepInternshipText",
 };

@@ -24,7 +24,15 @@
     "selfPic": "Photo de moi",
     "avatarImg": "Mon avatar",
     "myCareer": "Mon parcours",
+    "presentationParagraph": "Développer des sites et des jeux est au cœur de mes passions.\nJe cherche toujours le travail bien fait, la nouveauté et la progression.",
     "stepMiddleschoolName": "Le collège",
-    "stepMiddleschoolText": "Pour moi, le développement à commencer au collège, sur Scratch.\n\nJe m'amusait à faire des fangames en apprenant l'algorithmie par moi même, au point d'être plus à l'aise que ma prof de math sur le 'logiciel'.",
-    "presentationParagraph": "Développer des sites et des jeux est au coeur de mes passions.\nJe cherche toujours le travail bien fait, la nouveauté et la progression."
+    "stepMiddleschoolText": "Pour moi, la programmation a commencé aussi tôt, sur Scratch.\n\nJe m'amusais à apprendre l'algorithmie tout seul, principalement en réalisant des fangames.",
+    "stepHighschoolName": "Le lycée",
+    "stepHighschoolText": "L'envie de réaliser des jeux vidéo professionnels m'a fait remplacer Scratch par GameMaker.\n\nLe sujet du développement web m'a également été introduit durant mes cours d'option ISN.",
+    "stepSabbaticalTimeName": "Post-bac sabbatique",
+    "stepSabbaticalTimeText": "1 an et demi de pause pour me consacrer à plein temps (au point de ne plus sortir… du tout) à la réalisation de prototypes de jeux dans l'objectif d'apprendre à mieux en faire.",
+    "stepBackToEducationName": "Reprise d'étude",
+    "stepBackToEducationText": "Vivre du jeu vidéo, ça ne sera pas pour tout de suite visiblement.\n\nJ'ai donc choisi de me consacrer au développement web en attendant, en complétant une formation diplômante OpenClassrooms.",
+    "stepInternshipName": "Alternance front-end",
+    "stepInternshipText": "Sous conseil de mes mentors et en guise de transition vers le monde du travail, je suis actuellement en alternance pour me spécialiser sur ReactJS.\n\nJe continue toujours à améliorer mes compétences en création de jeux, ayant notamment créé un framework qui accélère et simplifie le développement."
 }
