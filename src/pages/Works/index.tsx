@@ -1,7 +1,7 @@
 //Imports
 import React, { useEffect } from "react";
 import { StyledMain, StyledList, StyledTest } from "./style";
-import { WorkCard } from "../../components/content";
+import { WorkCard } from "../../components/works";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {
