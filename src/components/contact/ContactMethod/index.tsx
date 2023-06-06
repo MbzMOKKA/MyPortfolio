@@ -7,33 +7,32 @@ import { useText } from "../../../utils/hooks";
 
 //Component of a close button
 export default function ContactMethod(props: ContactMethodProps) {
-    const { logo, nameId, /*descriptionId,*/ contactInfo, ctaType, ctaUrl } =
-        props;
-    const { t } = useTranslation();
-    const { renderText } = useText();
+	const { logo, nameId, /*descriptionId,*/ contactInfo, cta } = props;
+	const { t } = useTranslation();
+	const { renderText } = useText();
 
-    const ctaAltTxt = t(ctaType.nameId);
+	const ctaAltTxt = t(cta.nameId);
 
-    return (
-        <StyledMethod>
-            <StyledHeader>
-                <img src={logo} alt="logo" />
-                <h2>{renderText(nameId)}</h2>
-                {/* <p>{renderText(descriptionId)}</p> */}
-            </StyledHeader>
-            <StyledMain>
-                <StyledInfo>
-                    <p>{contactInfo}</p>
-                </StyledInfo>
-                <a
-                    className="button"
-                    href={ctaUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <img src={ctaType.icon} alt={ctaAltTxt} />
-                </a>
-            </StyledMain>
-        </StyledMethod>
-    );
+	return (
+		<StyledMethod>
+			<StyledHeader>
+				<img src={logo} alt="logo" />
+				<h2>{renderText(nameId)}</h2>
+				{/* <p>{renderText(descriptionId)}</p> */}
+			</StyledHeader>
+			<StyledMain>
+				<StyledInfo>
+					<p>{contactInfo}</p>
+				</StyledInfo>
+				<a
+					className="button"
+					href={cta.action}
+					target="_blank"
+					rel="noreferrer"
+				>
+					<img src={cta.icon} alt={ctaAltTxt} />
+				</a>
+			</StyledMain>
+		</StyledMethod>
+	);
 }
