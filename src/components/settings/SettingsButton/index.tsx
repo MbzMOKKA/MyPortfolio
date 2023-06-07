@@ -5,8 +5,8 @@ import { openSettings } from "../../../redux_toolkit";
 import { useDispatch } from "react-redux";
 import { ICONS } from "../../../assets/images";
 
-//Component of a close button
-export default function CloseButton() {
+//Component of the open settings button
+export default function SettingsButton() {
     const dispatch = useDispatch();
 
     return (

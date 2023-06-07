@@ -10,15 +10,13 @@ import {
     StyledNamePart,
     StyledSummary,
 } from "./style";
-import { useTranslation } from "react-i18next";
 import { STRING_IDS } from "../../../data";
 import { heavyDevCup, irlPic } from "../../../assets/images";
 import { useText } from "../../../utils/hooks";
 
 //Component of the presentation section in the home page
 export default function Presentation() {
-    const { t } = useTranslation();
-    const { renderText } = useText();
+    const { renderText, t } = useText();
 
     const altSelfPic = t(STRING_IDS.selfPic);
     const altAvatar = t(STRING_IDS.selfPic);

@@ -1,6 +1,6 @@
 //Imports
 import React from "react";
-import CareerStep from "../CareerStep";
+import CareerStepCard from "../CareerStepCard";
 import { StyledSection, StyledStepList, StyledTimeline } from "./style";
 import { STRING_IDS, careerSteps } from "../../../../data";
 import { useText } from "../../../../utils/hooks";
@@ -15,14 +15,7 @@ export default function CareerHistory() {
             <StyledStepList>
                 <StyledTimeline />
                 {careerSteps.map((step, index) => {
-                    return (
-                        <CareerStep
-                            key={index}
-                            date={step.date}
-                            nameId={step.nameId}
-                            textId={step.textId}
-                        />
-                    );
+                    return <CareerStepCard key={index} step={step} />;
                 })}
             </StyledStepList>
         </StyledSection>

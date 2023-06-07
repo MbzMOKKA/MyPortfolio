@@ -15,6 +15,7 @@ const colors = {
         warning: "#EDDF09",
         negative: "#DC441B",
         positive: "#ADFD48",
+        typeGame: "#9A1FFA",
     },
     neutral: {
         textDefault: "#FFF",

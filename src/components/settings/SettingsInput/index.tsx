@@ -10,8 +10,10 @@ type SettingsInputProps = {
 };
 
 //Component of a settings input
-export default function SettingsInput(props: SettingsInputProps) {
-    const { nameId, children } = props;
+export default function SettingsInput({
+    nameId,
+    children,
+}: SettingsInputProps) {
     const { renderText } = useText();
 
     return (

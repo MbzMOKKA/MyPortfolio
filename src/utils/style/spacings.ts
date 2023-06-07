@@ -13,7 +13,7 @@ const margins = {
     nameBottom: `${10}px`,
     nameSeparatorRight: `${15}px`,
     option: `${5}px ${0}px`,
-    grid: `${20}px`,
+    grid: `${24}px`,
 };
 
 export { paddings, margins };

@@ -1,5 +1,5 @@
 //Imports
-import ContactMethod from "./ContactMethod";
+import ContactMethodCard from "./ContactMethodCard";
 
 //Fast-to-import modules
-export { ContactMethod };
+export { ContactMethodCard };

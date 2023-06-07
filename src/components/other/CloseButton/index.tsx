@@ -9,9 +9,7 @@ type CloseButtonProps = {
 };
 
 //Component of a close button
-export default function CloseButton(props: CloseButtonProps) {
-    const { onClick } = props;
-
+export default function CloseButton({ onClick }: CloseButtonProps) {
     return (
         <StyledButton onClick={onClick}>
             <img src={ICONS.cross} alt="close" />

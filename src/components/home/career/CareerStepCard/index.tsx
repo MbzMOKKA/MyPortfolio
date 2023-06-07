@@ -2,28 +2,26 @@
 import React from "react";
 import { StyledContainer, StyledBubble } from "./style";
 import { useText } from "../../../../utils/hooks";
+import { CareerStep } from "../../../../data/career_steps/careerSteps";
 
 //Types
-type CarrerStepProps = {
-    date: number;
-    nameId: string;
-    textId: string;
+type CareerStepProps = {
+    step: CareerStep;
 };
 
 //Component of a career step in the home page
-export default function CareerStep(props: CarrerStepProps) {
-    const { date, nameId, textId } = props;
+export default function CareerStepCard({ step }: CareerStepProps) {
     const { renderText } = useText();
 
     return (
         <StyledContainer>
             <StyledBubble>
                 <header>
-                    <p>{date}</p>
-                    <h2>{renderText(nameId)}</h2>
+                    <p>{step.date}</p>
+                    <h2>{renderText(step.nameId)}</h2>
                 </header>
                 <main>
-                    <p>{renderText(textId)}</p>
+                    <p>{renderText(step.descriptionId)}</p>
                 </main>
             </StyledBubble>
         </StyledContainer>

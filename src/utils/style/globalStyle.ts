@@ -30,6 +30,9 @@ export default createGlobalStyle`
         font-size: 15px;
         line-height: 1.4;
     }
+    a{
+        text-decoration: none;
+    }
     button,.button{
         display: flex;
         flex-direction: row;

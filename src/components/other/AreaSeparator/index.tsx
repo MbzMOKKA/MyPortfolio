@@ -1,11 +1,16 @@
 //Imports
 import React from "react";
-import { StyledModalHeaderSeparator, StyledPageTitleSeparator } from "./style";
+import {
+    StyledModalHeaderSeparator,
+    StyledSimpleSeparatorUpward,
+    StyledSimpleSeparatorDownward,
+} from "./style";
 
 //Types
 export enum AREA_SEPARATOR_TYPES {
     modalHeader,
-    pageHeader,
+    simpleUp,
+    simpleDown,
 }
 
 type AreaSeparatorProps = {
@@ -13,14 +18,14 @@ type AreaSeparatorProps = {
 };
 
 //Component of an area separator
-export default function AreaSeparator(props: AreaSeparatorProps) {
-    const { type } = props;
-
+export default function AreaSeparator({ type }: AreaSeparatorProps) {
     switch (type) {
         case AREA_SEPARATOR_TYPES.modalHeader:
             return <StyledModalHeaderSeparator />;
-        case AREA_SEPARATOR_TYPES.pageHeader:
-            return <StyledPageTitleSeparator />;
+        case AREA_SEPARATOR_TYPES.simpleUp:
+            return <StyledSimpleSeparatorUpward />;
+        case AREA_SEPARATOR_TYPES.simpleDown:
+            return <StyledSimpleSeparatorDownward />;
     }
 
     return null;

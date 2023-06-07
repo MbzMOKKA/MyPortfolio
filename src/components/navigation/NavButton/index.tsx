@@ -1,9 +1,8 @@
 //Imports
 import React from "react";
 import { StyledNavButton } from "./style";
-import { useTranslation } from "react-i18next";
 import { capString } from "../../../utils/misc";
-import { usePage } from "../../../utils/hooks";
+import { usePage, useText } from "../../../utils/hooks";
 
 //Types
 type NavButtonProps = {
@@ -14,10 +13,14 @@ type NavButtonProps = {
 };
 
 //Component of the site navigation bar
-export default function NavButton(props: NavButtonProps) {
-    const { icon, pathname, nameId, index } = props;
+export default function NavButton({
+    icon,
+    pathname,
+    nameId,
+    index,
+}: NavButtonProps) {
     const { currentPagename } = usePage();
-    const { t } = useTranslation();
+    const { t } = useText();
 
     return (
         <StyledNavButton

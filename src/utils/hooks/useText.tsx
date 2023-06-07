@@ -16,5 +16,5 @@ export default function useText() {
         ));
         return finalText;
     }
-    return { renderText };
+    return { renderText, t };
 }

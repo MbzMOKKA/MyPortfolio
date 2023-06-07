@@ -1,15 +1,38 @@
-export default function formatDate(dateString: string | undefined) {
+export function formatFullDate(dateString: string | undefined) {
     if (dateString === undefined) {
         return "...";
     }
     const date = new Date(dateString);
-    let displayedDay = date.getUTCDate().toString();
-    let displayedMonth;
+    const displayedDay = formatDay(date.getUTCDate());
+    const displayedMonth = formatMonth(date.getUTCMonth());
     const displayedYear = date.getUTCFullYear().toString();
-    if (displayedDay === "1") {
-        displayedDay = "1er";
+    return `${displayedDay} ${displayedMonth} ${displayedYear}`;
+}
+
+export function formatSimplifiedDate(dateString: string | undefined) {
+    if (dateString === undefined) {
+        return "En cours";
     }
-    switch (date.getUTCMonth()) {
+    const date = new Date(dateString);
+    const today = new Date();
+    const dateYear = date.getUTCFullYear();
+    const dateMonth = date.getUTCMonth();
+    if (dateYear === today.getUTCFullYear()) {
+        return formatMonth(dateMonth);
+    }
+    return dateYear;
+}
+
+export function formatDay(day: number) {
+    if (day === 1) {
+        return "1er";
+    }
+    return day.toString();
+}
+
+export function formatMonth(month: number) {
+    let displayedMonth;
+    switch (month) {
         case 0:
             displayedMonth = "Janvier";
             break;
@@ -47,5 +70,5 @@ export default function formatDate(dateString: string | undefined) {
             displayedMonth = "Décembre";
             break;
     }
-    return `${displayedDay} ${displayedMonth} ${displayedYear}`;
+    return displayedMonth;
 }

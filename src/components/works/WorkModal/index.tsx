@@ -7,8 +7,6 @@ type WorkModalProps = {
 };
 
 //Component of a work's modal
-export default function WorkModal(props: WorkModalProps) {
-    const { params } = props;
-
+export default function WorkModal({ params }: WorkModalProps) {
     return <p>MODAL WORK</p>;
 }
