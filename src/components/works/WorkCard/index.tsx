@@ -8,8 +8,7 @@ import {
 } from "./style";
 import { Work } from "../../../data/works/works";
 import { heavyDevCup } from "../../../assets/images";
-import { useText } from "../../../utils/hooks";
-import { formatSimplifiedDate } from "../../../utils/misc";
+import { useDate, useText } from "../../../utils/hooks";
 import { STRING_IDS } from "../../../data";
 import { ImportanceBar, OngoingBadge } from "..";
 
@@ -26,6 +25,7 @@ export default function WorkCard({
     work,
     highestImportance,
 }: WorkCardProps) {
+    const { formatSimplifiedDate } = useDate();
     const { renderText, t } = useText();
 
     const thumbnailAlt = t(STRING_IDS.thumbnail);

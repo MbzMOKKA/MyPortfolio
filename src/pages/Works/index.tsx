@@ -1,12 +1,11 @@
 //Imports
-import React from "react";
+import React, { useEffect } from "react";
 import {
     StyledMain,
     StyledTopSection,
     StyledList,
     StyledActions,
     StyledStats,
-    StyledResultCount,
 } from "./style";
 import { WorkCard } from "../../components/works";
 import { useParams } from "react-router-dom";
@@ -20,7 +19,19 @@ import { STRING_IDS } from "../../data";
 export default function WorksPage() {
     const { t } = useText();
     const { id } = useParams();
-    const highestImportance = Math.max(...works.map((work) => work.importance));
+
+    useEffect(() => {}, [id]);
+
+    let highestImportance = 0;
+    let ongoings = 0;
+    for (const work of works) {
+        if (work.importance > highestImportance) {
+            highestImportance = work.importance;
+        }
+        if (work.dateEnd === undefined) {
+            ongoings++;
+        }
+    }
 
     return (
         <StyledMain>
@@ -29,9 +40,9 @@ export default function WorksPage() {
                     <button>{t(STRING_IDS.filter)}</button>
                     {/* <button>{t(STRING_IDS.sort)}</button> */}
                 </StyledActions>
-                <StyledStats>{`14 ${t(
+                <StyledStats>{`${works.length} ${t(
                     STRING_IDS.totalWorks
-                ).toLowerCase()} · 3 ${t(
+                ).toLowerCase()} · ${ongoings} ${t(
                     STRING_IDS.ongoing
                 ).toLowerCase()}`}</StyledStats>
             </StyledTopSection>
