@@ -14,24 +14,19 @@ import { ImportanceBar, OngoingBadge } from "..";
 
 //Types
 type WorkCardProps = {
-    id: number;
     work: Work;
     highestImportance: number;
 };
 
 //Component of a work card
-export default function WorkCard({
-    id,
-    work,
-    highestImportance,
-}: WorkCardProps) {
+export default function WorkCard({ work, highestImportance }: WorkCardProps) {
     const { formatSimplifiedDate } = useDate();
     const { renderText, t } = useText();
 
     const thumbnailAlt = t(STRING_IDS.thumbnail);
 
     return (
-        <StyledCard to={`/work/${id}`}>
+        <StyledCard to={`/work/${work.urlName}`}>
             <StyledThumbnail>
                 <img src={heavyDevCup} alt={thumbnailAlt} />
             </StyledThumbnail>

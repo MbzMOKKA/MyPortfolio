@@ -64,7 +64,7 @@ export default function App() {
         <>
             <Routes>
                 <Route path="/" element={<HomePage />}></Route>
-                <Route path="/work/:id?" element={<WorksPage />}></Route>
+                <Route path="/work/:urlName?" element={<WorksPage />}></Route>
                 <Route path="/contact" element={<ContactPage />}></Route>
                 <Route path="*" element={<ErrorNotFoundPage />}></Route>
             </Routes>

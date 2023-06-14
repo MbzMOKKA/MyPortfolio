@@ -9,6 +9,7 @@ export enum WORK_TYPES {
 }
 
 export type Work = {
+    urlName: string;
     nameId: string;
     thumbnail: string;
     dateStart: string;
@@ -23,18 +24,20 @@ export type Work = {
 
 const works: Work[] = [
     {
+        urlName: "super-mario-megalevel",
         nameId: STRING_IDS.superMarioMEGALEVEL,
         thumbnail: ICONS.call,
-        dateStart: "1970-01-01",
-        dateEnd: undefined,
+        dateStart: "2020-02-01",
+        dateEnd: "2022-09-15",
         type: WORK_TYPES.videoGame,
-        importance: 200,
+        importance: 100,
         skillsUsed: ["GameMaker", "Paint"],
         descriptionId: STRING_IDS.changeLanguage,
         medias: [{ source: "" }],
         ctas: [{ nameId: STRING_IDS.openLink, icon: ICONS.link, action: "" }],
     },
     {
+        urlName: "test-project",
         nameId: STRING_IDS.superMarioMEGALEVEL,
         thumbnail: ICONS.call,
         dateStart: "2023-06-01",

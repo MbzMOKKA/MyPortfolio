@@ -1,10 +1,8 @@
 export default function openUrl(url: string, openInNewTab = true) {
-    const newWindow = window.open(
-        url,
-        openInNewTab ? "_blank" : undefined,
-        "noopener,noreferrer"
-    );
-    if (newWindow) {
-        newWindow.opener = null;
+    if (openInNewTab) {
+        const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+        if (newWindow) newWindow.opener = null;
+    } else {
+        window.location.href = url;
     }
 }
