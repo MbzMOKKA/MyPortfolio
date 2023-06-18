@@ -1,23 +1,38 @@
 //Imports
 import React, { useEffect, useRef, useState } from "react";
-import { useText } from "../../../utils/hooks";
-import { StyledBackground, StyledModal } from "./style";
+import { useDate, useText } from "../../../utils/hooks";
+import {
+    StyledBackground,
+    StyledAttributesSection,
+    StyledModal,
+    StyledWorkType,
+    StyledDateSection,
+    StyledDescription,
+} from "./style";
 import { Work } from "../../../data/works/works";
 import { CloseButton } from "../../other";
-import { openUrl, removeUrlEnd } from "../../../utils/misc";
+import { getWorkTypeNameId } from "../../../utils/misc";
 import { Link } from "react-router-dom";
+import { STRING_IDS } from "../../../data";
+import ImportanceBar from "../ImportanceBar";
 
 //Types
 type WorkModalProps = {
     work: Work | null;
     opened: boolean;
+    highestImportance: number;
 };
 
 //Component of a work's modal
-export default function WorkModal({ work, opened }: WorkModalProps) {
+export default function WorkModal({
+    work,
+    opened,
+    highestImportance,
+}: WorkModalProps) {
+    const { formatFullDate } = useDate();
     const refCloseLink = useRef<any>(null);
     const [rendered, setRendered] = useState(false);
-    const { renderText } = useText();
+    const { renderText, renderComplexText } = useText();
 
     useEffect(() => {
         if (opened) {
@@ -27,6 +42,13 @@ export default function WorkModal({ work, opened }: WorkModalProps) {
 
     if (!work || !rendered) {
         return null;
+    }
+
+    function renderDateInfo(beginingId: string, date: string | undefined) {
+        if (date === undefined) {
+            return renderText(STRING_IDS.ongoing);
+        }
+        return renderText(beginingId) + " " + formatFullDate(date);
     }
 
     return (
@@ -42,14 +64,43 @@ export default function WorkModal({ work, opened }: WorkModalProps) {
             >
                 <StyledModal className={`${opened ? "shown" : "hidden"}`}>
                     <header>
-                        {renderText(work.nameId)}
+                        <img src={work.thumbnail} alt={work.nameId} />
+                        <h1>{renderComplexText(work.nameId)}</h1>
                         <CloseButton
                             onClick={() => {
                                 refCloseLink.current.click();
                             }}
                         />
                     </header>
-                    <main>123</main>
+                    <main>
+                        <StyledAttributesSection>
+                            <ImportanceBar
+                                score={work.importance}
+                                highscore={highestImportance}
+                            />
+                            <StyledWorkType work={work}>
+                                {renderText(getWorkTypeNameId(work.type))}
+                            </StyledWorkType>
+                        </StyledAttributesSection>
+                        <StyledDateSection>
+                            <p>
+                                {`· ${renderDateInfo(
+                                    STRING_IDS.dateStart,
+                                    work.dateStart
+                                )}`}
+                            </p>
+                            <p>
+                                {`· ${renderDateInfo(
+                                    STRING_IDS.dateEnd,
+                                    work.dateEnd
+                                )}`}
+                            </p>
+                        </StyledDateSection>
+                        <StyledDescription>
+                            {renderComplexText(work.descriptionId)}
+                        </StyledDescription>
+                        <p>{work.skillsUsed}</p>
+                    </main>
                 </StyledModal>
             </StyledBackground>
         </>

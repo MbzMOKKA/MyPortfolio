@@ -16,10 +16,10 @@ import { useText } from "../../../utils/hooks";
 
 //Component of the presentation section in the home page
 export default function Presentation() {
-    const { renderText, t } = useText();
+    const { renderComplexText, renderText } = useText();
 
-    const altSelfPic = t(STRING_IDS.selfPic);
-    const altAvatar = t(STRING_IDS.selfPic);
+    const altSelfPic = renderText(STRING_IDS.selfPic);
+    const altAvatar = renderText(STRING_IDS.selfPic);
 
     return (
         <section>
@@ -32,12 +32,12 @@ export default function Presentation() {
                 </StyledProfilePics>
             </StyledPicPart>
             <StyledNamePart>
-                <p>{renderText(STRING_IDS.iAm)}</p>
+                <p>{renderComplexText(STRING_IDS.iAm)}</p>
                 <h1>M.O.K.K.A.</h1>
                 <h2>(Dylan Pean)</h2>
             </StyledNamePart>
             <StyledSummary>
-                <p>{renderText(STRING_IDS.presentationParagraph)}</p>
+                <p>{renderComplexText(STRING_IDS.presentationParagraph)}</p>
             </StyledSummary>
         </section>
     );

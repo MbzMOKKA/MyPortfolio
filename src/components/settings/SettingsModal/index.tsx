@@ -13,7 +13,7 @@ import { useText } from "../../../utils/hooks";
 //Component of the settings modal
 export default function SettingsModal() {
     const [rendered, setRendered] = useState(false);
-    const { renderText } = useText();
+    const { renderComplexText } = useText();
     const dispatch = useDispatch();
     const { opened } = useSelector(selectSettingsModal);
     const language = useSelector(selectLanguage);
@@ -46,7 +46,7 @@ export default function SettingsModal() {
         >
             <StyledModal className={`${opened ? "shown" : "hidden"}`}>
                 <header>
-                    <h2>{renderText(STRING_IDS.settings)}</h2>
+                    <h2>{renderComplexText(STRING_IDS.settings)}</h2>
                     <CloseButton
                         onClick={() => {
                             dispatch(closeSettings());
@@ -61,14 +61,14 @@ export default function SettingsModal() {
                             onClick={setLanguageToEnglish}
                             selected={language === LANG.en}
                         >
-                            {renderText(STRING_IDS.english)}
+                            {renderComplexText(STRING_IDS.english)}
                         </StyledLanguageOption>
                         <StyledLanguageOption
                             className="option"
                             onClick={setLanguageToFrench}
                             selected={language === LANG.fr}
                         >
-                            {renderText(STRING_IDS.french)}
+                            {renderComplexText(STRING_IDS.french)}
                         </StyledLanguageOption>
                     </SettingsInput>
                 </main>

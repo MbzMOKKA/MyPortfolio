@@ -11,16 +11,16 @@ type ContactMethodProps = {
 
 //Component of a close button
 export default function ContactMethodCard({ method }: ContactMethodProps) {
-    const { renderText, t } = useText();
+    const { renderComplexText, renderText } = useText();
 
-    const ctaAltTxt = t(method.cta.nameId);
+    const ctaAltTxt = renderText(method.cta.nameId);
 
     return (
         <StyledMethod>
             <StyledHeader>
                 <img src={method.logo} alt="logo" />
-                <h2>{renderText(method.nameId)}</h2>
-                {/* <p>{renderText(descriptionId)}</p> */}
+                <h2>{renderComplexText(method.nameId)}</h2>
+                {/* <p>{renderComplexText(descriptionId)}</p> */}
             </StyledHeader>
             <StyledMain>
                 <StyledInfo>

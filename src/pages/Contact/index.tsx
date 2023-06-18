@@ -10,12 +10,12 @@ import { useText } from "../../utils/hooks";
 
 //Component of the contact page
 export default function ContactPage() {
-    const { renderText } = useText();
+    const { renderComplexText } = useText();
 
     return (
         <StyledMain>
             <StyledPageTitle>
-                <h1>{renderText(STRING_IDS.contactPageTitle)}</h1>
+                <h1>{renderComplexText(STRING_IDS.contactPageTitle)}</h1>
                 <AreaSeparator type={AREA_SEPARATOR_TYPES.simpleUp} />
             </StyledPageTitle>
             <StyledMethods>

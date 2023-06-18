@@ -14,12 +14,12 @@ export default function SettingsInput({
     nameId,
     children,
 }: SettingsInputProps) {
-    const { renderText } = useText();
+    const { renderComplexText } = useText();
 
     return (
         <StyledSetting>
             <StyledName>
-                <label>{renderText(nameId)}</label>
+                <label>{renderComplexText(nameId)}</label>
                 <div />
             </StyledName>
             {children}

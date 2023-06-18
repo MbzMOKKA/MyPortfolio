@@ -34,6 +34,24 @@
     }
 }
 
+@keyframes modalWorkOrSkillOpen {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes modalWorkOrSkillClose {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
 @keyframes ongoingBeep {
     0% {
         transform: scale(1);

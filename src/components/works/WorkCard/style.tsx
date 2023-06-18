@@ -1,7 +1,13 @@
 //Imports
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { colors } from "../../../utils/style";
+import { getWorkTypeColor } from "../../../utils/misc/getWorkTypeInfosFunctions";
+import { Work } from "../../../data/works/works";
+
+//Types
+type StyledThumbnailProps = {
+    work: Work;
+};
 
 //Local styles
 export const StyledCard = styled(Link)`
@@ -12,12 +18,12 @@ export const StyledCard = styled(Link)`
     align-items: flex-start;
 `;
 
-export const StyledThumbnail = styled.div`
+export const StyledThumbnail = styled.div<StyledThumbnailProps>`
     //4:3 format
     width: 40vw;
     height: 30vw;
     overflow: hidden;
-    border: 1px ${colors.support.typeGame} solid;
+    border: 1px ${({ work }) => getWorkTypeColor(work.type)} solid;
     margin-right: 6px;
     img {
         width: 100%;

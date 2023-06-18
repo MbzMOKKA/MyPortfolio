@@ -17,7 +17,7 @@ export const StyledBar = styled.div<StyledBarProps>`
     margin-top: 2px;
     div {
         position: absolute;
-        background: hsl(200 ${({ filling }) => filling}% 60%);
+        background: hsl(260 ${({ filling }) => filling}% 60%);
         top: 0;
         left: 0;
         width: ${({ filling }) => filling}%;

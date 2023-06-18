@@ -7,11 +7,11 @@ import { useText } from "../../../utils/hooks";
 
 //Component of the portfolio's link QR Code
 export default function QrCode() {
-    const { renderText } = useText();
+    const { renderComplexText } = useText();
 
     return (
         <StyledSection>
-            <p>{renderText(STRING_IDS.scanQrCode)}</p>
+            <p>{renderComplexText(STRING_IDS.scanQrCode)}</p>
             <img src={qrCode} alt="close" />
         </StyledSection>
     );

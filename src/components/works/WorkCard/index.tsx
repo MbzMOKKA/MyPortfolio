@@ -7,7 +7,6 @@ import {
     StyledThumbnail,
 } from "./style";
 import { Work } from "../../../data/works/works";
-import { heavyDevCup } from "../../../assets/images";
 import { useDate, useText } from "../../../utils/hooks";
 import { STRING_IDS } from "../../../data";
 import { ImportanceBar, OngoingBadge } from "..";
@@ -21,17 +20,17 @@ type WorkCardProps = {
 //Component of a work card
 export default function WorkCard({ work, highestImportance }: WorkCardProps) {
     const { formatSimplifiedDate } = useDate();
-    const { renderText, t } = useText();
+    const { renderComplexText, renderText } = useText();
 
-    const thumbnailAlt = t(STRING_IDS.thumbnail);
+    const thumbnailAlt = renderText(STRING_IDS.thumbnail);
 
     return (
         <StyledCard to={`/work/${work.urlName}`}>
-            <StyledThumbnail>
-                <img src={heavyDevCup} alt={thumbnailAlt} />
+            <StyledThumbnail work={work}>
+                <img src={work.thumbnail} alt={thumbnailAlt} />
             </StyledThumbnail>
             <StyledSummary>
-                <h2>{renderText(work.nameId)}</h2>
+                <h2>{renderComplexText(work.nameId)}</h2>
                 <StyledDate>
                     <p>
                         {`${formatSimplifiedDate(
@@ -42,7 +41,7 @@ export default function WorkCard({ work, highestImportance }: WorkCardProps) {
                 </StyledDate>
                 <ImportanceBar
                     score={work.importance}
-                    filling={(work.importance / highestImportance) * 100}
+                    highscore={highestImportance}
                 />
             </StyledSummary>
         </StyledCard>

@@ -7,17 +7,20 @@ import { useText } from "../../../utils/hooks";
 //Types
 type ImportanceBarProps = {
     score: number;
-    filling: number;
+    highscore: number;
 };
 
 //Component of a work's importance score bar
-export default function ImportanceBar({ score, filling }: ImportanceBarProps) {
-    const { t } = useText();
+export default function ImportanceBar({
+    score,
+    highscore,
+}: ImportanceBarProps) {
+    const { renderText } = useText();
 
     return (
         <StyledLine>
-            <p>{`${t(STRING_IDS.importance)} : ${score}`}</p>
-            <StyledBar filling={filling}>
+            <p>{`${renderText(STRING_IDS.importance)} : ${score}`}</p>
+            <StyledBar filling={(score / highscore) * 100}>
                 <div />
             </StyledBar>
         </StyledLine>

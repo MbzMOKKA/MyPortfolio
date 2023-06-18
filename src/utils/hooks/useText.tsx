@@ -1,12 +1,14 @@
 //Imports
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { WORK_TYPES } from "../../data/works/works";
+import { STRING_IDS } from "../../data";
 
 //useText custom hook
 export default function useText() {
     const { t } = useTranslation();
 
-    function renderText(text: string, isRaw = false) {
+    function renderComplexText(text: string, isRaw = false) {
         const translatedText = isRaw ? text : t(text);
         const finalText = translatedText.split("\n").map((str, index, arr) => (
             <React.Fragment key={index}>
@@ -16,5 +18,6 @@ export default function useText() {
         ));
         return finalText;
     }
-    return { renderText, t };
+
+    return { renderComplexText, renderText: t };
 }

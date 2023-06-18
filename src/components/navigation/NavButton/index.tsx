@@ -20,7 +20,7 @@ export default function NavButton({
     index,
 }: NavButtonProps) {
     const { currentPagename } = usePage();
-    const { t } = useText();
+    const { renderText } = useText();
 
     return (
         <StyledNavButton
@@ -29,7 +29,7 @@ export default function NavButton({
             selected={currentPagename === pathname}
         >
             <img src={icon} alt="" />
-            <p>{capString(t(nameId), 7)}</p>
+            <p>{capString(renderText(nameId), 7)}</p>
         </StyledNavButton>
     );
 }

@@ -1,6 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { borders, colors, shadows } from "../../../utils/style";
+import { colors } from "../../../utils/style";
 
 //Common constants
 const buttonSize = "40px";

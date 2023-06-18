@@ -56,5 +56,11 @@
     "september": "Septembre",
     "october": "Octobre",
     "november": "Novembre",
-    "december": "Décembre"
+    "december": "Décembre",
+    "dateStart": "Commencé le",
+    "dateEnd": "Terminé le",
+    "videoGame": "Jeu vidéo",
+    "webSite": "Site web",
+    "other": "Divers",
+    "typescript": "Typescript"
 }

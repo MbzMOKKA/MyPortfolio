@@ -1,10 +1,12 @@
 //Imports
 import styled from "styled-components";
-import { borders, colors, paddings, shadows } from "../../../utils/style";
+import { borders, colors, shadows } from "../../../utils/style";
+import { Work } from "../../../data/works/works";
+import { getWorkTypeColor } from "../../../utils/misc/getWorkTypeInfosFunctions";
 
 //Types
-type StyledLanguageOptionProps = {
-    selected: boolean;
+type StyledWorkTypeProps = {
+    work: Work;
 };
 
 //Local styles
@@ -17,7 +19,7 @@ export const StyledBackground = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 100;
+    z-index: 150;
     &.shown {
         animation: modalBgAppear 600ms forwards;
     }
@@ -29,39 +31,99 @@ export const StyledBackground = styled.div`
 export const StyledModal = styled.div`
     position: relative;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: ${colors.neutral.settingsBg};
+    background-color: ${colors.neutral.bodyBgColor};
     border: ${borders.common.modal};
-    border-top: none;
-    border-bottom-left-radius: ${borders.radius.modal};
-    border-bottom-right-radius: ${borders.radius.modal};
+    border-bottom: none;
+    border-top-left-radius: ${borders.radius.modal};
+    border-top-right-radius: ${borders.radius.modal};
     box-shadow: ${shadows.modal};
     overflow: hidden;
     &.shown {
-        animation: modalSettingsOpen 600ms forwards
+        animation: modalWorkOrSkillOpen 600ms forwards
             cubic-bezier(0.1, 0.98, 0.41, 0.98);
     }
     &.hidden {
-        animation: modalSettingsClose 400ms forwards;
+        animation: modalWorkOrSkillClose 400ms forwards;
     }
     header {
+        position: relative;
         width: 100%;
+        height: 30vh;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: ${paddings.modalHeader};
-        background-color: rgba(255, 255, 255, 0.125);
+        & > img {
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+        h1 {
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+            text-shadow: 0px 1px 4px black;
+        }
+        button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
     }
     main {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        padding: ${paddings.modalMain};
+        align-items: flex-start;
+        padding: 8px 0px;
     }
+`;
+
+export const StyledAttributesSection = styled.section`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+`;
+
+export const StyledDateSection = styled.section`
+    background-color: rgba(255, 255, 255, 0.05);
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4px;
+    padding-left: 16px;
+    /*&::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 5px;
+    }*/
+`;
+
+export const StyledDescription = styled.p`
+    width: 100%;
+    background-color: ${colors.neutral.semiOpaqueBlack};
+    padding: 8px;
+    padding-top: 24px;
+`;
+
+export const StyledWorkType = styled.p<StyledWorkTypeProps>`
+    color: ${({ work }) => getWorkTypeColor(work.type)};
+    border: 1px ${({ work }) => getWorkTypeColor(work.type)} solid;
+    border-radius: 5px;
+    padding: 1px 5px;
 `;

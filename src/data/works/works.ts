@@ -1,4 +1,4 @@
-import { ICONS } from "../../assets/images";
+import { ICONS, irlPic } from "../../assets/images";
 import { STRING_IDS } from "../locales/stringIds";
 import { Cta, Media } from "../miscTypes";
 
@@ -39,10 +39,10 @@ const works: Work[] = [
     {
         urlName: "test-project",
         nameId: STRING_IDS.superMarioMEGALEVEL,
-        thumbnail: ICONS.call,
+        thumbnail: irlPic,
         dateStart: "2023-06-01",
         dateEnd: undefined,
-        type: WORK_TYPES.videoGame,
+        type: WORK_TYPES.webSite,
         importance: 50,
         skillsUsed: ["GameMaker", "Paint"],
         descriptionId: STRING_IDS.changeLanguage,

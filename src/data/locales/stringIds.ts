@@ -62,4 +62,10 @@ export const STRING_IDS = {
     october: "october",
     november: "november",
     december: "december",
+    dateStart: "dateStart",
+    dateEnd: "dateEnd",
+    videoGame: "videoGame",
+    webSite: "webSite",
+    other: "other",
+    typescript: "typescript",
 };

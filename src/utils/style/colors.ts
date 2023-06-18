@@ -15,7 +15,10 @@ const colors = {
         warning: "#EDDF09",
         negative: "#DC441B",
         positive: "#ADFD48",
-        typeGame: "#9A1FFA",
+        typeGame: "#9542FF",
+        typeSite: "#58BFF7",
+        typeOther: "#EAD373",
+        typeSkill: "#7AF05A",
     },
     neutral: {
         textDefault: "#FFF",

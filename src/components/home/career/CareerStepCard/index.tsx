@@ -11,17 +11,17 @@ type CareerStepProps = {
 
 //Component of a career step in the home page
 export default function CareerStepCard({ step }: CareerStepProps) {
-    const { renderText } = useText();
+    const { renderComplexText } = useText();
 
     return (
         <StyledContainer>
             <StyledBubble>
                 <header>
                     <p>{step.date}</p>
-                    <h2>{renderText(step.nameId)}</h2>
+                    <h2>{renderComplexText(step.nameId)}</h2>
                 </header>
                 <main>
-                    <p>{renderText(step.descriptionId)}</p>
+                    <p>{renderComplexText(step.descriptionId)}</p>
                 </main>
             </StyledBubble>
         </StyledContainer>

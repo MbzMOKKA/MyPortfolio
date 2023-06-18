@@ -7,7 +7,7 @@ import useText from "./useText";
 //useDate custom hook
 export default function useDate() {
     const language = useSelector(selectLanguage);
-    const { t } = useText();
+    const { renderText } = useText();
 
     function formatFullDate(dateString: string | undefined) {
         if (dateString === undefined) {
@@ -25,7 +25,7 @@ export default function useDate() {
 
     function formatSimplifiedDate(dateString: string | undefined) {
         if (dateString === undefined) {
-            return t(STRING_IDS.ongoing);
+            return renderText(STRING_IDS.ongoing);
         }
         const date = new Date(dateString);
         const today = new Date();
@@ -39,7 +39,7 @@ export default function useDate() {
 
     function formatDay(day: number) {
         if (day === 1) {
-            return t(STRING_IDS.firstDay);
+            return renderText(STRING_IDS.firstDay);
         }
         return day.toString();
     }
@@ -83,7 +83,7 @@ export default function useDate() {
                 displayedMonthId = STRING_IDS.december;
                 break;
         }
-        return t(displayedMonthId);
+        return renderText(displayedMonthId);
     }
 
     return { formatFullDate, formatSimplifiedDate, formatDay, formatMonth };
