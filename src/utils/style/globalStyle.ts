@@ -28,7 +28,7 @@ export default createGlobalStyle`
     }
     p{
         font-size: 15px;
-        line-height: 1.4;
+        line-height: 1.5;
     }
     a{
         text-decoration: none;

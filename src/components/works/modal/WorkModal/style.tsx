@@ -1,13 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { borders, colors, shadows } from "../../../utils/style";
-import { Work } from "../../../data/works/works";
-import { getWorkTypeColor } from "../../../utils/misc/getWorkTypeInfosFunctions";
-
-//Types
-type StyledWorkTypeProps = {
-    work: Work;
-};
+import { borders, colors, shadows } from "../../../../utils/style";
 
 //Local styles
 export const StyledBackground = styled.div`
@@ -51,9 +44,10 @@ export const StyledModal = styled.div`
         animation: modalWorkOrSkillClose 400ms forwards;
     }
     header {
+        //4:3 format
         position: relative;
         width: 100%;
-        height: 30vh;
+        height: 75vw;
         display: flex;
         & > img {
             object-fit: cover;
@@ -82,48 +76,9 @@ export const StyledModal = styled.div`
     }
 `;
 
-export const StyledAttributesSection = styled.section`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 24px;
-    padding-left: 8px;
-    padding-right: 8px;
-`;
-
-export const StyledDateSection = styled.section`
-    background-color: rgba(255, 255, 255, 0.05);
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 4px;
-    padding-left: 16px;
-    /*&::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        width: 5px;
-    }*/
-`;
-
 export const StyledDescription = styled.p`
     width: 100%;
     background-color: ${colors.neutral.semiOpaqueBlack};
     padding: 8px;
     padding-top: 24px;
-`;
-
-export const StyledWorkType = styled.p<StyledWorkTypeProps>`
-    color: ${({ work }) => getWorkTypeColor(work.type)};
-    border: 1px ${({ work }) => getWorkTypeColor(work.type)} solid;
-    border-radius: 5px;
-    padding: 1px 5px;
 `;

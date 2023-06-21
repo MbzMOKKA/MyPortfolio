@@ -52,4 +52,7 @@ export const StyledDate = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    p {
+        font-size: 14px;
+    }
 `;
