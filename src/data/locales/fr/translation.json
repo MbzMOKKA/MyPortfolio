@@ -62,5 +62,8 @@
     "videoGame": "Jeu vidéo",
     "webSite": "Site web",
     "other": "Divers",
-    "typescript": "Typescript"
+    "skillsUsed": "Compétences utilisés",
+    "typescript": "Typescript",
+    "gamemaker": "GameMaker",
+    "workDescSuperMarioMEGALEVEL": "Ce qui devait juste être mon projet de fin d'année d'ISN en terminal c'est finalement transformé en quelque chose de plus gros.\n\nIl s'agit d'un fangame de jeu de plateforme 2D Mario qui se concentre un peu plus sur les objets et les boss.\n\nC'est avant tout un projet de passion où je peut réaliser un rêve d'enfance, dont je me sert aussi pour perfectionner ma façon de réaliser des jeux de plateformes en 2D ou même d'autres aspects techniques.\n\nEnviron 2000 heures de travails sont derrières, et ça ne s'arretera pas là.\nCependant, compte tenu de sa faible valeur professionel, je m'autorise à faire au maximum 1 mise à jour/année."
 }

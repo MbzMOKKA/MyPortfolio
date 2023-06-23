@@ -35,7 +35,7 @@ export const StyledModal = styled.div`
     border-top-left-radius: ${borders.radius.modal};
     border-top-right-radius: ${borders.radius.modal};
     box-shadow: ${shadows.modal};
-    overflow: hidden;
+    overflow: scroll;
     &.shown {
         animation: modalWorkOrSkillOpen 600ms forwards
             cubic-bezier(0.1, 0.98, 0.41, 0.98);
@@ -79,6 +79,6 @@ export const StyledModal = styled.div`
 export const StyledDescription = styled.p`
     width: 100%;
     background-color: ${colors.neutral.semiOpaqueBlack};
-    padding: 8px;
-    padding-top: 24px;
+    padding: 36px 8px;
+    margin-bottom: 48px;
 `;

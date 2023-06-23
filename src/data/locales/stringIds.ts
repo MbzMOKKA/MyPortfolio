@@ -67,5 +67,8 @@ export const STRING_IDS = {
     videoGame: "videoGame",
     webSite: "webSite",
     other: "other",
+    skillsUsed: "skillsUsed",
     typescript: "typescript",
+    gamemaker: "gamemaker",
+    workDescSuperMarioMEGALEVEL: "workDescSuperMarioMEGALEVEL",
 };

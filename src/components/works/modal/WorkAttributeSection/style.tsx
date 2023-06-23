@@ -23,5 +23,7 @@ export const StyledWorkType = styled.p<StyledWorkTypeProps>`
     color: ${({ work }) => getWorkTypeColor(work.type)};
     border: 1px ${({ work }) => getWorkTypeColor(work.type)} solid;
     border-radius: 5px;
-    padding: 1px 5px;
+    padding: 4px 5px;
+    font-size: 16px;
+    line-height: 1;
 `;

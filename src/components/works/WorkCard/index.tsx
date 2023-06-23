@@ -25,7 +25,7 @@ export default function WorkCard({ work, highestImportance }: WorkCardProps) {
     const thumbnailAlt = renderText(STRING_IDS.thumbnail);
 
     return (
-        <StyledCard to={`/work/${work.urlName}`}>
+        <StyledCard to={`/work/${work.id}`}>
             <StyledThumbnail work={work}>
                 <img src={work.thumbnail} alt={thumbnailAlt} />
             </StyledThumbnail>

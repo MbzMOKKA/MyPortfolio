@@ -19,7 +19,7 @@ import { STRING_IDS } from "../../data";
 export default function WorksPage() {
     const [workSelected, setWorkSelected] = useState<Work | null>(null);
     const { renderText } = useText();
-    const { urlName } = useParams();
+    const { id } = useParams();
 
     let highestImportance = 0;
     let ongoings = 0;
@@ -30,7 +30,7 @@ export default function WorksPage() {
         if (work.dateEnd === undefined) {
             ongoings++;
         }
-        if (work.urlName === urlName && workSelected !== work) {
+        if (work.id === id && workSelected !== work) {
             setWorkSelected(work);
         }
     }
@@ -40,7 +40,7 @@ export default function WorksPage() {
             <WorkModal
                 work={workSelected}
                 highestImportance={highestImportance}
-                opened={urlName !== undefined}
+                opened={id !== undefined}
             />
             <StyledMain>
                 <StyledTopSection>

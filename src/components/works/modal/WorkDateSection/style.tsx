@@ -11,7 +11,7 @@ export const StyledSection = styled.section`
     justify-content: flex-start;
     align-items: center;
     padding: 4px;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
     ::before {
         position: absolute;
         content: "";

@@ -4,7 +4,11 @@ import { Work } from "../../../../data/works/works";
 import { useText } from "../../../../utils/hooks";
 import { Link } from "react-router-dom";
 import { CloseButton } from "../../../other";
-import { WorkAttributeSection, WorkDateSection } from "../..";
+import {
+    WorkAttributeSection,
+    WorkDateSection,
+    WorkSkillsUsedSection,
+} from "../..";
 import { StyledBackground, StyledModal, StyledDescription } from "./style";
 
 //Types
@@ -64,7 +68,7 @@ export default function WorkModal({
                         <StyledDescription>
                             {renderComplexText(work.descriptionId)}
                         </StyledDescription>
-                        <p>{work.skillsUsed}</p>
+                        <WorkSkillsUsedSection skillsId={work.skillsUsed} />
                     </main>
                 </StyledModal>
             </StyledBackground>

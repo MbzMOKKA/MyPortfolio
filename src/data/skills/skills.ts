@@ -2,7 +2,7 @@ import { ICONS } from "../../assets/images";
 import { STRING_IDS } from "../locales/stringIds";
 
 export type Skill = {
-    urlName: string;
+    id: string;
     nameId: string;
     logo: string;
     dateBegin: string;
@@ -12,7 +12,23 @@ export type Skill = {
 
 const skills: Skill[] = [
     {
-        urlName: "typescript",
+        id: "typescript",
+        nameId: STRING_IDS.typescript,
+        logo: ICONS.call,
+        dateBegin: "2020-02-01",
+        mastery: 60,
+        descriptionId: STRING_IDS.changeLanguage,
+    },
+    {
+        id: "gamemaker",
+        nameId: STRING_IDS.gamemaker,
+        logo: ICONS.call,
+        dateBegin: "2020-02-01",
+        mastery: 60,
+        descriptionId: STRING_IDS.changeLanguage,
+    },
+    {
+        id: "paint",
         nameId: STRING_IDS.typescript,
         logo: ICONS.call,
         dateBegin: "2020-02-01",

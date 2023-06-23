@@ -5,6 +5,7 @@ import OngoingBadge from "./OngoingBadge";
 import ImportanceBar from "./ImportanceBar";
 import WorkDateSection from "./modal/WorkDateSection";
 import WorkAttributeSection from "./modal/WorkAttributeSection";
+import WorkSkillsUsedSection from "./modal/WorkSkillsUsedSection";
 
 //Fast-to-import modules
 export {
@@ -14,4 +15,5 @@ export {
     ImportanceBar,
     WorkDateSection,
     WorkAttributeSection,
+    WorkSkillsUsedSection,
 };
