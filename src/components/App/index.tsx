@@ -16,6 +16,7 @@ import {
     ErrorNotFoundPage,
     WorksPage,
     ContactPage,
+    SkillsPage,
 } from "../../pages";
 import { StyledBackground } from "./style";
 import { NavBar } from "../navigation";
@@ -65,6 +66,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<HomePage />}></Route>
                 <Route path="/work/:id?" element={<WorksPage />}></Route>
+                <Route path="/skill/:id?" element={<SkillsPage />}></Route>
                 <Route path="/contact" element={<ContactPage />}></Route>
                 <Route path="*" element={<ErrorNotFoundPage />}></Route>
             </Routes>

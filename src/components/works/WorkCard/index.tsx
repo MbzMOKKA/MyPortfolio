@@ -20,7 +20,7 @@ type WorkCardProps = {
 //Component of a work card
 export default function WorkCard({ work, highestImportance }: WorkCardProps) {
     const { formatSimplifiedDate } = useDate();
-    const { renderComplexText, renderText } = useText();
+    const { renderText } = useText();
 
     const thumbnailAlt = renderText(STRING_IDS.thumbnail);
 
@@ -30,7 +30,7 @@ export default function WorkCard({ work, highestImportance }: WorkCardProps) {
                 <img src={work.thumbnail} alt={thumbnailAlt} />
             </StyledThumbnail>
             <StyledSummary>
-                <h2>{renderComplexText(work.nameId)}</h2>
+                <h2>{renderText(work.nameId)}</h2>
                 <StyledDate>
                     <p>
                         {`${formatSimplifiedDate(
