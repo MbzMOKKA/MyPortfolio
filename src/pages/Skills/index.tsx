@@ -6,8 +6,8 @@ import { AreaSeparator, ScrollToTopButton } from "../../components/other";
 import { AREA_SEPARATOR_TYPES } from "../../components/other/AreaSeparator";
 import { useText } from "../../utils/hooks";
 import { STRING_IDS } from "../../data";
-import skills, { Skill } from "../../data/skills/skills";
-import { SkillCard } from "../../components/skills";
+import skills, { Skill } from "../../data/content/skills";
+import { SkillCard, SkillModal } from "../../components/skills";
 
 //Component of the skills page
 export default function SkillsPage() {
@@ -23,7 +23,7 @@ export default function SkillsPage() {
 
     return (
         <>
-            {/* <SkillModal skill={skillSelected} opened={id !== undefined} /> */}
+            <SkillModal skill={skillSelected} opened={id !== undefined} />
             <StyledMain>
                 <StyledTopSection>
                     <StyledStats>{`${skills.length} ${renderText(

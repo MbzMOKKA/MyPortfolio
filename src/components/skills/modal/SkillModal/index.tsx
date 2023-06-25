@@ -1,33 +1,24 @@
 //Imports
 import React, { useEffect, useRef, useState } from "react";
-import { Work } from "../../../../data/content/works";
 import { useText } from "../../../../utils/hooks";
 import { Link } from "react-router-dom";
 import { CloseButton } from "../../../other";
-import {
-    WorkAttributeSection,
-    WorkCTAsSection,
-    WorkDateSection,
-    WorkSkillsUsedSection,
-} from "../..";
 import { StyledBackground, StyledModal, StyledDescription } from "./style";
+import { Skill } from "../../../../data/content/skills";
+import SkillDateSection from "../SkillDateSection";
+import SkillAttributeSection from "../SkillAttributeSection";
 
 //Types
-type WorkModalProps = {
-    work: Work | null;
+type SkillModalProps = {
+    skill: Skill | null;
     opened: boolean;
-    highestImportance: number;
 };
 
-//Component of a work's modal
-export default function WorkModal({
-    work,
-    opened,
-    highestImportance,
-}: WorkModalProps) {
+//Component of a skill's modal
+export default function SkillModal({ skill, opened }: SkillModalProps) {
     const refCloseLink = useRef<any>(null);
     const [rendered, setRendered] = useState(false);
-    const { renderComplexText } = useText();
+    const { renderText, renderComplexText } = useText();
 
     useEffect(() => {
         if (opened) {
@@ -35,13 +26,15 @@ export default function WorkModal({
         }
     }, [opened]);
 
-    if (!work || !rendered) {
+    if (!skill || !rendered) {
         return null;
     }
 
+    const name = renderText(skill.nameId);
+
     return (
         <>
-            <Link to={`/work`} ref={refCloseLink} />
+            <Link to={`/skill`} ref={refCloseLink} />
             <StyledBackground
                 className={`${opened ? "shown" : "hidden"}`}
                 onAnimationEnd={(e) => {
@@ -52,8 +45,8 @@ export default function WorkModal({
             >
                 <StyledModal className={`${opened ? "shown" : "hidden"}`}>
                     <header>
-                        <img src={work.thumbnail} alt={work.nameId} />
-                        <h1>{renderComplexText(work.nameId)}</h1>
+                        <img src={skill.logo} alt={name} />
+                        <h1>{name}</h1>
                         <CloseButton
                             onClick={() => {
                                 refCloseLink.current.click();
@@ -61,16 +54,11 @@ export default function WorkModal({
                         />
                     </header>
                     <main>
-                        <WorkAttributeSection
-                            work={work}
-                            highestImportance={highestImportance}
-                        />
-                        <WorkDateSection work={work} />
+                        <SkillAttributeSection skill={skill} />
+                        <SkillDateSection skill={skill} />
                         <StyledDescription>
-                            {renderComplexText(work.descriptionId)}
+                            {renderComplexText(skill.descriptionId)}
                         </StyledDescription>
-                        <WorkSkillsUsedSection skillsId={work.skillsUsed} />
-                        <WorkCTAsSection ctas={work.ctas} />
                     </main>
                 </StyledModal>
             </StyledBackground>

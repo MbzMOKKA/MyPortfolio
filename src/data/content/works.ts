@@ -34,7 +34,18 @@ const works: Work[] = [
         skillsUsed: ["gamemaker", "gamedesign"],
         descriptionId: STRING_IDS.workDescSuperMarioMEGALEVEL,
         medias: [{ source: "" }],
-        ctas: [{ nameId: STRING_IDS.openLink, icon: ICONS.link, action: "" }],
+        ctas: [
+            {
+                nameId: STRING_IDS.openLink,
+                icon: ICONS.link,
+                action: "https://www.youtube.com/",
+            },
+            {
+                nameId: STRING_IDS.openLink,
+                icon: ICONS.link,
+                action: "https://www.youtube.com/",
+            },
+        ],
     },
     {
         id: "test-project",

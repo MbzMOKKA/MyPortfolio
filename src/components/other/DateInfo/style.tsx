@@ -1,6 +1,7 @@
 //Imports
 import styled from "styled-components";
 
+//Local styles
 export const StyledInfo = styled.div`
     flex: 1;
     display: flex;

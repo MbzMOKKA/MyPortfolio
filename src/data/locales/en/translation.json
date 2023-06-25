@@ -37,6 +37,11 @@
     "stepInternshipText": "On the advice of my mentors and as a transition before entering the workforce, I am currently doing an internship to specialize in ReactJS.\n\nI am still actively improving my game-making skills, having notably created a framework that speeds up and simplifies the development process.",
     "importance": "Importance score",
     "mastery": "Mastery",
+    "novice": "Novice",
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "expert": "Expert",
     "thumbnail": "Thumbnail",
     "filter": "Filter",
     "sort": "Sort",
@@ -60,6 +65,7 @@
     "october": "October",
     "november": "November",
     "december": "December",
+    "dateBegin": "Began on",
     "dateStart": "Started on",
     "dateEnd": "Ended on",
     "videoGame": "Video game",
@@ -68,5 +74,6 @@
     "skillsUsed": "Skills used",
     "typescript": "Typescript",
     "gamemaker": "GameMaker",
+    "tailwind": "Tailwind CSS",
     "workDescSuperMarioMEGALEVEL": "test"
 }

@@ -3,7 +3,7 @@ import React from "react";
 import { StyledSection } from "./style";
 import { STRING_IDS } from "../../../../data";
 import { DateInfo } from "../../../other";
-import { Work } from "../../../../data/works/works";
+import { Work } from "../../../../data/content/works";
 
 //Types
 type WorkDateSectionProps = {

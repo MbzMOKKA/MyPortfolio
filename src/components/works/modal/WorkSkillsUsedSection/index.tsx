@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledSection } from "./style";
-import skills, { Skill } from "../../../../data/skills/skills";
+import skills, { Skill } from "../../../../data/content/skills";
 import { useText } from "../../../../utils/hooks";
 import { STRING_IDS } from "../../../../data";
 
@@ -22,13 +22,13 @@ export default function WorkSkillsUsedSection({
         <StyledSection>
             <p>{renderText(STRING_IDS.skillsUsed)}</p>
             <ul>
-                {skillsUsed.map((skillUsed) => {
+                {skillsUsed.map((skillUsed, index) => {
                     if (!skillUsed) {
                         return null;
                     }
                     const name = renderText(skillUsed.nameId);
                     return (
-                        <li>
+                        <li key={index}>
                             <img src={skillUsed.logo} alt={name} />
                             {name}
                         </li>

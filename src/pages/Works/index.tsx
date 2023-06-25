@@ -11,7 +11,7 @@ import { WorkCard, WorkModal } from "../../components/works";
 import { useParams } from "react-router-dom";
 import { AreaSeparator, ScrollToTopButton } from "../../components/other";
 import { AREA_SEPARATOR_TYPES } from "../../components/other/AreaSeparator";
-import works, { Work } from "../../data/works/works";
+import works, { Work } from "../../data/content/works";
 import { useText } from "../../utils/hooks";
 import { STRING_IDS } from "../../data";
 

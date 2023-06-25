@@ -1,6 +1,6 @@
 //Imports
 import React from "react";
-import { Work } from "../../../../data/works/works";
+import { Work } from "../../../../data/content/works";
 import { useText } from "../../../../utils/hooks";
 import ImportanceBar from "../../ImportanceBar";
 import { StyledSection, StyledWorkType } from "./style";

@@ -1,7 +1,7 @@
 //Imports
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { WORK_TYPES } from "../../data/works/works";
+import { WORK_TYPES } from "../../data/content/works";
 import { STRING_IDS } from "../../data";
 
 //useText custom hook

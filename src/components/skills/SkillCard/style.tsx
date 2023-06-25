@@ -13,9 +13,9 @@ export const StyledCard = styled(Link)`
 `;
 
 export const StyledThumbnail = styled.div`
-    //4:3 format
-    width: 28vw;
-    height: 21vw;
+    //1:1 format
+    width: 24vw;
+    height: 24vw;
     overflow: hidden;
     border: 1px ${colors.support.typeSkill} solid;
     margin-right: 6px;

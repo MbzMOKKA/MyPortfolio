@@ -1,13 +1,14 @@
 //Imports
 import styled from "styled-components";
-import { Work } from "../../../../data/works/works";
-import { getWorkTypeColor } from "../../../../utils/misc/getWorkTypeInfosFunctions";
+import { Work } from "../../../../data/content/works";
+import { getWorkTypeColor } from "../../../../utils/misc";
 
 //Types
 type StyledWorkTypeProps = {
     work: Work;
 };
 
+//Local styles
 export const StyledSection = styled.section`
     width: 100%;
     display: flex;

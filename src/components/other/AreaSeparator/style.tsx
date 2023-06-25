@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { borders } from "../../../utils/style";
 
+//Local styles
 export const StyledModalHeaderSeparator = styled.div`
     width: 100%;
     height: 8px;

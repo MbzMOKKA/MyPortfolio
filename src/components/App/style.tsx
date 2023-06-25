@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { colors } from "../../utils/style";
 
+//Local styles
 export const StyledBackground = styled.div`
     position: fixed;
     top: 0;

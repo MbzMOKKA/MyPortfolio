@@ -2,7 +2,7 @@
 import React from "react";
 import { StyledContainer, StyledBubble } from "./style";
 import { useText } from "../../../../utils/hooks";
-import { CareerStep } from "../../../../data/career_steps/careerSteps";
+import { CareerStep } from "../../../../data/content/careerSteps";
 
 //Types
 type CareerStepProps = {

@@ -1,8 +1,8 @@
 //Imports
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { getWorkTypeColor } from "../../../utils/misc/getWorkTypeInfosFunctions";
-import { Work } from "../../../data/works/works";
+import { getWorkTypeColor } from "../../../utils/misc";
+import { Work } from "../../../data/content/works";
 
 //Types
 type StyledThumbnailProps = {

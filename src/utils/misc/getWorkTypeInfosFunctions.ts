@@ -1,5 +1,5 @@
 import { STRING_IDS } from "../../data";
-import { WORK_TYPES } from "../../data/works/works";
+import { WORK_TYPES } from "../../data/content/works";
 import { colors } from "../style";
 
 export function getWorkTypeNameId(workType: WORK_TYPES) {

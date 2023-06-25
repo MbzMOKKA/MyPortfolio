@@ -2,7 +2,7 @@
 import React from "react";
 import { StyledMethod, StyledHeader, StyledInfo, StyledMain } from "./style";
 import { useText } from "../../../utils/hooks";
-import { ContactMethod } from "../../../data/contact_methods/contactMethods";
+import { ContactMethod } from "../../../data/content/contactMethods";
 
 //Types
 type ContactMethodProps = {

@@ -6,7 +6,7 @@ import {
     StyledSummary,
     StyledThumbnail,
 } from "./style";
-import { Work } from "../../../data/works/works";
+import { Work } from "../../../data/content/works";
 import { useDate, useText } from "../../../utils/hooks";
 import { STRING_IDS } from "../../../data";
 import { ImportanceBar, OngoingBadge } from "..";

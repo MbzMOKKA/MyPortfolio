@@ -37,6 +37,11 @@
     "stepInternshipText": "Sous conseil de mes mentors et en guise de transition vers le monde du travail, je suis actuellement en alternance pour me spécialiser sur ReactJS.\n\nJe continue toujours à améliorer mes compétences en création de jeux, ayant notamment créé un framework qui accélère et simplifie le développement.",
     "importance": "Score d'importance",
     "mastery": "Maitrise",
+    "novice": "Novice",
+    "beginner": "Débutant",
+    "intermediate": "Intermédiaire",
+    "advanced": "Confirmé",
+    "expert": "Expert",
     "thumbnail": "Miniature",
     "filter": "Filtrer",
     "sort": "Trier",
@@ -60,6 +65,7 @@
     "october": "Octobre",
     "november": "Novembre",
     "december": "Décembre",
+    "dateBegin": "Depuis le",
     "dateStart": "Commencé le",
     "dateEnd": "Terminé le",
     "videoGame": "Jeu vidéo",
@@ -68,5 +74,6 @@
     "skillsUsed": "Compétences utilisés",
     "typescript": "Typescript",
     "gamemaker": "GameMaker",
+    "tailwind": "Tailwind CSS",
     "workDescSuperMarioMEGALEVEL": "Ce qui devait juste être mon projet de fin d'année d'ISN en terminal c'est finalement transformé en quelque chose de plus gros.\n\nIl s'agit d'un fangame de jeu de plateforme 2D Mario qui se concentre un peu plus sur les objets et les boss.\n\nC'est avant tout un projet de passion où je peut réaliser un rêve d'enfance, dont je me sert aussi pour perfectionner ma façon de réaliser des jeux de plateformes en 2D ou même d'autres aspects techniques.\n\nEnviron 2000 heures de travails sont derrières, et ça ne s'arretera pas là.\nCependant, compte tenu de sa faible valeur professionel, je m'autorise à faire au maximum 1 mise à jour/année."
 }

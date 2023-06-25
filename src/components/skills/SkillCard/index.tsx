@@ -8,7 +8,7 @@ import {
 } from "./style";
 import { useDate, useText } from "../../../utils/hooks";
 import { STRING_IDS } from "../../../data";
-import { Skill } from "../../../data/skills/skills";
+import { Skill } from "../../../data/content/skills";
 import MasteryBar from "../MasteryBar";
 
 //Types

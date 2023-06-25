@@ -6,6 +6,7 @@ import ImportanceBar from "./ImportanceBar";
 import WorkDateSection from "./modal/WorkDateSection";
 import WorkAttributeSection from "./modal/WorkAttributeSection";
 import WorkSkillsUsedSection from "./modal/WorkSkillsUsedSection";
+import WorkCTAsSection from "./modal/WorkCTAsSection";
 
 //Fast-to-import modules
 export {
@@ -16,4 +17,5 @@ export {
     WorkDateSection,
     WorkAttributeSection,
     WorkSkillsUsedSection,
+    WorkCTAsSection,
 };

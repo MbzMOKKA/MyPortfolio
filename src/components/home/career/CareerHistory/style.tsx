@@ -1,6 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { colors, margins, paddings } from "../../../../utils/style";
+import { colors, margins } from "../../../../utils/style";
 
 //Local styles
 export const StyledSection = styled.section`

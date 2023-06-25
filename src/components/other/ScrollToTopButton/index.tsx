@@ -14,7 +14,7 @@ export default function ScrollToTopButton() {
 
     return (
         <StyledButton onClick={scrollToTop}>
-            <img src={ICONS.cross} alt="close" />
+            <img src={ICONS.scrollToTop} alt="close" />
         </StyledButton>
     );
 }

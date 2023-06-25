@@ -41,7 +41,7 @@ export default function useDate() {
         if (day === 1) {
             return renderText(STRING_IDS.firstDay);
         }
-        return day.toString();
+        return language === "fr" ? day.toString() : day.toString() + "th";
     }
 
     function formatMonth(month: number) {

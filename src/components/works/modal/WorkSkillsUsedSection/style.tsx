@@ -10,6 +10,7 @@ export const StyledSection = styled.section`
     justify-content: flex-start;
     align-items: flex-start;
     padding: 8px;
+    margin-bottom: 48px;
     p {
         font-size: 18px;
         font-weight: bold;
@@ -23,7 +24,6 @@ export const StyledSection = styled.section`
         align-items: flex-start;
         flex-wrap: wrap;
         list-style: none;
-        margin-bottom: 24px;
         li {
             display: flex;
             flex-direction: row;

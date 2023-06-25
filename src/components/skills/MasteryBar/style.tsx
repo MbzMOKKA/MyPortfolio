@@ -7,8 +7,6 @@ type StyledBarProps = {
 };
 
 //Local styles
-export const StyledLine = styled.div``;
-
 export const StyledBar = styled.div<StyledBarProps>`
     position: relative;
     background-color: black;

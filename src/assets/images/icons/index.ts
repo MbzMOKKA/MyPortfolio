@@ -8,6 +8,7 @@ const ICONS = {
     link: require("./link.png"),
     call: require("./call.png"),
     email: require("./email.png"),
+    scrollToTop: require("./scroll-to-top.png"),
 };
 
 //Fast-to-import modules

@@ -1,6 +1,5 @@
 //Imports
 import styled from "styled-components";
-import { colors } from "../../../../utils/style";
 
 //Local styles
 export const StyledSection = styled.section`
@@ -9,17 +8,8 @@ export const StyledSection = styled.section`
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     padding: 4px;
     margin-bottom: 48px;
-    ::before {
-        position: absolute;
-        content: "";
-        top: 5px;
-        left: 50%;
-        bottom: 5px;
-        background-color: ${colors.neutral.semiOpaqueWhite};
-        width: 1px;
-    }
 `;

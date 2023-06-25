@@ -1,8 +1,9 @@
 //Imports
 import React from "react";
-import { StyledLine, StyledBar } from "./style";
+import { StyledBar } from "./style";
 import { STRING_IDS } from "../../../data";
 import { useText } from "../../../utils/hooks";
+import { getMasteryStringId } from "../../../utils/misc";
 
 //Types
 type MasteryBarProps = {
@@ -12,13 +13,15 @@ type MasteryBarProps = {
 //Component of a work's importance score bar
 export default function MasteryBar({ score }: MasteryBarProps) {
     const { renderText } = useText();
-
+    console.log(score);
     return (
-        <StyledLine>
-            <p>{`${renderText(STRING_IDS.mastery)} : ${score}`}</p>
+        <div>
+            <p>{`${renderText(STRING_IDS.mastery)} : ${renderText(
+                getMasteryStringId(score)
+            )}`}</p>
             <StyledBar filling={score}>
                 <div />
             </StyledBar>
-        </StyledLine>
+        </div>
     );
 }
