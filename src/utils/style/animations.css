@@ -1,0 +1,128 @@
+@keyframes noEffectAnimation1 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0.0001px);
+    }
+}
+
+@keyframes noEffectAnimation2 {
+    0% {
+        transform: translateY(0.0001px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes loadingSpinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes modalBgAppear {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+}
+
+@keyframes modalBgDisappear {
+    0% {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes modalBgAppearSmallScreen {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(6px);
+    }
+}
+
+@keyframes modalSettingsOpen {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes modalSettingsClose {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -100%;
+    }
+}
+
+@keyframes modalWorkOrSkillOpen {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes modalWorkOrSkillClose {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes ongoingBeep {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(3);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+@keyframes profilePictureFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ctaColorChange {
+    0%,
+    100% {
+        background-color: #5411e3;
+    }
+    50% {
+        background-color: #8231f3;
+    }
+}
