@@ -1,7 +1,7 @@
 {
     "name": "my-eportfolio",
     "homepage": "https://mbzmokka.github.io/MyPortfolio",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "private": true,
     "dependencies": {
         "@reduxjs/toolkit": "^1.9.5",

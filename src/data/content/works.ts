@@ -299,7 +299,13 @@ const works: Work[] = [
         ],
         descriptionId: STRING_IDS.workDescMyPortfolio,
         medias: [],
-        ctas: [],
+        ctas: [
+            {
+                nameId: STRING_IDS.viewRepo,
+                icon: ICONS.link,
+                action: "https://github.com/MbzMOKKA/MyPortfolio",
+            },
+        ],
     },
 ];
 
