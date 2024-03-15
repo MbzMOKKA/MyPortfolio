@@ -15,29 +15,29 @@ export type ContactMethod = {
 //Exports
 const contactMethods: ContactMethod[] = [
     //Phone
-    /*{
+    {
         logo: LOGOS.phone,
         nameId: STRING_IDS.phone,
         descriptionId: STRING_IDS.placeholder,
-        contactInfo: "06.--.--.--.--",
+        contactInfo: "06.38.93.16.19",
         cta: {
             nameId: STRING_IDS.call,
             icon: ICONS.call,
-            action: "tel:06--------",
+            action: "tel:+33638931619",
         },
-    },*/
+    },
     //Mail
-    /*{
+    {
         logo: LOGOS.gmail,
         nameId: STRING_IDS.email,
         descriptionId: STRING_IDS.placeholder,
-        contactInfo: "---@gmail.com",
+        contactInfo: "dylanpean.pro@gmail.com",
         cta: {
             nameId: STRING_IDS.email,
             icon: ICONS.email,
-            action: "mailto:---@gmail.com",
+            action: "mailto:dylanpean.pro@gmail.com",
         },
-    },*/
+    },
     //LinkedIn
     {
         logo: LOGOS.linkedIn,
@@ -51,7 +51,7 @@ const contactMethods: ContactMethod[] = [
         },
     },
     //Twitter
-    {
+    /*{
         logo: LOGOS.twitter,
         nameId: STRING_IDS.twitter,
         descriptionId: STRING_IDS.placeholder,
@@ -61,7 +61,7 @@ const contactMethods: ContactMethod[] = [
             icon: ICONS.link,
             action: "https://twitter.com/MbzMokka",
         },
-    },
+    },*/
 ];
 
 export default contactMethods;
