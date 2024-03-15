@@ -52,6 +52,7 @@ export const StyledModal = styled.div`
     border-top-right-radius: ${borders.radius.modal};
     box-shadow: ${shadows.modal};
     overflow-y: scroll;
+    scrollbar-color: ${colors.support.scrollbar} transparent;
     &.shown {
         animation: modalWorkOrSkillOpen 600ms forwards
             cubic-bezier(0.1, 0.98, 0.41, 0.98);

@@ -3,8 +3,13 @@ import styled from "styled-components";
 import { navBarHeight } from "../../../utils/globalConstants";
 import { breakpoints } from "../../../utils/style";
 
+//Types
+type StyledButtonProps = {
+    visible: boolean;
+};
+
 //Local styles
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<StyledButtonProps>`
     position: fixed;
     bottom: ${navBarHeight + 8}px;
     right: 8px;
@@ -36,4 +41,7 @@ export const StyledButton = styled.button`
             width: 36px;
         }
     }
+    transform: scale(0);
+    transition: transform 200ms ease-out;
+    ${({ visible }) => (visible ? `transform: scale(1);` : null)}
 `;

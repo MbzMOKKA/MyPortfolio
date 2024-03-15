@@ -14,19 +14,16 @@ export default function ScrollToTopButton() {
     }
 
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 1) {
+        if (window.scrollY > 200) {
             setShow(true);
         } else {
             setShow(false);
         }
     });
 
-    if (!show) {
-        return null;
-    }
     return (
-        <StyledButton onClick={scrollToTop}>
-            <img src={ICONS.scrollToTop} alt="close" />
+        <StyledButton onClick={scrollToTop} visible={show}>
+            <img src={ICONS.scrollToTop} alt="Remonter la page" />
         </StyledButton>
     );
 }

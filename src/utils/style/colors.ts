@@ -20,6 +20,7 @@ const colors = {
         typeOther: "#EAD373",
         typeHardSkill: "#7AF05A",
         active: "#000000",
+        scrollbar: "#FFFFFF44",
     },
     neutral: {
         textDefault: "#CCCCCC",

@@ -22,6 +22,9 @@ export default createGlobalStyle`
             padding-top: ${navBarHeight}px;
         }
     }
+    html{
+        scrollbar-color: ${colors.support.scrollbar} ${colors.support.notSelected};
+    }
     body{
         overflow-y: scroll;
     }
@@ -64,14 +67,12 @@ export default createGlobalStyle`
         background-color: ${colors.identity.primary};
         box-shadow: ${shadows.button};
         font-size: 14px;
-        animation: ctaColorChange 2000ms infinite ease-out;
         @media (min-width: ${breakpoints.laptopMinWidth}) {
             font-size: 18px;
         }
         :hover{
             cursor: pointer;
             background-color: ${colors.support.active};
-            animation: none;
         }
     }
 `;

@@ -116,13 +116,3 @@
         transform: translateY(0px);
     }
 }
-
-@keyframes ctaColorChange {
-    0%,
-    100% {
-        background-color: #5411e3;
-    }
-    50% {
-        background-color: #8231f3;
-    }
-}
