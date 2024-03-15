@@ -20,11 +20,9 @@ export type Skill = {
     logoHQ: string;
     dateBegin: string;
     mastery: MasteryLevel;
-    descriptionId: string;
 };
 
 export enum Skills {
-    gameMaker = "gamemaker",
     javaScript = "javascript",
     typeScript = "typescript",
     nodeJs = "node-js",
@@ -41,7 +39,6 @@ export enum Skills {
     axios = "axios",
     expressJs = "express-js",
     mongoDB = "mongo-db",
-    gameDesign = "game-design",
     uiDesign = "ui-design",
     uxDesign = "ux-design",
     git = "git",
@@ -49,10 +46,11 @@ export enum Skills {
     npm = "npm",
     reactRouterDom = "react-router-dom",
     jest = "jest",
-    communication = "communication",
     chatGpt = "chat-gpt",
     videoEditing = "video-editing",
     libreOffice = "libre-office",
+    vite = "vite",
+    figma = "figma",
 }
 
 //Exports
@@ -65,7 +63,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.javaScriptHQ,
         dateBegin: "2022-05-23",
         mastery: MasteryLevel.advanced,
-        descriptionId: STRING_IDS.skillDescJavaScript,
     },
     {
         id: Skills.typeScript,
@@ -75,25 +72,7 @@ const skills: Skill[] = [
         logoHQ: LOGOS.typeScriptHQ,
         dateBegin: "2022-11-08",
         mastery: MasteryLevel.intermediate,
-        descriptionId: STRING_IDS.skillDescTypeScript,
     },
-    /*{
-        id: Skills.gameMaker,type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRING_IDS.gameMaker,
-        logo: LOGOS.gameMaker,
-        logoHQ: LOGOS.gameMakerHQ,
-        dateBegin: "2018-10-20",
-        mastery: 80,
-        descriptionId: STRING_IDS.skillDescGameMaker,
-    },*/
-    /*{
-        id: Skills.gameDesign,type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRING_IDS.gameDesign,
-        logo: ICONS.cross,
-        dateBegin: "2016-10-01",
-        mastery: 50,
-        descriptionId: STRING_IDS.skillDescMongoDb,
-    },*/
     {
         id: Skills.tailwindCss,
         type: SHOWCASE_TYPES.hardSkill,
@@ -102,7 +81,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.tailwindHQ,
         dateBegin: "2023-06-26",
         mastery: MasteryLevel.beginner,
-        descriptionId: STRING_IDS.skillDescTailwind,
     },
     {
         id: Skills.nextJs,
@@ -112,7 +90,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.nextJsHQ,
         dateBegin: "2023-06-05",
         mastery: MasteryLevel.beginner,
-        descriptionId: STRING_IDS.skillDescNextJs,
     },
     {
         id: Skills.react,
@@ -122,7 +99,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.reactHQ,
         dateBegin: "2022-08-17",
         mastery: MasteryLevel.intermediate,
-        descriptionId: STRING_IDS.skillDescReact,
     },
     {
         id: Skills.mongoDB,
@@ -132,7 +108,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.mongoDBHQ,
         dateBegin: "2022-06-24",
         mastery: MasteryLevel.beginner,
-        descriptionId: STRING_IDS.skillDescMongoDb,
     },
     {
         id: Skills.expressJs,
@@ -142,7 +117,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.expressJsHQ,
         dateBegin: "2022-06-24",
         mastery: MasteryLevel.intermediate,
-        descriptionId: STRING_IDS.skillDescExpressJs,
     },
     {
         id: Skills.nodeJs,
@@ -152,7 +126,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.nodeJsHQ,
         dateBegin: "2022-06-24",
         mastery: MasteryLevel.beginner,
-        descriptionId: STRING_IDS.skillDescNodeJs,
     },
     /*{
         id: Skills.uiDesign,type:SHOWCASE_TYPES.hardSkill,
@@ -160,7 +133,6 @@ const skills: Skill[] = [
         logo: ICONS.cross,
         dateBegin: "2016-06-01",
         mastery: 30,
-        descriptionId: STRING_IDS.placeholder,
     },*/
     /*{
         id: Skills.uxDesign,type:SHOWCASE_TYPES.hardSkill,
@@ -168,7 +140,6 @@ const skills: Skill[] = [
         logo: ICONS.cross,
         dateBegin: "2016-06-01",
         mastery: 30,
-        descriptionId: STRING_IDS.placeholder,
     },*/
     {
         id: Skills.styledComponents,
@@ -178,7 +149,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.styledComponentsHQ,
         dateBegin: "2022-08-20",
         mastery: MasteryLevel.intermediate,
-        descriptionId: STRING_IDS.skillDescStyledComponents,
     },
     {
         id: Skills.sass,
@@ -188,7 +158,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.sassHQ,
         dateBegin: "2022-03-26",
         mastery: MasteryLevel.intermediate,
-        descriptionId: STRING_IDS.skillDescSass,
     },
     {
         id: Skills.css,
@@ -198,7 +167,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.cssHQ,
         dateBegin: "2018-10-01",
         mastery: MasteryLevel.intermediate,
-        descriptionId: STRING_IDS.skillDescCss,
     },
     {
         id: Skills.html,
@@ -208,7 +176,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.htmlHQ,
         dateBegin: "2018-10-01",
         mastery: MasteryLevel.advanced,
-        descriptionId: STRING_IDS.skillDescHtml,
     },
     {
         id: Skills.createReactApp,
@@ -218,24 +185,7 @@ const skills: Skill[] = [
         logoHQ: LOGOS.createReactAppHQ,
         dateBegin: "2022-08-17",
         mastery: MasteryLevel.intermediate,
-        descriptionId: STRING_IDS.skillDescCreateReactApp,
     },
-    /*{
-        id: "libre-office",type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRING_IDS.libreOffice,
-        logo: LOGOS.nextJs,
-        dateBegin: "2016-01-01",
-        mastery: 30,
-        descriptionId: STRING_IDS.placeholder,
-    },*/
-    /*{
-        id: "video-editing",type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRING_IDS.videoEditing,
-        logo: LOGOS.nextJs,
-        dateBegin: "2016-04-01",
-        mastery: 30,
-        descriptionId: STRING_IDS.placeholder,
-    },*/
     /*{
         id: Skills.axios,type:SHOWCASE_TYPES.hardSkill,
         nameId: STRING_IDS.axios,
@@ -243,7 +193,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.axiosHQ,
         dateBegin: "2022-09-15",
         mastery: 30,
-        descriptionId: STRING_IDS.placeholder,
     },*/
     /*{
         id: Skills.reactNative,type:SHOWCASE_TYPES.hardSkill,
@@ -252,7 +201,6 @@ const skills: Skill[] = [
         logoHQ: LOGOS.reactHQ,
         dateBegin: "2022-12-19",
         mastery: 30,
-        descriptionId: STRING_IDS.placeholder,
     },*/
     /*{
         id: "electron",type:SHOWCASE_TYPES.hardSkill,
@@ -260,7 +208,6 @@ const skills: Skill[] = [
         logo: LOGOS.nextJs,
         dateBegin: "2023-05-01",
         mastery: 30,
-        descriptionId: STRING_IDS.placeholder,
     },*/
     {
         id: Skills.redux,
@@ -270,16 +217,25 @@ const skills: Skill[] = [
         logoHQ: LOGOS.reduxHQ,
         dateBegin: "2023-03-13",
         mastery: MasteryLevel.intermediate,
-        descriptionId: STRING_IDS.skillDescRedux,
     },
-    /*{
-        id: "scratch",type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRING_IDS.scratch,
-        logo: LOGOS.nextJs,
-        dateBegin: "2016-06-01",
-        mastery: 70,
-        descriptionId: STRING_IDS.placeholder,
-    },*/
+    {
+        id: Skills.vite,
+        type: SHOWCASE_TYPES.hardSkill,
+        nameId: STRING_IDS.vite,
+        logo: LOGOS.vite,
+        logoHQ: LOGOS.viteHQ,
+        dateBegin: "2023-11-22",
+        mastery: MasteryLevel.intermediate,
+    },
+    {
+        id: Skills.figma,
+        type: SHOWCASE_TYPES.hardSkill,
+        nameId: STRING_IDS.figma,
+        logo: LOGOS.figma,
+        logoHQ: LOGOS.figmaHQ,
+        dateBegin: "2024-01-10",
+        mastery: MasteryLevel.intermediate,
+    },
 ];
 
 export default skills;

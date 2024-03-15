@@ -18,9 +18,10 @@ export default function MasteryBar({ mastery, className }: MasteryBarProps) {
 
     return (
         <StyledMastery className={className}>
-            <p>{`${renderText(STRING_IDS.mastery)} : ${renderText(
-                getMasteryStringId(mastery)
-            )}`}</p>
+            <p>
+                {`${renderText(STRING_IDS.mastery)} : `}
+                <span>{`${renderText(getMasteryStringId(mastery))}`}</span>
+            </p>
         </StyledMastery>
     );
 }

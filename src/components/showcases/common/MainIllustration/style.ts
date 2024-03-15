@@ -2,7 +2,6 @@
 import styled from "styled-components";
 import { breakpoints, colors, borders } from "../../../../utils/style";
 import { SHOWCASE_TYPES } from "../../../../data/miscTypes";
-import { getShowcaseTypeColor } from "../../../../utils/misc";
 import { workThumbnailAspectRatio } from "../../../../utils/style/spacings";
 
 //Types
@@ -37,12 +36,7 @@ export const StyledMainIllustration = styled.div<StyledMainIllustrationProps>`
     width: ${({ mobileWidth }) => mobileWidth};
     height: ${({ mobileHeight }) => mobileHeight};
     overflow: hidden;
-    ${({ inCard, type }) =>
-        inCard
-            ? `margin-right: 6px;border: 2px ${getShowcaseTypeColor(
-                  type
-              )} solid`
-            : null};
+    ${({ inCard, type }) => (inCard ? `margin-right: 6px;` : null)};
     ${({ inCard, type }) =>
         type === SHOWCASE_TYPES.hardSkill
             ? inCard

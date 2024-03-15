@@ -26,7 +26,7 @@ export const StyledCoreInfos = styled.div`
             width: 80%;
             left: 0;
             bottom: 0;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         button {
             right: 0;

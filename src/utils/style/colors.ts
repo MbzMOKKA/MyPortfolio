@@ -15,7 +15,6 @@ const colors = {
         warning: "#EDDF09",
         negative: "#DC441B",
         positive: "#ADFD48",
-        typeGame: "#9542FF",
         typeSite: "#58BFF7",
         typeOther: "#EAD373",
         typeHardSkill: "#7AF05A",

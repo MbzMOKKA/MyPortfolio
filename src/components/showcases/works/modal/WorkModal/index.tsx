@@ -9,7 +9,6 @@ import {
     MainIllustration,
     Description,
     ShowcaseModal,
-    ShowcaseType,
     AttributesOnSmallScreen,
     CoreInfos,
     HeaderBottomOnLargeScreen,
@@ -55,7 +54,6 @@ export default function WorkModal({
                         score={work.importance}
                         highscore={highestImportance}
                     />
-                    <ShowcaseType showcase={work} />
                 </AttributesOnSmallScreen>
                 <DateSection showcase={work} />
                 <Description showcase={work} />
@@ -74,7 +72,6 @@ export default function WorkModal({
                 <MainIllustration showcase={work} />
                 <CoreInfos>
                     <h1>{renderComplexText(work.nameId)}</h1>
-                    <ShowcaseType showcase={work} />
                     <HeaderBottomOnLargeScreen>
                         <StyledImportanceBar
                             score={work.importance}

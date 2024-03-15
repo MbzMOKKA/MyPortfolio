@@ -5,7 +5,6 @@ import DateInfoInModal from "./modal/DateInfoInModal";
 import ShowcaseModal from "./modal/ShowcaseModal";
 import DateSection from "./modal/DateSection";
 import Description from "./modal/Description";
-import ShowcaseType from "./modal/ShowcaseType";
 import MainIllustration from "./MainIllustration";
 import ShowcaseCard from "./ShowcaseCard";
 import AttributesOnSmallScreen from "./modal/AttributesOnSmallScreen";
@@ -21,7 +20,6 @@ export {
     ShowcaseModal,
     DateSection,
     Description,
-    ShowcaseType,
     MainIllustration,
     ShowcaseCard,
     AttributesOnSmallScreen,

@@ -1,6 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { borders, breakpoints } from "../../../../utils/style";
+import { borders, breakpoints, colors } from "../../../../utils/style";
 
 //Types
 type StyledBarProps = {
@@ -16,13 +16,13 @@ export const StyledBar = styled.div<StyledBarProps>`
     position: relative;
     background-color: black;
     width: 90%;
-    height: 4px;
-    margin-top: 2px;
+    height: 5px;
+    margin-top: 3px;
     border-radius: ${borders.radius.round};
     overflow: hidden;
     div {
         position: absolute;
-        background: hsl(260 ${({ filling }) => filling}% 60%);
+        background-color: ${colors.support.typeSite};
         top: 0;
         left: 0;
         width: ${({ filling }) => filling}%;
@@ -33,10 +33,6 @@ export const StyledBar = styled.div<StyledBarProps>`
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         width: 100%;
-        height: 6px;
         max-width: 400px;
-    }
-    @media (min-width: ${breakpoints.desktopMinWidth}) {
-        height: 8px;
     }
 `;

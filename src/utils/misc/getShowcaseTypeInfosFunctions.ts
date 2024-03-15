@@ -4,8 +4,6 @@ import { colors } from "../style";
 
 export function getShowcaseTypeNameId(showcaseType: SHOWCASE_TYPES) {
     switch (showcaseType) {
-        case SHOWCASE_TYPES.videoGame:
-            return STRING_IDS.videoGame;
         case SHOWCASE_TYPES.webSite:
             return STRING_IDS.webSite;
         case SHOWCASE_TYPES.hardSkill:
@@ -17,8 +15,6 @@ export function getShowcaseTypeNameId(showcaseType: SHOWCASE_TYPES) {
 
 export function getShowcaseTypeColor(showcaseType: SHOWCASE_TYPES) {
     switch (showcaseType) {
-        case SHOWCASE_TYPES.videoGame:
-            return colors.support.typeGame;
         case SHOWCASE_TYPES.webSite:
             return colors.support.typeSite;
         case SHOWCASE_TYPES.hardSkill:

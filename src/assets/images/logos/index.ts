@@ -5,8 +5,6 @@ const LOGOS = {
     nextJsHQ: require("./next-js-HQ.png"),
     phone: require("./phone.png"),
     twitter: require("./x.png"),
-    gameMaker: require("./gamemaker.png"),
-    gameMakerHQ: require("./gamemaker-HQ.png"),
     javaScript: require("./javascript.png"),
     javaScriptHQ: require("./javascript-HQ.png"),
     typeScript: require("./typescript.png"),
@@ -35,6 +33,10 @@ const LOGOS = {
     sassHQ: require("./sass-HQ.png"),
     styledComponents: require("./styled-components.png"),
     styledComponentsHQ: require("./styled-components-HQ.png"),
+    vite: require("./vite.png"),
+    viteHQ: require("./vite-HQ.png"),
+    figma: require("./figma.png"),
+    figmaHQ: require("./figma-HQ.png"),
 };
 
 //Fast-to-import modules

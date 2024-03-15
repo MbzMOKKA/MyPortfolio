@@ -33,7 +33,7 @@ const contactMethods: ContactMethod[] = [
         descriptionId: STRING_IDS.placeholder,
         contactInfo: "dylanpean.pro@gmail.com",
         cta: {
-            nameId: STRING_IDS.email,
+            nameId: STRING_IDS.sendEmail,
             icon: ICONS.email,
             action: "mailto:dylanpean.pro@gmail.com",
         },

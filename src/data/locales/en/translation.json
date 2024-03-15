@@ -68,12 +68,10 @@
     "dateBegin": "Learning since",
     "dateStart": "Started on",
     "dateEnd": "Ended on",
-    "videoGame": "Video game",
     "webSite": "Website",
     "other": "Other",
     "skillsUsed": "Skills used",
     "typescript": "Typescript",
-    "gamemaker": "GameMaker",
     "tailwind": "Tailwind CSS",
     "workDescSuperMarioMEGALEVEL": "test"
 }

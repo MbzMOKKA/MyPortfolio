@@ -9,7 +9,6 @@ export type Media = {
 };
 
 export enum SHOWCASE_TYPES {
-    videoGame,
     webSite,
     hardSkill,
     other,

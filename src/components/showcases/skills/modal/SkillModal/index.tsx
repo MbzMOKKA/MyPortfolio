@@ -6,9 +6,7 @@ import { StyledMasteryBar } from "./style";
 import {
     DateSection,
     MainIllustration,
-    Description,
     ShowcaseModal,
-    ShowcaseType,
     AttributesOnSmallScreen,
     CoreInfos,
     HeaderBottomOnLargeScreen,
@@ -46,10 +44,8 @@ export default function SkillModal({ skill, opened }: SkillModalProps) {
             <>
                 <AttributesOnSmallScreen>
                     <StyledMasteryBar mastery={skill.mastery} />
-                    <ShowcaseType showcase={skill} />
                 </AttributesOnSmallScreen>
                 <DateSection showcase={skill} />
-                <Description showcase={skill} />
             </>
         );
     }
@@ -63,7 +59,6 @@ export default function SkillModal({ skill, opened }: SkillModalProps) {
                 <MainIllustration showcase={skill} />
                 <CoreInfos>
                     <h1>{renderComplexText(skill.nameId)}</h1>
-                    <ShowcaseType showcase={skill} />
                     <HeaderBottomOnLargeScreen>
                         <StyledMasteryBar mastery={skill.mastery} />
                         <DateSection showcase={skill} />
@@ -77,11 +72,7 @@ export default function SkillModal({ skill, opened }: SkillModalProps) {
         if (!skill) {
             return null;
         }
-        return (
-            <>
-                <Description showcase={skill} />
-            </>
-        );
+        return <></>;
     }
 
     return (
