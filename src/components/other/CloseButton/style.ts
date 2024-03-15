@@ -9,13 +9,13 @@ export const StyledButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+    background: none;
+    box-shadow: none;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.65);
-    border: 3px ${colors.support.negative} solid;
-    border-radius: 50%;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-    animation: none;
     img {
-        width: 18px;
+        width: 60%;
+        height: 60%;
     }
     :hover {
         box-shadow: 0px 0px 8px ${colors.support.negative};
@@ -23,22 +23,13 @@ export const StyledButton = styled.button`
     @media (min-width: ${breakpoints.mobileLargeMinWidth}) {
         width: 45px;
         height: 45px;
-        img {
-            width: 20px;
-        }
     }
     @media (min-width: ${breakpoints.tabletMinWidth}) {
         width: 50px;
         height: 50px;
-        img {
-            width: 22px;
-        }
     }
     @media (min-width: ${breakpoints.desktopMinWidth}) {
         width: 60px;
         height: 60px;
-        img {
-            width: 24px;
-        }
     }
 `;
