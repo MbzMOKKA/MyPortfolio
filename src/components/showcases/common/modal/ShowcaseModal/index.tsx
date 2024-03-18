@@ -1,3 +1,4 @@
+//Imports
 import { ReactElement, ReactNode, useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { selectScreenType } from "../../../../../redux_toolkit";
@@ -36,6 +37,10 @@ export default function ShowcaseModal({
         }
     }, [opened]);
 
+    function handleClose() {
+        refCloseLink.current.click();
+    }
+
     if (!rendered) {
         return null;
     }
@@ -45,6 +50,7 @@ export default function ShowcaseModal({
             <Link to={listPageRoute} ref={refCloseLink} />
             <StyledBackground
                 className={`${opened ? "shown" : "hidden"}`}
+                onClick={handleClose}
                 onAnimationEnd={(e) => {
                     if (
                         e.animationName === "modalBgDisappear" ||
@@ -54,16 +60,15 @@ export default function ShowcaseModal({
                     }
                 }}
             >
-                <StyledModal className={`${opened ? "shown" : "hidden"}`}>
+                <StyledModal
+                    className={`${opened ? "shown" : "hidden"}`}
+                    onClick={(e) => e.stopPropagation()}
+                >
                     {screenType <= SCREEN_TYPES.tablet ? (
                         <>
                             <header>
                                 {smallScreenHeader}
-                                <CloseButton
-                                    onClick={() => {
-                                        refCloseLink.current.click();
-                                    }}
-                                />
+                                <CloseButton onClick={handleClose} />
                             </header>
                             <main>{smallScreenMain}</main>
                         </>

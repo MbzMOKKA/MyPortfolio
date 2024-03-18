@@ -31,19 +31,19 @@ export const STRINGS = {
         "Français de 21 ans, passionné de développement de sites et jeux vidéo.\nJ'aime le travail bien fait, découvrir et progresser.",
     stepMiddleschoolName: "Le collège",
     stepMiddleschoolText:
-        "C'est là que j'ai commencer à apprendre l'algorithmie tout seul, en développant des fangames sur Scratch.",
+        "C'est là que j'ai commencé à apprendre l'algorithmie tout seul, en développant des fangames sur Scratch.",
     stepHighschoolName: "Le lycée",
     stepHighschoolText:
-        "J'ai évoluer de Scratch vers GameMaker et fût introduit au sujet du développement web durant mes cours d'option ISN.",
+        "J'ai évolué de Scratch vers GameMaker et fût introduit au sujet du développement web durant mes cours d'option ISN.",
     stepSabbaticalTimeName: "Post-bac sabbatique",
     stepSabbaticalTimeText:
         "1 an et demi consacré à plein temps à la réalisation de prototypes de jeux dans l'objectif d'apprendre à mieux en faire.",
     stepBackToEducationName: "Reprise d'étude",
     stepBackToEducationText:
-        "J'ai choisi d'étudier le développement web car mes compétences acquises avec la réalisation de jeux vidéos me donnent des facilités dans ce domaine.",
+        "J'ai choisi d'étudier le développement web, car mes compétences acquises avec la réalisation de jeux vidéos me donnent des facilités dans ce domaine.",
     stepInternshipName: "Alternance front-end",
     stepInternshipText:
-        "Sous conseil de mes mentors et pour mieux transitionner vers le monde professionel, je suis actuellement en alternance pour me spécialiser sur ReactJS.\n\nPendant ce temps, je continue à améliorer mes compétences en création de jeux.",
+        "Sous conseil de mes mentors et pour mieux transitionner vers le monde professionnel, j'ai poursuivi avec une alternance pour me spécialiser sur React.js.",
     importance: "Importance",
     mastery: "Maitrise",
     novice: "Novice",

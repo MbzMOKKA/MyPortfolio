@@ -9,16 +9,14 @@ export const StyledButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: none;
-    box-shadow: none;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: ${colors.neutral.semiOpaqueBlack};
     img {
         width: 60%;
         height: 60%;
     }
     :hover {
-        box-shadow: 0px 0px 8px ${colors.support.negative};
+        background-color: ${colors.support.negative};
     }
     @media (min-width: ${breakpoints.mobileLargeMinWidth}) {
         width: 45px;

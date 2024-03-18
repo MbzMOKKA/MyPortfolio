@@ -4,23 +4,20 @@ import { borders, breakpoints, colors } from "../../../utils/style";
 
 //Local styles
 export const StyledMethod = styled.div`
+    background-color: ${colors.neutral.card};
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 12px;
     margin-bottom: 12px;
     overflow: hidden;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     border-radius: ${borders.radius.normal};
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         margin-bottom: 24px;
     }
 `;
 
 export const StyledHeader = styled.header`
-    background-color: ${colors.neutral.semiOpaqueWhite};
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -46,7 +43,7 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledMain = styled.main`
-    background-color: ${colors.neutral.semiOpaqueBlack};
+    // background-color: ${colors.neutral.semiOpaqueBlack};
     display: flex;
     flex-direction: row;
     padding: 8px;

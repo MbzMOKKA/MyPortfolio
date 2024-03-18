@@ -39,7 +39,7 @@ const contactMethods: ContactMethod[] = [
     {
         logo: LOGOS.linkedIn,
         nameId: STRINGS.linkedin,
-        contactInfo: "Dylan Pean",
+        contactInfo: "Dylan (Pierrot) Pean",
         cta: {
             nameId: STRINGS.openLink,
             icon: ICONS.link,
