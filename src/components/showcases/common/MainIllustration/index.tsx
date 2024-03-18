@@ -47,6 +47,12 @@ export default function MainIllustration({
         : isSkill
         ? heights.skillModalLogoLaptopHeight
         : heights.workModalThumbnailLaptopHeight;
+    const img =
+        showcase.type === SHOWCASE_TYPES.webSite
+            ? inCard
+                ? showcase.thumbnail
+                : showcase.thumbnailHQ
+            : showcase.logoHQ;
 
     return (
         <StyledMainIllustration
@@ -57,14 +63,7 @@ export default function MainIllustration({
             laptopWidth={laptopWidth}
             laptopHeight={laptopHeight}
         >
-            <img
-                src={
-                    showcase.thumbnailHQ
-                        ? showcase.thumbnailHQ
-                        : showcase.logoHQ
-                }
-                alt={alt}
-            />
+            <img src={img} alt={alt} />
         </StyledMainIllustration>
     );
 }

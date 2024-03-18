@@ -1,6 +1,4 @@
 const THUMBNAILS = {
-    superMarioMegalevel: require("./super-mario-megalevel.png"),
-    superMarioMegalevelHQ: require("./super-mario-megalevel-HQ.png"),
     groupomania: require("./groupomania.png"),
     groupomaniaHQ: require("./groupomania-HQ.png"),
     ohMyFood: require("./oh-my-food.png"),
@@ -13,6 +11,8 @@ const THUMBNAILS = {
     portfolioHQ: require("./portfolio-HQ.png"),
     argentBank: require("./argent-bank.png"),
     argentBankHQ: require("./argent-bank-HQ.png"),
+    lesPetitsPlats: require("./les-petits-plats.png"),
+    lesPetitsPlatsHQ: require("./les-petits-plats-HQ.png"),
 };
 
 //Fast-to-import modules
