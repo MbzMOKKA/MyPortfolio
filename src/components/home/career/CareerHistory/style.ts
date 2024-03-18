@@ -56,7 +56,7 @@ export const StyledTimeline = styled.div`
     left: 10px;
     bottom: 0;
     flex: 1;
-    border-left: 2px ${colors.identity.bright} dashed;
+    border-left: 2px ${colors.identity.primary} dashed;
     @media (min-width: ${breakpoints.tabletMinWidth}) {
         left: ${tabletHorizontalPadding};
         border-width: 4px;

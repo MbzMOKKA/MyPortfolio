@@ -1,12 +1,9 @@
 //Imports
-import { useSelector } from "react-redux";
-import { STRING_IDS } from "../../data";
-import { selectLanguage } from "../../redux_toolkit";
+import { STRINGS } from "../../data";
 import useText from "./useText";
 
 //useDate custom hook
 export default function useDate() {
-    const language = useSelector(selectLanguage);
     const { renderText } = useText();
 
     function formatFullDate(dateString: string | undefined) {
@@ -17,15 +14,12 @@ export default function useDate() {
         const displayedDay = formatDay(date.getUTCDate());
         const displayedMonth = formatMonth(date.getUTCMonth());
         const displayedYear = date.getUTCFullYear().toString();
-        if (language === "fr") {
-            return `${displayedDay} ${displayedMonth} ${displayedYear}`;
-        }
-        return `${displayedMonth} ${displayedDay} ${displayedYear}`;
+        return `${displayedDay} ${displayedMonth} ${displayedYear}`;
     }
 
     function formatSimplifiedDate(dateString: string | undefined) {
         if (dateString === undefined) {
-            return renderText(STRING_IDS.ongoing);
+            return renderText(STRINGS.ongoing);
         }
         const date = new Date(dateString);
         const today = new Date();
@@ -39,48 +33,48 @@ export default function useDate() {
 
     function formatDay(day: number) {
         if (day === 1) {
-            return renderText(STRING_IDS.firstDay);
+            return renderText(STRINGS.firstDay);
         }
-        return language === "fr" ? day.toString() : day.toString() + "th";
+        return day.toString();
     }
 
     function formatMonth(month: number) {
-        let displayedMonthId = STRING_IDS.january;
+        let displayedMonthId = STRINGS.january;
         switch (month) {
             case 0:
                 break;
             case 1:
-                displayedMonthId = STRING_IDS.february;
+                displayedMonthId = STRINGS.february;
                 break;
             case 2:
-                displayedMonthId = STRING_IDS.march;
+                displayedMonthId = STRINGS.march;
                 break;
             case 3:
-                displayedMonthId = STRING_IDS.april;
+                displayedMonthId = STRINGS.april;
                 break;
             case 4:
-                displayedMonthId = STRING_IDS.may;
+                displayedMonthId = STRINGS.may;
                 break;
             case 5:
-                displayedMonthId = STRING_IDS.june;
+                displayedMonthId = STRINGS.june;
                 break;
             case 6:
-                displayedMonthId = STRING_IDS.jully;
+                displayedMonthId = STRINGS.jully;
                 break;
             case 7:
-                displayedMonthId = STRING_IDS.august;
+                displayedMonthId = STRINGS.august;
                 break;
             case 8:
-                displayedMonthId = STRING_IDS.september;
+                displayedMonthId = STRINGS.september;
                 break;
             case 9:
-                displayedMonthId = STRING_IDS.october;
+                displayedMonthId = STRINGS.october;
                 break;
             case 10:
-                displayedMonthId = STRING_IDS.november;
+                displayedMonthId = STRINGS.november;
                 break;
             case 11:
-                displayedMonthId = STRING_IDS.december;
+                displayedMonthId = STRINGS.december;
                 break;
         }
         return renderText(displayedMonthId);

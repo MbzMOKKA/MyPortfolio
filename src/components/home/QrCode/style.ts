@@ -30,7 +30,7 @@ export const StyledSection = styled.section`
         width: 50%;
         max-width: 255px;
         border-radius: ${borders.radius.normal};
-        box-shadow: 0px 4px 64px ${colors.identity.bright};
+        box-shadow: 0px 4px 64px ${colors.identity.primaryBright};
         margin-top: 30px;
     }
     @media (min-width: ${breakpoints.tabletMinWidth}) {

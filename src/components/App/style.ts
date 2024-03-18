@@ -9,6 +9,6 @@ export const StyledBackground = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: ${colors.neutral.bodyBgColor};
+    background-color: ${colors.neutral.bodyBg};
     z-index: -100;
 `;

@@ -1,19 +1,19 @@
-import { STRING_IDS } from "../../data";
+import { STRINGS } from "../../data";
 import { MasteryLevel } from "../../data/content/skills";
 
 export default function getMasteryStringId(mastery: number) {
-	switch (mastery) {
-		case MasteryLevel.novice:
-			return STRING_IDS.novice;
-		case MasteryLevel.beginner:
-			return STRING_IDS.beginner;
-		case MasteryLevel.intermediate:
-			return STRING_IDS.intermediate;
-		case MasteryLevel.advanced:
-			return STRING_IDS.advanced;
-		case MasteryLevel.expert:
-			return STRING_IDS.expert;
-		default:
-			return STRING_IDS.placeholder;
-	}
+    switch (mastery) {
+        case MasteryLevel.novice:
+            return STRINGS.novice;
+        case MasteryLevel.beginner:
+            return STRINGS.beginner;
+        case MasteryLevel.intermediate:
+            return STRINGS.intermediate;
+        case MasteryLevel.advanced:
+            return STRINGS.advanced;
+        case MasteryLevel.expert:
+            return STRINGS.expert;
+        default:
+            return STRINGS.placeholder;
+    }
 }

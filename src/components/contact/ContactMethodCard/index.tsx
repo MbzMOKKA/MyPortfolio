@@ -23,7 +23,6 @@ export default function ContactMethodCard({ method }: ContactMethodProps) {
             <StyledHeader>
                 <img src={method.logo} alt="logo" draggable={false} />
                 <h2>{renderComplexText(method.nameId)}</h2>
-                {/* <p>{renderComplexText(descriptionId)}</p> */}
             </StyledHeader>
             <StyledMain>
                 <StyledInfo>

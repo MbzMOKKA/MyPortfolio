@@ -1,5 +1,5 @@
 //Imports
-import { STRING_IDS } from "../locales/stringIds";
+import { STRINGS } from "./strings";
 
 //Types
 export type CareerStep = {
@@ -13,32 +13,32 @@ const careerSteps: CareerStep[] = [
     //Middleschool
     {
         date: 2016,
-        nameId: STRING_IDS.stepMiddleschoolName,
-        descriptionId: STRING_IDS.stepMiddleschoolText,
+        nameId: STRINGS.stepMiddleschoolName,
+        descriptionId: STRINGS.stepMiddleschoolText,
     },
     //Highschool
     {
         date: 2017,
-        nameId: STRING_IDS.stepHighschoolName,
-        descriptionId: STRING_IDS.stepHighschoolText,
+        nameId: STRINGS.stepHighschoolName,
+        descriptionId: STRINGS.stepHighschoolText,
     },
     //1.5 year break
     {
         date: 2020,
-        nameId: STRING_IDS.stepSabbaticalTimeName,
-        descriptionId: STRING_IDS.stepSabbaticalTimeText,
+        nameId: STRINGS.stepSabbaticalTimeName,
+        descriptionId: STRINGS.stepSabbaticalTimeText,
     },
     //Web dev course
     {
         date: 2022,
-        nameId: STRING_IDS.stepBackToEducationName,
-        descriptionId: STRING_IDS.stepBackToEducationText,
+        nameId: STRINGS.stepBackToEducationName,
+        descriptionId: STRINGS.stepBackToEducationText,
     },
     //Now
     {
         date: 2023,
-        nameId: STRING_IDS.stepInternshipName,
-        descriptionId: STRING_IDS.stepInternshipText,
+        nameId: STRINGS.stepInternshipName,
+        descriptionId: STRINGS.stepInternshipText,
     },
 ];
 

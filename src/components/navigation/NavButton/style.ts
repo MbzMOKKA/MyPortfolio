@@ -1,11 +1,10 @@
 //Imports
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { borders, colors, breakpoints } from "../../../utils/style";
+import { colors, breakpoints } from "../../../utils/style";
 
 //Types
 type StyledNavButtonProps = {
-    index: number;
     selected: boolean;
 };
 
@@ -18,23 +17,23 @@ export const StyledNavButton = styled(Link)<StyledNavButtonProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8px 0px;
+    padding: 10px 0px;
     text-decoration: none;
-    border-right: ${borders.common.blackSlim};
-    border-left: ${({ index }) =>
-        index === 0 ? borders.common.blackSlim : "none"};
-    ${({ selected }) =>
-        selected ? `background-color:${colors.support.navBarSelection}` : null};
+    border-top: 2px
+        ${({ selected }) =>
+            selected ? `${colors.identity.primary}` : `transparent`}
+        solid;
+
     img {
         width: auto;
-        height: 28px;
-        opacity: ${({ selected }) => (selected ? 1 : 0.35)};
+        height: 20px;
+        opacity: ${({ selected }) => (selected ? 1 : 0.25)};
     }
     p {
         color: white;
         padding: 8px 0px;
-        font-size: 15px;
-        opacity: ${({ selected }) => (selected ? 1 : 0.35)};
+        font-size: 12px;
+        opacity: ${({ selected }) => (selected ? 1 : 0.25)};
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         background-color: unset;
@@ -44,11 +43,10 @@ export const StyledNavButton = styled(Link)<StyledNavButtonProps>`
         padding: 16px ${buttonLaptopHorizontalPadding} 8px
             ${buttonLaptopHorizontalPadding};
         border: none;
-        border-bottom: 8px transparent solid;
-        ${({ selected }) =>
-            selected
-                ? `border-color: ${colors.support.navBarSelection}`
-                : null};
+        border-bottom: 8px
+            ${({ selected }) =>
+                selected ? `${colors.identity.primary}` : `transparent`}
+            solid;
         img {
             height: 26px;
             margin-right: 8px;

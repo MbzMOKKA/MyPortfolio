@@ -18,7 +18,7 @@ export const StyledCard = styled.li<StyledCardProps>`
         justify-content: space-between;
         align-items: flex-start;
         @media (min-width: ${breakpoints.tabletMinWidth}) {
-            background-color: ${colors.neutral.semiOpaqueBlack};
+            background-color: ${colors.neutral.card};
             box-shadow: ${shadows.cardLaptop};
             border-top-right-radius: ${borders.radius.normal};
             border-bottom-right-radius: ${borders.radius.normal};

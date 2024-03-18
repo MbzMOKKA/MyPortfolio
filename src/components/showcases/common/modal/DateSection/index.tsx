@@ -1,7 +1,7 @@
 //Imports
 import React from "react";
 import { StyledSection } from "./style";
-import { STRING_IDS } from "../../../../../data";
+import { STRINGS } from "../../../../../data";
 import { DateInfoInModal } from "../..";
 
 //Types
@@ -17,17 +17,17 @@ export default function DateSection({ showcase }: DateSectionProps) {
         <StyledSection dates={dates}>
             {dates === 1 ? (
                 <DateInfoInModal
-                    introId={STRING_IDS.dateBegin}
+                    introId={STRINGS.dateBegin}
                     date={showcase.dateBegin}
                 />
             ) : (
                 <>
                     <DateInfoInModal
-                        introId={STRING_IDS.dateStart}
+                        introId={STRINGS.dateStart}
                         date={showcase.dateStart}
                     />
                     <DateInfoInModal
-                        introId={STRING_IDS.dateEnd}
+                        introId={STRINGS.dateEnd}
                         date={showcase.dateEnd}
                     />
                 </>

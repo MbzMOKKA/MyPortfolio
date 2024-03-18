@@ -1,7 +1,7 @@
 //Imports
 import React from "react";
 import { StyledSection } from "./style";
-import { STRING_IDS } from "../../../data";
+import { STRINGS } from "../../../data";
 import { qrCode } from "../../../assets/images";
 import { useText } from "../../../utils/hooks";
 
@@ -11,7 +11,7 @@ export default function QrCode() {
 
     return (
         <StyledSection>
-            <p>{renderComplexText(STRING_IDS.scanQrCode)}</p>
+            <p>{renderComplexText(STRINGS.scanQrCode)}</p>
             <img src={qrCode} alt="QR code" />
         </StyledSection>
     );

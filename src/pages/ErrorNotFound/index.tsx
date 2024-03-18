@@ -2,7 +2,7 @@
 import React from "react";
 import { StyledMain, StyledImage } from "./style";
 import { useText } from "../../utils/hooks";
-import { STRING_IDS } from "../../data";
+import { STRINGS } from "../../data";
 import { Link } from "react-router-dom";
 import { ICONS } from "../../assets/images";
 
@@ -15,9 +15,9 @@ export default function ErrorNotFoundPage() {
             <StyledImage>
                 <img src={ICONS.warning} alt="test" />
             </StyledImage>
-            <p>{renderText(STRING_IDS.errorNotFound)}</p>
+            <p>{renderText(STRINGS.errorNotFound)}</p>
             <Link to={"/"} className="button">
-                {renderText(STRING_IDS.goToHomepage)}
+                {renderText(STRINGS.goToHomepage)}
             </Link>
         </StyledMain>
     );

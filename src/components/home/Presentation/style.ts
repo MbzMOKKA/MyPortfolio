@@ -41,7 +41,7 @@ export const StyledLight1 = styled.div`
     height: 12px;
     background: linear-gradient(
         to top,
-        ${adjustColor(colors.identity.bright, 1.3)},
+        ${adjustColor(colors.identity.primaryBright, 1.3)},
         transparent
     );
     z-index: 1;
@@ -56,7 +56,11 @@ export const StyledLight2 = styled.div`
     left: 0;
     right: 0;
     height: 64px;
-    background: linear-gradient(to top, ${colors.identity.bright}, transparent);
+    background: linear-gradient(
+        to top,
+        ${colors.identity.primaryBright},
+        transparent
+    );
     z-index: -1;
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         display: none;
@@ -95,7 +99,7 @@ export const StyledSelfPic = styled.div`
         width: 100%;
         height: 100%;
         border-radius: ${borders.radius.round};
-        box-shadow: 0px 0px 48px ${colors.identity.bright};
+        box-shadow: 0px 0px 48px ${colors.identity.primaryBright};
     }
 `;
 

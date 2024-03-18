@@ -4,7 +4,6 @@ import {
     borders,
     breakpoints,
     colors,
-    shadows,
     widths,
 } from "../../../../../utils/style";
 
@@ -38,7 +37,7 @@ export const StyledBackground = styled.div`
 
 export const StyledModal = styled.div`
     position: relative;
-    background-color: ${colors.neutral.bodyBgColor};
+    background-color: ${colors.neutral.bodyBg};
     width: 100%;
     height: 100%;
     display: flex;
@@ -46,11 +45,6 @@ export const StyledModal = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     margin: auto;
-    border: ${borders.common.modal};
-    border-bottom: none;
-    border-top-left-radius: ${borders.radius.modal};
-    border-top-right-radius: ${borders.radius.modal};
-    box-shadow: ${shadows.modal};
     overflow-y: scroll;
     scrollbar-color: ${colors.support.scrollbar} transparent;
     &.shown {
@@ -80,7 +74,7 @@ export const StyledModal = styled.div`
         align-items: flex-start;
         padding: 16px 0px;
     }
-    @media (min-width: ${breakpoints.mobileLargeMinWidth}) {
+    @media (min-width: ${breakpoints.tabletMinWidth}) {
         max-width: ${widths.narrowContentTabletMaxWidth};
         header {
             padding-top: 28px;

@@ -4,7 +4,7 @@ import { Skill } from "../../../../data/content/skills";
 import { useDate, useText } from "../../../../utils/hooks";
 import { DateInfoInCard, ShowcaseCard } from "../../common";
 import MasteryBar from "../MasteryBar";
-import { STRING_IDS } from "../../../../data";
+import { STRINGS } from "../../../../data";
 
 //Types
 type WorkCardProps = {
@@ -19,7 +19,7 @@ export default function WorkCard({ skill }: WorkCardProps) {
     return (
         <ShowcaseCard showcase={skill} listPageRoute={`/skill`}>
             <DateInfoInCard>
-                <p>{`${renderText(STRING_IDS.since)} ${formatSimplifiedDate(
+                <p>{`${renderText(STRINGS.since)} ${formatSimplifiedDate(
                     skill.dateBegin
                 )}`}</p>
             </DateInfoInCard>

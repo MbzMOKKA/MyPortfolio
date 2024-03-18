@@ -4,7 +4,6 @@ const ICONS = {
     skills: require("./skills.png"),
     contact: require("./contact.png"),
     cross: require("./cross.png"),
-    settings: require("./settings.png"),
     link: require("./link.png"),
     call: require("./call.png"),
     email: require("./email.png"),

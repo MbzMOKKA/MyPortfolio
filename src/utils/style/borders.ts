@@ -6,7 +6,7 @@ const borders = {
     common: {
         blackSlim: `1px solid black`,
         modal: `1px rgba(255, 255, 255, 0.3) solid`,
-        optionSelected: `3px ${colors.identity.bright} solid`,
+        optionSelected: `3px ${colors.identity.primaryBright} solid`,
         optionNotSelected: `3px transparent solid`,
     },
     radius: {

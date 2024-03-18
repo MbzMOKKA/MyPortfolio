@@ -5,7 +5,7 @@ import skills, { Skill } from "../../data/content/skills";
 import { useParams } from "react-router-dom";
 import { SkillCard, SkillModal } from "../../components/showcases/skills";
 import { useText } from "../../utils/hooks";
-import { STRING_IDS } from "../../data";
+import { STRINGS } from "../../data";
 
 //Component of the skill page
 export default function SkillPage() {
@@ -28,7 +28,7 @@ export default function SkillPage() {
     }
 
     const statText = `${shownSkills.length} ${renderText(
-        STRING_IDS.totalSkills
+        STRINGS.totalSkills
     ).toLowerCase()}`;
 
     function card(skill: Skill, index: number) {

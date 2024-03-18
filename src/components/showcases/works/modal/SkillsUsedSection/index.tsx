@@ -2,7 +2,7 @@ import React from "react";
 import { StyledSection } from "./style";
 import skills, { Skill } from "../../../../../data/content/skills";
 import { useText } from "../../../../../utils/hooks";
-import { STRING_IDS } from "../../../../../data";
+import { STRINGS } from "../../../../../data";
 
 //Types
 type WorkSkillsUsedSectionProps = {
@@ -27,8 +27,8 @@ export default function WorkSkillsUsedSection({
             <h2>
                 {renderText(
                     skillsUsed.length > 1
-                        ? STRING_IDS.skillsUsed
-                        : STRING_IDS.skillUsed
+                        ? STRINGS.skillsUsed
+                        : STRINGS.skillUsed
                 )}
             </h2>
             <ul>

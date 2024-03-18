@@ -11,5 +11,4 @@ export type Media = {
 export enum SHOWCASE_TYPES {
     webSite,
     hardSkill,
-    other,
 }

@@ -1,8 +1,8 @@
 //Imports
 import { ICONS, THUMBNAILS } from "../../assets/images";
-import { STRING_IDS } from "../locales/stringIds";
 import { Cta, Media, SHOWCASE_TYPES } from "../miscTypes";
 import { Skills } from "./skills";
+import { STRINGS } from "./strings";
 
 //Types
 export type Work = {
@@ -24,7 +24,7 @@ export type Work = {
 const works: Work[] = [
     {
         id: "direct-brico",
-        nameId: STRING_IDS.directBrico,
+        nameId: STRINGS.directBrico,
         thumbnail: THUMBNAILS.directBrico,
         thumbnailHQ: THUMBNAILS.directBricoHQ,
         dateStart: "2022-12-19",
@@ -43,13 +43,13 @@ const works: Work[] = [
             Skills.redux,
             Skills.jest,
         ],
-        descriptionId: STRING_IDS.workDescDirectBrico,
+        descriptionId: STRINGS.workDescDirectBrico,
         medias: [],
         ctas: [],
     },
     {
         id: "oh-my-food",
-        nameId: STRING_IDS.ohMyFood,
+        nameId: STRINGS.ohMyFood,
         thumbnail: THUMBNAILS.ohMyFood,
         thumbnailHQ: THUMBNAILS.ohMyFoodHQ,
         dateStart: "2022-03-29",
@@ -57,16 +57,16 @@ const works: Work[] = [
         type: SHOWCASE_TYPES.webSite,
         importance: 50,
         skillsUsed: [Skills.html, Skills.css, Skills.sass],
-        descriptionId: STRING_IDS.workDescOhMyFood,
+        descriptionId: STRINGS.workDescOhMyFood,
         medias: [],
         ctas: [
             {
-                nameId: STRING_IDS.viewSite,
+                nameId: STRINGS.viewSite,
                 icon: ICONS.link,
                 action: "https://mbzmokka.github.io/ohmyfood/",
             },
             {
-                nameId: STRING_IDS.viewRepo,
+                nameId: STRINGS.viewRepo,
                 icon: ICONS.link,
                 action: "https://github.com/MbzMOKKA/ohmyfood",
             },
@@ -74,7 +74,7 @@ const works: Work[] = [
     },
     {
         id: "argent-bank",
-        nameId: STRING_IDS.argentBank,
+        nameId: STRINGS.argentBank,
         thumbnail: THUMBNAILS.argentBank,
         thumbnailHQ: THUMBNAILS.argentBankHQ,
         dateStart: "2023-04-10",
@@ -92,11 +92,11 @@ const works: Work[] = [
             Skills.axios,
             Skills.redux,
         ],
-        descriptionId: STRING_IDS.workDescArgentBank,
+        descriptionId: STRINGS.workDescArgentBank,
         medias: [],
         ctas: [
             {
-                nameId: STRING_IDS.viewRepo,
+                nameId: STRINGS.viewRepo,
                 icon: ICONS.link,
                 action: "https://github.com/MokkaReactJsCourseProjects/ArgentBankFront",
             },
@@ -104,7 +104,7 @@ const works: Work[] = [
     },
     {
         id: "hr-net",
-        nameId: STRING_IDS.hrNet,
+        nameId: STRINGS.hrNet,
         thumbnail: THUMBNAILS.hrNet,
         thumbnailHQ: THUMBNAILS.hrNetHQ,
         dateStart: "2023-06-26",
@@ -123,16 +123,16 @@ const works: Work[] = [
             Skills.redux,
             Skills.uiDesign,
         ],
-        descriptionId: STRING_IDS.workDescHrNet,
+        descriptionId: STRINGS.workDescHrNet,
         medias: [],
         ctas: [
             {
-                nameId: STRING_IDS.viewSite,
+                nameId: STRINGS.viewSite,
                 icon: ICONS.link,
                 action: "https://hr-net-alpha.vercel.app/",
             },
             {
-                nameId: STRING_IDS.viewRepo,
+                nameId: STRINGS.viewRepo,
                 icon: ICONS.link,
                 action: "https://github.com/MokkaReactJsCourseProjects/HRNet",
             },
@@ -140,20 +140,20 @@ const works: Work[] = [
     },
     /*{
         id: "survivalcraft-manager",
-        nameId: STRING_IDS.scManager,
+        nameId: STRINGS.scManager,
         thumbnail:ICONS.cross,
         dateStart: "2020-02-01",
         dateEnd: undefined,
         type: SHOWCASE_TYPES.other,
         importance: 100,
         skillsUsed: [],
-        descriptionId: STRING_IDS.placeholder,
+        descriptionId: STRINGS.placeholder,
         medias: [],
         ctas: [],
     },*/
     {
         id: "groupomania",
-        nameId: STRING_IDS.groupomania,
+        nameId: STRINGS.groupomania,
         thumbnail: THUMBNAILS.groupomania,
         thumbnailHQ: THUMBNAILS.groupomaniaHQ,
         dateStart: "2022-08-25",
@@ -174,11 +174,11 @@ const works: Work[] = [
             Skills.expressJs,
             Skills.mongoDB,
         ],
-        descriptionId: STRING_IDS.workDescGroupomania,
+        descriptionId: STRINGS.workDescGroupomania,
         medias: [],
         ctas: [
             {
-                nameId: STRING_IDS.viewRepo,
+                nameId: STRINGS.viewRepo,
                 icon: ICONS.link,
                 action: "https://github.com/MbzMOKKA/GroupomaniaSocialTool",
             },
@@ -186,7 +186,7 @@ const works: Work[] = [
     },
     {
         id: "my-portfolio",
-        nameId: STRING_IDS.myPortfolio,
+        nameId: STRINGS.myPortfolio,
         thumbnail: THUMBNAILS.portfolio,
         thumbnailHQ: THUMBNAILS.portfolioHQ,
         dateStart: "2023-04-24",
@@ -203,11 +203,11 @@ const works: Work[] = [
             Skills.styledComponents,
             Skills.redux,
         ],
-        descriptionId: STRING_IDS.workDescMyPortfolio,
+        descriptionId: STRINGS.workDescMyPortfolio,
         medias: [],
         ctas: [
             {
-                nameId: STRING_IDS.viewRepo,
+                nameId: STRINGS.viewRepo,
                 icon: ICONS.link,
                 action: "https://github.com/MbzMOKKA/MyPortfolio",
             },

@@ -5,7 +5,7 @@ import works, { Work } from "../../data/content/works";
 import { useParams } from "react-router-dom";
 import { WorkCard, WorkModal } from "../../components/showcases/works";
 import { useText } from "../../utils/hooks";
-import { STRING_IDS } from "../../data";
+import { STRINGS } from "../../data";
 
 //Component of the work page
 export default function WorkPage() {
@@ -37,9 +37,9 @@ export default function WorkPage() {
     }
 
     const statText = `${shownWorks.length} ${renderText(
-        STRING_IDS.totalWorks
+        STRINGS.totalWorks
     ).toLowerCase()} (${ongoings} ${renderText(
-        STRING_IDS.ongoing
+        STRINGS.ongoing
     ).toLowerCase()})`;
 
     function card(work: Work, index: number) {

@@ -1,6 +1,6 @@
 //Imports
 import React from "react";
-import { STRING_IDS } from "../../../../data";
+import { STRINGS } from "../../../../data";
 import { useText } from "../../../../utils/hooks";
 import { getMasteryStringId } from "../../../../utils/misc";
 import { MasteryLevel } from "../../../../data/content/skills";
@@ -19,7 +19,7 @@ export default function MasteryBar({ mastery, className }: MasteryBarProps) {
     return (
         <StyledMastery className={className}>
             <p>
-                {`${renderText(STRING_IDS.mastery)} : `}
+                {`${renderText(STRINGS.mastery)} : `}
                 <span>{`${renderText(getMasteryStringId(mastery))}`}</span>
             </p>
         </StyledMastery>

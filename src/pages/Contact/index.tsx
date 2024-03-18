@@ -7,7 +7,7 @@ import {
     StyledSeparator,
 } from "./style";
 import { ContactMethodCard } from "../../components/contact/";
-import { STRING_IDS, contactMethods } from "../../data";
+import { STRINGS, contactMethods } from "../../data";
 import { AREA_SEPARATOR_TYPES } from "../../components/other/AreaSeparator";
 import { useText } from "../../utils/hooks";
 
@@ -18,7 +18,7 @@ export default function ContactPage() {
     return (
         <StyledMain>
             <StyledPageTitle>
-                <h1>{renderComplexText(STRING_IDS.contactPageTitle)}</h1>
+                <h1>{renderComplexText(STRINGS.contactPageTitle)}</h1>
                 <StyledSeparator type={AREA_SEPARATOR_TYPES.simpleUp} />
             </StyledPageTitle>
             <StyledMethods>

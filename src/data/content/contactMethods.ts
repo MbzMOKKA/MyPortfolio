@@ -1,13 +1,12 @@
 //Imports
 import { ICONS, LOGOS } from "../../assets/images";
-import { STRING_IDS } from "../locales/stringIds";
 import { Cta } from "../miscTypes";
+import { STRINGS } from "./strings";
 
 //Types
 export type ContactMethod = {
     logo: string;
     nameId: string;
-    descriptionId: string;
     contactInfo: string;
     cta: Cta;
 };
@@ -17,11 +16,10 @@ const contactMethods: ContactMethod[] = [
     //Phone
     {
         logo: LOGOS.phone,
-        nameId: STRING_IDS.phone,
-        descriptionId: STRING_IDS.placeholder,
+        nameId: STRINGS.phone,
         contactInfo: "06.38.93.16.19",
         cta: {
-            nameId: STRING_IDS.call,
+            nameId: STRINGS.call,
             icon: ICONS.call,
             action: "tel:+33638931619",
         },
@@ -29,11 +27,10 @@ const contactMethods: ContactMethod[] = [
     //Mail
     {
         logo: LOGOS.gmail,
-        nameId: STRING_IDS.email,
-        descriptionId: STRING_IDS.placeholder,
+        nameId: STRINGS.email,
         contactInfo: "dylanpean.pro@gmail.com",
         cta: {
-            nameId: STRING_IDS.sendEmail,
+            nameId: STRINGS.sendEmail,
             icon: ICONS.email,
             action: "mailto:dylanpean.pro@gmail.com",
         },
@@ -41,11 +38,10 @@ const contactMethods: ContactMethod[] = [
     //LinkedIn
     {
         logo: LOGOS.linkedIn,
-        nameId: STRING_IDS.linkedin,
-        descriptionId: STRING_IDS.placeholder,
+        nameId: STRINGS.linkedin,
         contactInfo: "Dylan Pean",
         cta: {
-            nameId: STRING_IDS.openLink,
+            nameId: STRINGS.openLink,
             icon: ICONS.link,
             action: "https://www.linkedin.com/in/dylanpean",
         },
@@ -53,11 +49,10 @@ const contactMethods: ContactMethod[] = [
     //Twitter
     /*{
         logo: LOGOS.twitter,
-        nameId: STRING_IDS.twitter,
-        descriptionId: STRING_IDS.placeholder,
+        nameId: STRINGS.twitter,
         contactInfo: "@MbzMokka",
         cta: {
-            nameId: STRING_IDS.openLink,
+            nameId: STRINGS.openLink,
             icon: ICONS.link,
             action: "https://twitter.com/MbzMokka",
         },

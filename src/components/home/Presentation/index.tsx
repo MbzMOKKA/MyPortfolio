@@ -11,7 +11,7 @@ import {
     StyledSummary,
     StyledMainPart,
 } from "./style";
-import { STRING_IDS } from "../../../data";
+import { STRINGS } from "../../../data";
 import { heavyDevCup, irlPic } from "../../../assets/images";
 import { useText } from "../../../utils/hooks";
 
@@ -19,8 +19,8 @@ import { useText } from "../../../utils/hooks";
 export default function Presentation() {
     const { renderComplexText, renderText } = useText();
 
-    const altSelfPic = renderText(STRING_IDS.selfPic);
-    const altAvatar = renderText(STRING_IDS.avatarImg);
+    const altSelfPic = renderText(STRINGS.selfPic);
+    const altAvatar = renderText(STRINGS.avatarImg);
 
     return (
         <section>
@@ -38,13 +38,13 @@ export default function Presentation() {
                     </StyledProfilePics>
                 </StyledPicPart>
                 <StyledNamePart>
-                    <p>{renderComplexText(STRING_IDS.iAm)}</p>
+                    <p>{renderComplexText(STRINGS.iAm)}</p>
                     <h1>{`Dylan Pean`}</h1>
                     <h2>{`(M.O.K.K.A.)`}</h2>
                 </StyledNamePart>
             </StyledMainPart>
             <StyledSummary>
-                <p>{renderComplexText(STRING_IDS.presentationParagraph)}</p>
+                <p>{renderComplexText(STRINGS.presentationParagraph)}</p>
             </StyledSummary>
         </section>
     );

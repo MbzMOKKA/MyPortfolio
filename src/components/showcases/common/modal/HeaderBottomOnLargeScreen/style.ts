@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 //Local styles
 export const StyledHeaderBottomOnLargeScreen = styled.div`
-    width: 100%;
+    width: 360px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    gap: 24px;
 `;

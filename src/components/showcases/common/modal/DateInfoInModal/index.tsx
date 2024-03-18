@@ -2,7 +2,7 @@
 import React from "react";
 import { useDate, useText } from "../../../../../utils/hooks";
 import { StyledInfo } from "./style";
-import { STRING_IDS } from "../../../../../data";
+import { STRINGS } from "../../../../../data";
 import { OngoingBadge } from "../../../works";
 
 //Types
@@ -24,7 +24,7 @@ export default function DateInfoInModal({
             {date === undefined ? (
                 <>
                     <p>
-                        <strong>{renderText(STRING_IDS.ongoing)}</strong>
+                        <strong>{renderText(STRINGS.ongoing)}</strong>
                     </p>
                     <OngoingBadge />
                 </>

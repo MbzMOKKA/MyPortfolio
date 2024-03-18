@@ -1,7 +1,7 @@
 //Imports
 import { createGlobalStyle } from "styled-components";
-import { borders, colors, paddings, shadows, breakpoints } from "./";
-import { navBarHeight } from "../globalConstants";
+import { borders, colors, paddings, breakpoints } from "./";
+import { navBarHeight, navBarHeightLaptop } from "../globalConstants";
 
 //Global styles
 export default createGlobalStyle`
@@ -19,11 +19,11 @@ export default createGlobalStyle`
         padding-bottom: ${navBarHeight}px;
         @media (min-width: ${breakpoints.laptopMinWidth}) {
             padding-bottom:0;
-            padding-top: ${navBarHeight}px;
+            padding-top: ${navBarHeightLaptop}px;
         }
     }
     html{
-        scrollbar-color: ${colors.support.scrollbar} ${colors.support.notSelected};
+        scrollbar-color: ${colors.support.scrollbar} ${colors.neutral.navigationBg};
     }
     body{
         overflow-y: scroll;
@@ -65,7 +65,6 @@ export default createGlobalStyle`
         border-radius: ${borders.radius.normal};
         padding: ${paddings.mobile.button};
         background-color: ${colors.identity.primary};
-        box-shadow: ${shadows.button};
         font-size: 14px;
         @media (min-width: ${breakpoints.laptopMinWidth}) {
             font-size: 18px;

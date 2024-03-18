@@ -3,9 +3,7 @@ import styled from "styled-components";
 import ImportanceBar from "../../ImportanceBar";
 
 //Local styles
-export const StyledImportanceBar = styled(ImportanceBar)`
-    margin-right: 36px;
-`;
+export const StyledImportanceBar = styled(ImportanceBar)``;
 
 export const StyledModalBottomOnLaptop = styled.section`
     width: 100%;

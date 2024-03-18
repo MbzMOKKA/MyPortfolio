@@ -1,15 +1,15 @@
-import { STRING_IDS } from "../../data";
+import { STRINGS } from "../../data";
 import { SHOWCASE_TYPES } from "../../data/miscTypes";
 import { colors } from "../style";
 
 export function getShowcaseTypeNameId(showcaseType: SHOWCASE_TYPES) {
     switch (showcaseType) {
         case SHOWCASE_TYPES.webSite:
-            return STRING_IDS.webSite;
+            return STRINGS.webSite;
         case SHOWCASE_TYPES.hardSkill:
-            return STRING_IDS.hardSkill;
+            return STRINGS.hardSkill;
         default:
-            return STRING_IDS.other;
+            return STRINGS.other;
     }
 }
 
@@ -20,6 +20,6 @@ export function getShowcaseTypeColor(showcaseType: SHOWCASE_TYPES) {
         case SHOWCASE_TYPES.hardSkill:
             return colors.support.typeHardSkill;
         default:
-            return colors.support.typeOther;
+            return "#000000";
     }
 }

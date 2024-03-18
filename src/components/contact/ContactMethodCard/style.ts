@@ -20,7 +20,7 @@ export const StyledMethod = styled.div`
 `;
 
 export const StyledHeader = styled.header`
-    background-color: ${colors.neutral.semiOpaqueBlack};
+    background-color: ${colors.neutral.semiOpaqueWhite};
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -46,7 +46,7 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledMain = styled.main`
-    background-color: ${colors.neutral.semiOpaqueWhite};
+    background-color: ${colors.neutral.semiOpaqueBlack};
     display: flex;
     flex-direction: row;
     padding: 8px;
@@ -72,13 +72,12 @@ export const StyledMain = styled.main`
 `;
 
 export const StyledInfo = styled.div`
-    background-color: ${colors.neutral.semiOpaqueBlack};
+    background-color: rgba(0, 0, 0, 0.5);
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: ${borders.radius.round};
-    border-top: 2px rgba(0, 0, 0, 0.5) solid;
     p {
         color: white;
         text-align: center;

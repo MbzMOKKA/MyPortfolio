@@ -16,12 +16,7 @@ type NavButtonProps = {
 };
 
 //Component of the site navigation bar
-export default function NavButton({
-    icon,
-    pathname,
-    nameId,
-    index,
-}: NavButtonProps) {
+export default function NavButton({ icon, pathname, nameId }: NavButtonProps) {
     const { currentPagename } = usePage();
     const { renderText } = useText();
     const screenType = useSelector(selectScreenType);
@@ -29,7 +24,6 @@ export default function NavButton({
     return (
         <StyledNavButton
             to={"/" + pathname}
-            index={index}
             selected={currentPagename === pathname}
         >
             <img src={icon} alt="" draggable={false} />

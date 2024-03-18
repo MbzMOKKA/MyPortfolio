@@ -15,7 +15,7 @@ export const StyledLine = styled.div`
 export const StyledBar = styled.div<StyledBarProps>`
     position: relative;
     background-color: black;
-    width: 90%;
+    width: 100%;
     height: 5px;
     margin-top: 3px;
     border-radius: ${borders.radius.round};
@@ -29,10 +29,10 @@ export const StyledBar = styled.div<StyledBarProps>`
         height: 100%;
     }
     @media (min-width: ${breakpoints.mobileLargeMinWidth}) {
-        max-width: 300px;
+        //max-width: 300px;
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         width: 100%;
-        max-width: 400px;
+        //max-width: 400px;
     }
 `;
