@@ -32,7 +32,7 @@ export const StyledStats = styled.h1`
     padding: 0 ${paddings.mobile.mainHorizontal};
     @media (min-width: ${breakpoints.tabletMinWidth}) {
         padding: 0;
-        margin: 12px 0;
+        margin: 36px 0;
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         margin: 48px 0;

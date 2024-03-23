@@ -11,6 +11,7 @@ export const StyledSection = styled.section`
     width: 100%;
     margin: auto;
     margin-top: 64px;
+    margin-bottom: 64px;
     h1 {
         margin-left: ${margins.mainHorizontal};
         margin-right: ${margins.mainHorizontal};
@@ -18,7 +19,7 @@ export const StyledSection = styled.section`
     }
     @media (min-width: ${breakpoints.tabletMinWidth}) {
         max-width: ${widths.narrowContentTabletMaxWidth};
-        margin-bottom: 64px;
+        margin-bottom: 92px;
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         max-width: ${widths.narrowContentLaptopMaxWidth};

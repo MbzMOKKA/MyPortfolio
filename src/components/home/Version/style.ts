@@ -4,6 +4,8 @@ import { breakpoints } from "../../../utils/style";
 
 //Local styles
 export const StyledSection = styled.section`
+    width: 55%;
+    margin: auto;
     padding-top: 144px;
     padding-bottom: 12px;
     p {

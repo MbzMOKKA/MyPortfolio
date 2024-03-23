@@ -16,7 +16,7 @@ export const StyledSection = styled.section`
     flex-direction: column;
     align-items: center;
     margin: auto;
-    margin-top: 128px;
+    margin-top: 64px;
     padding: 48px ${paddings.mobile.mainHorizontal};
     p {
         color: white;
@@ -36,6 +36,7 @@ export const StyledSection = styled.section`
         max-width: ${widths.narrowContentTabletMaxWidth};
         border-radius: 36px;
         padding: 36px;
+        margin-top: 92px;
         p {
             font-size: 22px;
         }
@@ -47,6 +48,7 @@ export const StyledSection = styled.section`
         max-width: ${widths.narrowContentLaptopMaxWidth};
         border-radius: 48px;
         padding: 48px;
+        margin-top: 128px;
         img {
             max-width: 200px;
         }

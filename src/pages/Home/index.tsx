@@ -2,6 +2,7 @@
 import React from "react";
 import { StyledMain } from "./style";
 import {
+    CV,
     CareerHistory,
     Presentation,
     QrCode,
@@ -17,6 +18,7 @@ export default function HomePage() {
             <CareerHistory />
             <NaturalFlowCTA url="/work" text="Voir mes travaux" />
             <QrCode />
+            <CV />
             <Version />
         </StyledMain>
     );

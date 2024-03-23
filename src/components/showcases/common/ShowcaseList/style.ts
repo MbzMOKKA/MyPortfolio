@@ -21,9 +21,10 @@ export const StyledList = styled.ul<StyledListProps>`
     padding-left: 5px;
     padding-right: 5px;
     margin: auto;
-    margin-bottom: 140px;
+    margin-bottom: 64px;
     @media (min-width: ${breakpoints.tabletMinWidth}) {
         width: ${widths.narrowContentTabletMaxWidth};
+        margin-bottom: 92px;
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         width: 100%;
@@ -34,5 +35,6 @@ export const StyledList = styled.ul<StyledListProps>`
         );
         justify-content: space-between;
         gap: 64px 0;
+        margin-bottom: 140px;
     }
 `;
