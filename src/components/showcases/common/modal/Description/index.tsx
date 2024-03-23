@@ -1,8 +1,8 @@
 //Imports
 import React from "react";
 import { StyledDescription } from "./style";
-import { useText } from "../../../../../utils/hooks";
 import { Work } from "../../../../../data/content/works";
+import { renderComplexText } from "../../../../../utils/misc";
 
 //Types
 type ShowcaseDescriptionProps = {
@@ -13,11 +13,9 @@ type ShowcaseDescriptionProps = {
 export default function ShowcaseDescription({
     showcase,
 }: ShowcaseDescriptionProps) {
-    const { renderComplexText } = useText();
-
     return (
         <StyledDescription>
-            {renderComplexText(showcase.descriptionId)}
+            {renderComplexText(showcase.description)}
         </StyledDescription>
     );
 }

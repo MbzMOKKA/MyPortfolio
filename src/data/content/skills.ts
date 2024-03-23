@@ -1,7 +1,6 @@
 //Imports
 import { LOGOS } from "../../assets/images";
 import { SHOWCASE_TYPES } from "../miscTypes";
-import { STRINGS } from "./strings";
 
 //Types
 export enum MasteryLevel {
@@ -15,7 +14,7 @@ export enum MasteryLevel {
 export type Skill = {
     id: string;
     type: SHOWCASE_TYPES;
-    nameId: string;
+    name: string;
     logo: string;
     logoHQ: string;
     dateBegin: string;
@@ -46,9 +45,6 @@ export enum Skills {
     npm = "npm",
     reactRouterDom = "react-router-dom",
     jest = "jest",
-    chatGpt = "chat-gpt",
-    videoEditing = "video-editing",
-    libreOffice = "libre-office",
     vite = "vite",
     figma = "figma",
 }
@@ -58,25 +54,25 @@ const skills: Skill[] = [
     {
         id: Skills.javaScript,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.javaScript,
+        name: `JavaScript`,
         logo: LOGOS.javaScript,
         logoHQ: LOGOS.javaScriptHQ,
         dateBegin: "2022-05-23",
-        mastery: MasteryLevel.advanced,
+        mastery: MasteryLevel.intermediate,
     },
     {
         id: Skills.typeScript,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.typeScript,
+        name: `TypeScript`,
         logo: LOGOS.typeScript,
         logoHQ: LOGOS.typeScriptHQ,
         dateBegin: "2022-11-08",
-        mastery: MasteryLevel.intermediate,
+        mastery: MasteryLevel.beginner,
     },
     {
         id: Skills.tailwindCss,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.tailwind,
+        name: `Tailwind CSS`,
         logo: LOGOS.tailwind,
         logoHQ: LOGOS.tailwindHQ,
         dateBegin: "2023-06-26",
@@ -85,7 +81,7 @@ const skills: Skill[] = [
     {
         id: Skills.nextJs,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.nextJs,
+        name: `Next.js`,
         logo: LOGOS.nextJs,
         logoHQ: LOGOS.nextJsHQ,
         dateBegin: "2023-06-05",
@@ -94,7 +90,7 @@ const skills: Skill[] = [
     {
         id: Skills.react,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.react,
+        name: `React`,
         logo: LOGOS.react,
         logoHQ: LOGOS.reactHQ,
         dateBegin: "2022-08-17",
@@ -103,25 +99,25 @@ const skills: Skill[] = [
     {
         id: Skills.mongoDB,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.mongoDB,
+        name: `Mongo DB`,
         logo: LOGOS.mongoDB,
         logoHQ: LOGOS.mongoDBHQ,
         dateBegin: "2022-06-24",
-        mastery: MasteryLevel.beginner,
+        mastery: MasteryLevel.novice,
     },
     {
         id: Skills.expressJs,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.expressJs,
+        name: `Express.js`,
         logo: LOGOS.expressJs,
         logoHQ: LOGOS.expressJsHQ,
         dateBegin: "2022-06-24",
-        mastery: MasteryLevel.intermediate,
+        mastery: MasteryLevel.beginner,
     },
     {
         id: Skills.nodeJs,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.nodeJs,
+        name: `Node.js`,
         logo: LOGOS.nodeJs,
         logoHQ: LOGOS.nodeJsHQ,
         dateBegin: "2022-06-24",
@@ -129,14 +125,14 @@ const skills: Skill[] = [
     },
     /*{
         id: Skills.uiDesign,type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.uiDesign,
+        name: `UI Design`,
         logo: ICONS.cross,
         dateBegin: "2016-06-01",
         mastery: 30,
     },*/
     /*{
         id: Skills.uxDesign,type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.uxDesign,
+        name: `UX Design`,
         logo: ICONS.cross,
         dateBegin: "2016-06-01",
         mastery: 30,
@@ -144,7 +140,7 @@ const skills: Skill[] = [
     {
         id: Skills.styledComponents,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.styledComponents,
+        name: `styled-components`,
         logo: LOGOS.styledComponents,
         logoHQ: LOGOS.styledComponentsHQ,
         dateBegin: "2022-08-20",
@@ -153,7 +149,7 @@ const skills: Skill[] = [
     {
         id: Skills.sass,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.sass,
+        name: `Sass`,
         logo: LOGOS.sass,
         logoHQ: LOGOS.sassHQ,
         dateBegin: "2022-03-26",
@@ -162,7 +158,7 @@ const skills: Skill[] = [
     {
         id: Skills.css,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.css,
+        name: `CSS`,
         logo: LOGOS.css,
         logoHQ: LOGOS.cssHQ,
         dateBegin: "2018-10-01",
@@ -171,7 +167,7 @@ const skills: Skill[] = [
     {
         id: Skills.html,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.html,
+        name: `HTML`,
         logo: LOGOS.html,
         logoHQ: LOGOS.htmlHQ,
         dateBegin: "2018-10-01",
@@ -180,31 +176,34 @@ const skills: Skill[] = [
     {
         id: Skills.createReactApp,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.createReactApp,
+        name: `Create React App`,
         logo: LOGOS.createReactApp,
         logoHQ: LOGOS.createReactAppHQ,
         dateBegin: "2022-08-17",
         mastery: MasteryLevel.intermediate,
     },
     /*{
-        id: Skills.axios,type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.axios,
+        id: Skills.axios,type:
+        SHOWCASE_TYPES.hardSkill,
+        name: `Axios`,
         logo: LOGOS.axios,
         logoHQ: LOGOS.axiosHQ,
         dateBegin: "2022-09-15",
         mastery: 30,
     },*/
     /*{
-        id: Skills.reactNative,type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.reactNative,
+        id: Skills.reactNative,
+        type:SHOWCASE_TYPES.hardSkill,
+        name: `React Native`,
         logo: LOGOS.react,
         logoHQ: LOGOS.reactHQ,
         dateBegin: "2022-12-19",
         mastery: 30,
     },*/
     /*{
-        id: "electron",type:SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.electron,
+        id: "electron",
+        type:SHOWCASE_TYPES.hardSkill,
+        name: `Electron`,
         logo: LOGOS.nextJs,
         dateBegin: "2023-05-01",
         mastery: 30,
@@ -212,7 +211,7 @@ const skills: Skill[] = [
     {
         id: Skills.redux,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.redux,
+        name: `Redux`,
         logo: LOGOS.redux,
         logoHQ: LOGOS.reduxHQ,
         dateBegin: "2023-03-13",
@@ -221,7 +220,7 @@ const skills: Skill[] = [
     {
         id: Skills.vite,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.vite,
+        name: `Vite`,
         logo: LOGOS.vite,
         logoHQ: LOGOS.viteHQ,
         dateBegin: "2023-11-22",
@@ -230,7 +229,7 @@ const skills: Skill[] = [
     {
         id: Skills.figma,
         type: SHOWCASE_TYPES.hardSkill,
-        nameId: STRINGS.figma,
+        name: `Figma`,
         logo: LOGOS.figma,
         logoHQ: LOGOS.figmaHQ,
         dateBegin: "2024-01-10",

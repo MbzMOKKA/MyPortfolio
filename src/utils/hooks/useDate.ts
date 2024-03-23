@@ -1,11 +1,5 @@
-//Imports
-import { STRINGS } from "../../data";
-import useText from "./useText";
-
-//useDate custom hook
+//Exports
 export default function useDate() {
-    const { renderText } = useText();
-
     function formatFullDate(dateString: string | undefined) {
         if (dateString === undefined) {
             return "...";
@@ -19,7 +13,7 @@ export default function useDate() {
 
     function formatSimplifiedDate(dateString: string | undefined) {
         if (dateString === undefined) {
-            return renderText(STRINGS.ongoing);
+            return `En cours`;
         }
         const date = new Date(dateString);
         const today = new Date();
@@ -33,51 +27,52 @@ export default function useDate() {
 
     function formatDay(day: number) {
         if (day === 1) {
-            return renderText(STRINGS.firstDay);
+            return `1er`;
         }
         return day.toString();
     }
 
     function formatMonth(month: number) {
-        let displayedMonthId = STRINGS.january;
+        let displayedMonthName;
         switch (month) {
             case 0:
+                displayedMonthName = `Janvier`;
                 break;
             case 1:
-                displayedMonthId = STRINGS.february;
+                displayedMonthName = `Février`;
                 break;
             case 2:
-                displayedMonthId = STRINGS.march;
+                displayedMonthName = `Mars`;
                 break;
             case 3:
-                displayedMonthId = STRINGS.april;
+                displayedMonthName = `Avril`;
                 break;
             case 4:
-                displayedMonthId = STRINGS.may;
+                displayedMonthName = `Mai`;
                 break;
             case 5:
-                displayedMonthId = STRINGS.june;
+                displayedMonthName = `Juin`;
                 break;
             case 6:
-                displayedMonthId = STRINGS.jully;
+                displayedMonthName = `Juillet`;
                 break;
             case 7:
-                displayedMonthId = STRINGS.august;
+                displayedMonthName = `Août`;
                 break;
             case 8:
-                displayedMonthId = STRINGS.september;
+                displayedMonthName = `Septembre`;
                 break;
             case 9:
-                displayedMonthId = STRINGS.october;
+                displayedMonthName = `Octobre`;
                 break;
             case 10:
-                displayedMonthId = STRINGS.november;
+                displayedMonthName = `Novembre`;
                 break;
-            case 11:
-                displayedMonthId = STRINGS.december;
+            default:
+                displayedMonthName = `Décembre`;
                 break;
         }
-        return renderText(displayedMonthId);
+        return displayedMonthName;
     }
 
     return { formatFullDate, formatSimplifiedDate, formatDay, formatMonth };

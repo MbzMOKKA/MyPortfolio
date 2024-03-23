@@ -2,22 +2,27 @@
 import adjustColor from "./adjustColor";
 import capString from "./capString";
 import openUrl from "./openUrl";
-import getMasteryStringId from "./getMasteryStringId";
+import getMasteryLevelName from "./getMasteryLevelName";
 import {
-    getShowcaseTypeNameId,
+    getShowcaseTypename,
     getShowcaseTypeColor,
 } from "./getShowcaseTypeInfosFunctions";
 import getUrlMainPath from "./getUrlMainPath";
 import screenWidthGetType from "./screenWidthGetType";
+import renderComplexText from "./renderComplexText";
+import { createCheckWebsiteCTA, createViewRepoCTA } from "./createCTA";
 
 //Fast-to-import modules
 export {
     adjustColor,
     capString,
     openUrl,
-    getShowcaseTypeNameId,
+    getShowcaseTypename,
     getShowcaseTypeColor,
-    getMasteryStringId,
+    getMasteryLevelName,
     getUrlMainPath,
     screenWidthGetType,
+    renderComplexText,
+    createCheckWebsiteCTA,
+    createViewRepoCTA,
 };

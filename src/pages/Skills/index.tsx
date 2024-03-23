@@ -4,13 +4,10 @@ import { ShowcasePage } from "../../components/showcases/common";
 import skills, { Skill } from "../../data/content/skills";
 import { useParams } from "react-router-dom";
 import { SkillCard, SkillModal } from "../../components/showcases/skills";
-import { useText } from "../../utils/hooks";
-import { STRINGS } from "../../data";
 
 //Component of the skill page
 export default function SkillPage() {
     const { id } = useParams();
-    const { renderText } = useText();
     const [skillSelected, setSkillSelected] = useState<Skill | null>(null);
 
     const shownSkills = skills.slice();
@@ -27,9 +24,7 @@ export default function SkillPage() {
         }
     }
 
-    const statText = `${shownSkills.length} ${renderText(
-        STRINGS.totalSkills
-    ).toLowerCase()}`;
+    const statText = `${shownSkills.length} compétences`;
 
     function card(skill: Skill, index: number) {
         return <SkillCard key={index} skill={skill} />;

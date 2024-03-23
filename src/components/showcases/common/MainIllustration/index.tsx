@@ -1,13 +1,15 @@
 //Imports
 import React from "react";
 import { StyledMainIllustration } from "./style";
-import { useText } from "../../../../utils/hooks";
 import { heights, widths } from "../../../../utils/style";
 import { SHOWCASE_TYPES } from "../../../../data/miscTypes";
+import { Work } from "../../../../data/content/works";
+import { Skill } from "../../../../data/content/skills";
+import { isWork } from "../../../../utils/misc/typeGuards";
 
 //Types
 type MainIllustrationProps = {
-    showcase: any;
+    showcase: Work | Skill;
     inCard?: boolean;
 };
 
@@ -16,8 +18,7 @@ export default function MainIllustration({
     showcase,
     inCard = false,
 }: MainIllustrationProps) {
-    const { renderText } = useText();
-    const alt = renderText(showcase.nameId);
+    const alt = showcase.name;
     const isSkill = showcase.type === SHOWCASE_TYPES.hardSkill;
     const mobileWidth = inCard
         ? isSkill
@@ -47,12 +48,11 @@ export default function MainIllustration({
         : isSkill
         ? heights.skillModalLogoLaptopHeight
         : heights.workModalThumbnailLaptopHeight;
-    const img =
-        showcase.type === SHOWCASE_TYPES.webSite
-            ? inCard
-                ? showcase.thumbnail
-                : showcase.thumbnailHQ
-            : showcase.logoHQ;
+    const img = isWork(showcase)
+        ? inCard
+            ? showcase.thumbnail
+            : showcase.thumbnailHQ
+        : showcase.logoHQ;
 
     return (
         <StyledMainIllustration

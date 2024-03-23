@@ -1,7 +1,6 @@
 //Imports
 import React from "react";
 import { Skill } from "../../../../../data/content/skills";
-import { useText } from "../../../../../utils/hooks";
 import { StyledMasteryBar } from "./style";
 import {
     DateSection,
@@ -11,6 +10,7 @@ import {
     CoreInfos,
     HeaderBottomOnLargeScreen,
 } from "../../../common";
+import { renderComplexText } from "../../../../../utils/misc";
 
 //Types
 type SkillModalProps = {
@@ -20,8 +20,6 @@ type SkillModalProps = {
 
 //Component of a skill's modal
 export default function SkillModal({ skill, opened }: SkillModalProps) {
-    const { renderComplexText } = useText();
-
     function SmallScreenHeader() {
         if (!skill) {
             return null;
@@ -30,7 +28,7 @@ export default function SkillModal({ skill, opened }: SkillModalProps) {
             <>
                 <MainIllustration showcase={skill} />
                 <CoreInfos>
-                    <h1>{renderComplexText(skill.nameId)}</h1>
+                    <h1>{skill.name}</h1>
                 </CoreInfos>
             </>
         );
@@ -58,7 +56,7 @@ export default function SkillModal({ skill, opened }: SkillModalProps) {
             <>
                 <MainIllustration showcase={skill} />
                 <CoreInfos>
-                    <h1>{renderComplexText(skill.nameId)}</h1>
+                    <h1>{renderComplexText(skill.name)}</h1>
                     <HeaderBottomOnLargeScreen>
                         <StyledMasteryBar mastery={skill.mastery} />
                         <DateSection showcase={skill} />

@@ -1,7 +1,6 @@
 //Imports
 import React from "react";
 import { StyledSection } from "./style";
-import { STRINGS } from "../../../../../data";
 import { Skill } from "../../../../../data/content/skills";
 import { DateInfoInModal } from "../../../common";
 
@@ -14,10 +13,7 @@ type SkillDateSectionProps = {
 export default function SkillDateSection({ skill }: SkillDateSectionProps) {
     return (
         <StyledSection>
-            <DateInfoInModal
-                introId={STRINGS.dateBegin}
-                date={skill.dateBegin}
-            />
+            <DateInfoInModal name={`Depuis le`} date={skill.dateBegin} />
         </StyledSection>
     );
 }

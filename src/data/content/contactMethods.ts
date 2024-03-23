@@ -1,12 +1,11 @@
 //Imports
 import { ICONS, LOGOS } from "../../assets/images";
 import { Cta } from "../miscTypes";
-import { STRINGS } from "./strings";
 
 //Types
 export type ContactMethod = {
     logo: string;
-    nameId: string;
+    name: string;
     contactInfo: string;
     cta: Cta;
 };
@@ -16,10 +15,10 @@ const contactMethods: ContactMethod[] = [
     //Phone
     {
         logo: LOGOS.phone,
-        nameId: STRINGS.phone,
+        name: `Téléphone`,
         contactInfo: "06.38.93.16.19",
         cta: {
-            nameId: STRINGS.call,
+            name: `Appeler`,
             icon: ICONS.call,
             action: "tel:+33638931619",
         },
@@ -27,10 +26,10 @@ const contactMethods: ContactMethod[] = [
     //Mail
     {
         logo: LOGOS.gmail,
-        nameId: STRINGS.email,
+        name: `E-mail`,
         contactInfo: "dylanpean.pro@gmail.com",
         cta: {
-            nameId: STRINGS.sendEmail,
+            name: `Écrire un mail`,
             icon: ICONS.email,
             action: "mailto:dylanpean.pro@gmail.com",
         },
@@ -38,10 +37,10 @@ const contactMethods: ContactMethod[] = [
     //LinkedIn
     {
         logo: LOGOS.linkedIn,
-        nameId: STRINGS.linkedin,
+        name: `LinkedIn`,
         contactInfo: "Dylan (Pierrot) Pean",
         cta: {
-            nameId: STRINGS.openLink,
+            name: `Ouvrir le lien`,
             icon: ICONS.link,
             action: "https://www.linkedin.com/in/dylanpean",
         },
@@ -49,10 +48,10 @@ const contactMethods: ContactMethod[] = [
     //Twitter
     /*{
         logo: LOGOS.twitter,
-        nameId: STRINGS.twitter,
+        name: `X (Twitter)`,
         contactInfo: "@MbzMokka",
         cta: {
-            nameId: STRINGS.openLink,
+            name: `Ouvrir le lien`,
             icon: ICONS.link,
             action: "https://twitter.com/MbzMokka",
         },

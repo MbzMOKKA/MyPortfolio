@@ -1,5 +1,5 @@
 export type Cta = {
-    nameId: string;
+    name: string;
     icon: string;
     action: any;
 };

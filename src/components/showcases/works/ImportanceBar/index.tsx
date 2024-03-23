@@ -1,8 +1,6 @@
 //Imports
 import React from "react";
 import { StyledLine, StyledBar } from "./style";
-import { STRINGS } from "../../../../data";
-import { useText } from "../../../../utils/hooks";
 
 //Types
 type ImportanceBarProps = {
@@ -17,11 +15,9 @@ export default function ImportanceBar({
     highscore,
     className,
 }: ImportanceBarProps) {
-    const { renderText } = useText();
-
     return (
         <StyledLine className={className}>
-            <p>{`${renderText(STRINGS.importance)} :` /*${score}*/}</p>
+            <p>{`Importance :`}</p>
             <StyledBar filling={(score / highscore) * 100}>
                 <div />
             </StyledBar>

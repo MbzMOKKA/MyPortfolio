@@ -9,17 +9,13 @@ import {
     StyledTimeline,
 } from "./style";
 import { careerSteps } from "../../../../data";
-import { useText } from "../../../../utils/hooks";
 import { AREA_SEPARATOR_TYPES } from "../../../other/AreaSeparator";
-import { STRINGS } from "../../../../data/content/strings";
 
 //Component of the career section in the home page
 export default function CareerHistory() {
-    const { renderComplexText } = useText();
-
     return (
         <StyledSection>
-            <h1>{renderComplexText(STRINGS.myCareer)}</h1>
+            <h1>{`Mon parcours`}</h1>
             <StyledListContainer>
                 <StyledSeparator type={AREA_SEPARATOR_TYPES.simpleDown} />
                 <StyledStepList>

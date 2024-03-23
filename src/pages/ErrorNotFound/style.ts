@@ -2,10 +2,12 @@
 import styled from "styled-components";
 import { breakpoints } from "../../utils/style";
 
+//Local styles
 export const StyledMain = styled.main`
     padding: 10px;
     padding-top: 64px;
     p {
+        text-align: center;
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 18px;

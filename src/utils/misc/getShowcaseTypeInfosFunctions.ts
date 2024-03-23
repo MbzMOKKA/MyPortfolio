@@ -1,15 +1,16 @@
-import { STRINGS } from "../../data";
+//Imports
 import { SHOWCASE_TYPES } from "../../data/miscTypes";
 import { colors } from "../style";
 
-export function getShowcaseTypeNameId(showcaseType: SHOWCASE_TYPES) {
+//Exports
+export function getShowcaseTypename(showcaseType: SHOWCASE_TYPES) {
     switch (showcaseType) {
         case SHOWCASE_TYPES.webSite:
-            return STRINGS.webSite;
+            return `Site web`;
         case SHOWCASE_TYPES.hardSkill:
-            return STRINGS.hardSkill;
+            return `Compétence`;
         default:
-            return STRINGS.other;
+            return `{TYPE}`;
     }
 }
 

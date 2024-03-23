@@ -1,7 +1,6 @@
 //Imports
 import styled from "styled-components";
 import { borders, colors, breakpoints, paddings } from "../../../utils/style";
-import { adjustColor } from "../../../utils/misc";
 
 //Local styles
 export const StyledMainPart = styled.div`
@@ -19,8 +18,6 @@ export const StyledPicPart = styled.div`
     position: relative;
     height: 200px;
     margin-bottom: 150px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-bottom: 3px black solid;
     @media (min-width: ${breakpoints.tabletMinWidth}) {
         height: 250px;
     }
@@ -29,41 +26,6 @@ export const StyledPicPart = styled.div`
         height: auto;
         border: none;
         margin: unset;
-    }
-`;
-
-export const StyledLight1 = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 12px;
-    background: linear-gradient(
-        to top,
-        ${adjustColor(colors.identity.primaryBright, 1.3)},
-        transparent
-    );
-    z-index: 1;
-    @media (min-width: ${breakpoints.laptopMinWidth}) {
-        display: none;
-    }
-`;
-
-export const StyledLight2 = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
-    background: linear-gradient(
-        to top,
-        ${colors.identity.primaryBright},
-        transparent
-    );
-    z-index: -1;
-    @media (min-width: ${breakpoints.laptopMinWidth}) {
-        display: none;
     }
 `;
 
@@ -99,7 +61,7 @@ export const StyledSelfPic = styled.div`
         width: 100%;
         height: 100%;
         border-radius: ${borders.radius.round};
-        box-shadow: 0px 0px 48px ${colors.identity.primaryBright};
+        box-shadow: 0px 0px 128px ${colors.identity.primary};
     }
 `;
 

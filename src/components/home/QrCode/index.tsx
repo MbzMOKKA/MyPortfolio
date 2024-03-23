@@ -1,17 +1,13 @@
 //Imports
 import React from "react";
 import { StyledSection } from "./style";
-import { STRINGS } from "../../../data";
 import { qrCode } from "../../../assets/images";
-import { useText } from "../../../utils/hooks";
 
 //Component of the portfolio's link QR Code
 export default function QrCode() {
-    const { renderComplexText } = useText();
-
     return (
         <StyledSection>
-            <p>{renderComplexText(STRINGS.scanQrCode)}</p>
+            <p>{`Scanne-moi pour ouvrir le Portfolio sur un autre appareil !`}</p>
             <img src={qrCode} alt="QR code" />
         </StyledSection>
     );

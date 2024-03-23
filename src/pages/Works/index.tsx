@@ -4,13 +4,10 @@ import { ShowcasePage } from "../../components/showcases/common";
 import works, { Work } from "../../data/content/works";
 import { useParams } from "react-router-dom";
 import { WorkCard, WorkModal } from "../../components/showcases/works";
-import { useText } from "../../utils/hooks";
-import { STRINGS } from "../../data";
 
 //Component of the work page
 export default function WorkPage() {
     const { id } = useParams();
-    const { renderText } = useText();
     const [workSelected, setWorkSelected] = useState<Work | null>(null);
 
     const shownWorks = works.slice();
@@ -36,11 +33,7 @@ export default function WorkPage() {
         }
     }
 
-    const statText = `${shownWorks.length} ${renderText(
-        STRINGS.totalWorks
-    ).toLowerCase()} (${ongoings} ${renderText(
-        STRINGS.ongoing
-    ).toLowerCase()})`;
+    const statText = `${shownWorks.length} travaux (${ongoings} en cours)`;
 
     function card(work: Work, index: number) {
         return (

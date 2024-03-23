@@ -1,22 +1,17 @@
 //Imports
 import React from "react";
-import { useDate, useText } from "../../../../../utils/hooks";
+import { useDate } from "../../../../../utils/hooks";
 import { StyledInfo } from "./style";
-import { STRINGS } from "../../../../../data";
 import { OngoingBadge } from "../../../works";
 
 //Types
 type DateInfoInModalProps = {
-    introId: string;
+    name: string;
     date: string | undefined;
 };
 
 //Component of a date info in a work or skill modal
-export default function DateInfoInModal({
-    introId,
-    date,
-}: DateInfoInModalProps) {
-    const { renderText } = useText();
+export default function DateInfoInModal({ name, date }: DateInfoInModalProps) {
     const { formatFullDate } = useDate();
 
     return (
@@ -24,13 +19,13 @@ export default function DateInfoInModal({
             {date === undefined ? (
                 <>
                     <p>
-                        <strong>{renderText(STRINGS.ongoing)}</strong>
+                        <strong>{`En cours`}</strong>
                     </p>
                     <OngoingBadge />
                 </>
             ) : (
                 <p>
-                    {renderText(introId)}
+                    {name}
                     <br />
                     <strong>{formatFullDate(date)}</strong>
                 </p>

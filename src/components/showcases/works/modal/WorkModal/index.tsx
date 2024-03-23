@@ -1,7 +1,6 @@
 //Imports
 import React from "react";
 import { Work } from "../../../../../data/content/works";
-import { useText } from "../../../../../utils/hooks";
 import { CTAsSection, SkillsUsedSection } from "../..";
 import { StyledModalBottomOnLaptop, StyledImportanceBar } from "./style";
 import {
@@ -27,8 +26,6 @@ export default function WorkModal({
     opened,
     highestImportance,
 }: WorkModalProps) {
-    const { renderComplexText } = useText();
-
     function SmallScreenHeader() {
         if (!work) {
             return null;
@@ -37,7 +34,7 @@ export default function WorkModal({
             <>
                 <MainIllustration showcase={work} />
                 <CoreInfos>
-                    <h1>{renderComplexText(work.nameId)}</h1>
+                    <h1>{work.name}</h1>
                 </CoreInfos>
             </>
         );
@@ -71,7 +68,7 @@ export default function WorkModal({
             <>
                 <MainIllustration showcase={work} />
                 <CoreInfos>
-                    <h1>{renderComplexText(work.nameId)}</h1>
+                    <h1>{work.name}</h1>
                     <HeaderBottomOnLargeScreen>
                         <StyledImportanceBar
                             score={work.importance}

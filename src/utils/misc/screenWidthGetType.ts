@@ -1,6 +1,8 @@
+//Imports
 import { SCREEN_TYPES } from "../../redux_toolkit/miscSlice";
 import { breakpoints } from "../style";
 
+//Exports
 export default function screenWidthGetType(width: number): SCREEN_TYPES {
     if (width >= breakpoints.raw.desktopMinWidth) {
         return SCREEN_TYPES.desktop;

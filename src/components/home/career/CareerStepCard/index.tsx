@@ -1,8 +1,8 @@
 //Imports
 import React from "react";
 import { StyledContainer, StyledBubble } from "./style";
-import { useText } from "../../../../utils/hooks";
 import { CareerStep } from "../../../../data/content/careerSteps";
+import { renderComplexText } from "../../../../utils/misc";
 
 //Types
 type CareerStepProps = {
@@ -11,17 +11,15 @@ type CareerStepProps = {
 
 //Component of a career step in the home page
 export default function CareerStepCard({ step }: CareerStepProps) {
-    const { renderComplexText } = useText();
-
     return (
         <StyledContainer>
             <StyledBubble>
                 <header>
                     <p>{step.date}</p>
-                    <h2>{renderComplexText(step.nameId)}</h2>
+                    <h2>{step.name}</h2>
                 </header>
                 <main>
-                    <p>{renderComplexText(step.descriptionId)}</p>
+                    <p>{renderComplexText(step.description)}</p>
                 </main>
             </StyledBubble>
         </StyledContainer>

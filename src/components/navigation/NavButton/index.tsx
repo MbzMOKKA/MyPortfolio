@@ -2,7 +2,7 @@
 import React from "react";
 import { StyledNavButton } from "./style";
 import { capString } from "../../../utils/misc";
-import { usePage, useText } from "../../../utils/hooks";
+import { usePage } from "../../../utils/hooks";
 import { useSelector } from "react-redux";
 import { selectScreenType } from "../../../redux_toolkit";
 import { SCREEN_TYPES } from "../../../redux_toolkit/miscSlice";
@@ -11,14 +11,13 @@ import { SCREEN_TYPES } from "../../../redux_toolkit/miscSlice";
 type NavButtonProps = {
     icon: string;
     pathname: string;
-    nameId: string;
+    name: string;
     index: number;
 };
 
 //Component of the site navigation bar
-export default function NavButton({ icon, pathname, nameId }: NavButtonProps) {
+export default function NavButton({ icon, pathname, name }: NavButtonProps) {
     const { currentPagename } = usePage();
-    const { renderText } = useText();
     const screenType = useSelector(selectScreenType);
 
     return (
@@ -29,7 +28,7 @@ export default function NavButton({ icon, pathname, nameId }: NavButtonProps) {
             <img src={icon} alt="" draggable={false} />
             <p>
                 {capString(
-                    renderText(nameId),
+                    name,
                     screenType <= SCREEN_TYPES.tablet ? 7 : undefined
                 )}
             </p>
