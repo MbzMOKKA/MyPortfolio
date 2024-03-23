@@ -18,6 +18,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
     img {
         width: 24px;
     }

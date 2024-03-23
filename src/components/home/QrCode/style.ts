@@ -16,9 +16,7 @@ export const StyledSection = styled.section`
     flex-direction: column;
     align-items: center;
     margin: auto;
-    padding: ${paddings.mobile.mainHorizontal};
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding: 48px ${paddings.mobile.mainHorizontal};
     p {
         color: white;
         text-align: center;
@@ -28,9 +26,9 @@ export const StyledSection = styled.section`
     }
     img {
         width: 50%;
-        max-width: 255px;
+        min-width: 164px;
+        max-width: 200px;
         border-radius: ${borders.radius.normal};
-        box-shadow: 0px 4px 64px ${colors.identity.primaryBright};
         margin-top: 30px;
     }
     @media (min-width: ${breakpoints.tabletMinWidth}) {
@@ -38,7 +36,7 @@ export const StyledSection = styled.section`
         border-radius: 36px;
         padding: 36px;
         p {
-            font-size: 25px;
+            font-size: 22px;
         }
         img {
             margin-top: 48px;
@@ -56,7 +54,7 @@ export const StyledSection = styled.section`
         border-radius: 64px;
         padding: 64px;
         p {
-            font-size: 30px;
+            font-size: 24px;
         }
         img {
             max-width: 255px;
