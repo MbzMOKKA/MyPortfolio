@@ -17,7 +17,7 @@ export const StyledList = styled.ul<StyledListProps>`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: ${margins.grid};
-    padding-top: 24px;
+    padding-top: 0px;
     padding-left: 5px;
     padding-right: 5px;
     margin: auto;

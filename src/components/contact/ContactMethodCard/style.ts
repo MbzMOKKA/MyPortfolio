@@ -43,7 +43,6 @@ export const StyledHeader = styled.header`
 `;
 
 export const StyledMain = styled.main`
-    // background-color: ${colors.neutral.semiOpaqueBlack};
     display: flex;
     flex-direction: row;
     padding: 8px;

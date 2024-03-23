@@ -1,7 +1,6 @@
 //Imports
 import styled from "styled-components";
 import { breakpoints, paddings, widths } from "../../utils/style";
-import { AreaSeparator } from "../../components/other";
 
 export const StyledMain = styled.main`
     width: 100%;
@@ -18,32 +17,22 @@ export const StyledPageTitle = styled.section`
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.4);
     h1 {
-        margin-top: 70px;
+        margin-top: 48px;
         margin-bottom: 4px;
         margin-left: ${paddings.mobile.mainHorizontal};
         margin-right: ${paddings.mobile.mainHorizontal};
     }
     @media (min-width: ${breakpoints.tabletMinWidth}) {
-        h1 {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: ${widths.narrowContentTabletMaxWidth};
-        }
+        max-width: ${widths.narrowContentTabletMaxWidth};
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
+        max-width: 100%;
         background: unset;
         h1 {
-            margin-top: 98px;
+            margin-top: 64px;
             margin-bottom: 24px;
         }
-    }
-`;
-
-export const StyledSeparator = styled(AreaSeparator)`
-    @media (min-width: ${breakpoints.laptopMinWidth}) {
-        display: none;
     }
 `;
 

@@ -4,6 +4,7 @@ import { ShowcasePage } from "../../components/showcases/common";
 import skills, { Skill } from "../../data/content/skills";
 import { useParams } from "react-router-dom";
 import { SkillCard, SkillModal } from "../../components/showcases/skills";
+import { StyledShowcaseType } from "./style";
 
 //Component of the skill page
 export default function SkillPage() {
@@ -24,7 +25,12 @@ export default function SkillPage() {
         }
     }
 
-    const statText = `${shownSkills.length} compétences`;
+    const statText = (
+        <>
+            {shownSkills.length}{" "}
+            <StyledShowcaseType>compétences</StyledShowcaseType>
+        </>
+    );
 
     function card(skill: Skill, index: number) {
         return <SkillCard key={index} skill={skill} />;

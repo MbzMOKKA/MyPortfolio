@@ -1,13 +1,7 @@
 //Imports
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import {
-    StyledMain,
-    StyledSeparator,
-    StyledStats,
-    StyledTopSection,
-} from "./style";
-import { AREA_SEPARATOR_TYPES } from "../../../other/AreaSeparator";
+import { StyledMain, StyledStats, StyledTopSection } from "./style";
 import ShowcaseList from "../ShowcaseList";
 import { Work } from "../../../../data/content/works";
 import { Skill } from "../../../../data/content/skills";
@@ -19,7 +13,7 @@ type ShowcasePageProps = {
     card: (showcase: any, index: number) => React.ReactNode;
     modal: React.ReactNode;
     showcaseGotSelected: boolean;
-    statText: string;
+    statText: JSX.Element;
 };
 
 //Component of a showcase type page
@@ -47,7 +41,6 @@ export default function ShowcasePage({
                 <StyledTopSection>
                     <StyledStats>{statText}</StyledStats>
                 </StyledTopSection>
-                <StyledSeparator type={AREA_SEPARATOR_TYPES.simpleDown} />
                 <ShowcaseList showcases={shownShowcases} card={card} />
             </StyledMain>
         </>

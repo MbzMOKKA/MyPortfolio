@@ -1,14 +1,8 @@
 //Imports
 import React from "react";
-import {
-    StyledMain,
-    StyledPageTitle,
-    StyledMethods,
-    StyledSeparator,
-} from "./style";
+import { StyledMain, StyledPageTitle, StyledMethods } from "./style";
 import { ContactMethodCard } from "../../components/contact/";
 import { contactMethods } from "../../data";
-import { AREA_SEPARATOR_TYPES } from "../../components/other/AreaSeparator";
 
 //Component of the contact page
 export default function ContactPage() {
@@ -16,7 +10,6 @@ export default function ContactPage() {
         <StyledMain>
             <StyledPageTitle>
                 <h1>{`Besoin de me joindre ?`}</h1>
-                <StyledSeparator type={AREA_SEPARATOR_TYPES.simpleUp} />
             </StyledPageTitle>
             <StyledMethods>
                 {contactMethods.map((method, index) => {

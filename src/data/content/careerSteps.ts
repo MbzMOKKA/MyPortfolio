@@ -11,7 +11,7 @@ const careerSteps: CareerStep[] = [
     {
         date: 2016,
         name: `"Le collège`,
-        description: `C'est là que j'ai commencé à apprendre l'algorithmie tout seul, en développant des fangames sur Scratch.`,
+        description: `C'est là que j'ai commencé à apprendre l'algorithmie tout seul, en développant des jeux vidéos sur Scratch.`,
     },
     //Highschool
     {
@@ -35,7 +35,7 @@ const careerSteps: CareerStep[] = [
     {
         date: 2023,
         name: `Alternance front-end`,
-        description: `Sous conseil de mes mentors et pour mieux transitionner vers le monde professionnel, j'ai poursuivi avec une alternance pour me spécialiser sur React.js.`,
+        description: `Sous conseil de mes mentors ainsi que pour mieux transitionner vers le monde professionnel, j'ai poursuivi avec une alternance pour me spécialiser sur React.js.`,
     },
 ];
 

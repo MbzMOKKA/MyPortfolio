@@ -1,7 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { borders, breakpoints, colors, widths } from "../../../../utils/style";
-import { AreaSeparator } from "../../../other";
+import { breakpoints, paddings, widths } from "../../../../utils/style";
 
 //Local styles
 export const StyledMain = styled.main`
@@ -11,37 +10,30 @@ export const StyledMain = styled.main`
 `;
 
 export const StyledTopSection = styled.section`
-    background-color: ${colors.neutral.semiOpaqueWhite};
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     margin: auto;
-    padding: 6px;
     @media (min-width: ${breakpoints.tabletMinWidth}) {
-        max-width: ${widths.narrowContentTabletMaxWidth};
-        margin: 48px auto;
-        padding: 16px;
-        border-radius: ${borders.radius.normal};
+        width: ${widths.narrowContentTabletMaxWidth};
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
-        max-width: ${widths.narrowContentLaptopMaxWidth};
+        width: 100%;
+        padding: 0px ${paddings.laptop.mainHorizontal};
     }
 `;
 
-export const StyledStats = styled.p`
+export const StyledStats = styled.h1`
     width: 100%;
-    font-size: 15px;
-    color: white;
+    margin: 24px 0;
+    padding: 0 ${paddings.mobile.mainHorizontal};
     @media (min-width: ${breakpoints.tabletMinWidth}) {
-        text-align: center;
-        font-size: 20px;
+        padding: 0;
+        margin: 12px 0;
     }
-`;
-
-export const StyledSeparator = styled(AreaSeparator)`
-    @media (min-width: ${breakpoints.tabletMinWidth}) {
-        display: none;
+    @media (min-width: ${breakpoints.laptopMinWidth}) {
+        margin: 48px 0;
     }
 `;

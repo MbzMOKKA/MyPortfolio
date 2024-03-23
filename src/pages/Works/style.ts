@@ -41,3 +41,15 @@ export const StyledSeparator = styled(AreaSeparator)`
         display: none;
     }
 `;
+
+export const StyledShowcaseType = styled.span`
+    color: ${colors.support.typeSite};
+`;
+
+export const StyledOnGoingCount = styled.span`
+    color: ${colors.neutral.textDefault};
+    font-size: 16px;
+    @media (min-width: ${breakpoints.laptopMinWidth}) {
+        font-size: 22px;
+    }
+`;

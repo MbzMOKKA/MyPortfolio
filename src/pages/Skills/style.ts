@@ -41,3 +41,7 @@ export const StyledList = styled.ul`
     padding-right: 5px;
     margin-bottom: 128px;
 `;
+
+export const StyledShowcaseType = styled.span`
+    color: ${colors.support.typeHardSkill};
+`;

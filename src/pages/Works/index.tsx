@@ -4,6 +4,7 @@ import { ShowcasePage } from "../../components/showcases/common";
 import works, { Work } from "../../data/content/works";
 import { useParams } from "react-router-dom";
 import { WorkCard, WorkModal } from "../../components/showcases/works";
+import { StyledOnGoingCount, StyledShowcaseType } from "./style";
 
 //Component of the work page
 export default function WorkPage() {
@@ -33,7 +34,14 @@ export default function WorkPage() {
         }
     }
 
-    const statText = `${shownWorks.length} travaux (${ongoings} en cours)`;
+    const statText = (
+        <>
+            {shownWorks.length} <StyledShowcaseType>travaux</StyledShowcaseType>{" "}
+            <StyledOnGoingCount>
+                {`( ${ongoings} en cours )`}
+            </StyledOnGoingCount>
+        </>
+    );
 
     function card(work: Work, index: number) {
         return (
