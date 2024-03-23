@@ -21,7 +21,7 @@ export const StyledList = styled.ul<StyledListProps>`
     padding-left: 5px;
     padding-right: 5px;
     margin: auto;
-    margin-bottom: 128px;
+    margin-bottom: 140px;
     @media (min-width: ${breakpoints.tabletMinWidth}) {
         width: ${widths.narrowContentTabletMaxWidth};
     }

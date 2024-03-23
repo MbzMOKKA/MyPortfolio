@@ -14,6 +14,7 @@ type ShowcasePageProps = {
     modal: React.ReactNode;
     showcaseGotSelected: boolean;
     statText: JSX.Element;
+    naturalFlowCTA: JSX.Element;
 };
 
 //Component of a showcase type page
@@ -24,6 +25,7 @@ export default function ShowcasePage({
     modal,
     showcaseGotSelected,
     statText,
+    naturalFlowCTA,
 }: ShowcasePageProps) {
     const refNotFound = useRef<any>();
 
@@ -42,6 +44,7 @@ export default function ShowcasePage({
                     <StyledStats>{statText}</StyledStats>
                 </StyledTopSection>
                 <ShowcaseList showcases={shownShowcases} card={card} />
+                {naturalFlowCTA}
             </StyledMain>
         </>
     );

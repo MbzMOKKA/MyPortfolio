@@ -1,6 +1,6 @@
 //Imports
 import styled from "styled-components";
-import { borders, breakpoints, colors } from "../../../../utils/style";
+import { borders, colors } from "../../../../utils/style";
 
 //Types
 type StyledBarProps = {
@@ -10,6 +10,9 @@ type StyledBarProps = {
 //Local styles
 export const StyledLine = styled.div`
     flex: 1;
+    p {
+        font-size: 12px;
+    }
 `;
 
 export const StyledBar = styled.div<StyledBarProps>`
@@ -27,12 +30,5 @@ export const StyledBar = styled.div<StyledBarProps>`
         left: 0;
         width: ${({ filling }) => filling}%;
         height: 100%;
-    }
-    @media (min-width: ${breakpoints.mobileLargeMinWidth}) {
-        //max-width: 300px;
-    }
-    @media (min-width: ${breakpoints.laptopMinWidth}) {
-        width: 100%;
-        //max-width: 400px;
     }
 `;

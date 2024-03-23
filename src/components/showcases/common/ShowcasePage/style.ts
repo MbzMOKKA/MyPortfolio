@@ -7,6 +7,7 @@ export const StyledMain = styled.main`
     width: 100%;
     margin: auto;
     position: relative;
+    padding-bottom: 128px;
 `;
 
 export const StyledTopSection = styled.section`

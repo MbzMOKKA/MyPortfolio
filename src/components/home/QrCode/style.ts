@@ -16,6 +16,7 @@ export const StyledSection = styled.section`
     flex-direction: column;
     align-items: center;
     margin: auto;
+    margin-top: 128px;
     padding: 48px ${paddings.mobile.mainHorizontal};
     p {
         color: white;

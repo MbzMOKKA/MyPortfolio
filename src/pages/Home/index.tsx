@@ -7,6 +7,7 @@ import {
     QrCode,
     Version,
 } from "../../components/home";
+import { NaturalFlowCTA } from "../../components/other";
 
 //Component of the home page
 export default function HomePage() {
@@ -14,6 +15,7 @@ export default function HomePage() {
         <StyledMain>
             <Presentation />
             <CareerHistory />
+            <NaturalFlowCTA url="/work" text="Voir mes travaux" />
             <QrCode />
             <Version />
         </StyledMain>

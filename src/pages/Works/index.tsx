@@ -5,6 +5,7 @@ import works, { Work } from "../../data/content/works";
 import { useParams } from "react-router-dom";
 import { WorkCard, WorkModal } from "../../components/showcases/works";
 import { StyledOnGoingCount, StyledShowcaseType } from "./style";
+import { NaturalFlowCTA } from "../../components/other";
 
 //Component of the work page
 export default function WorkPage() {
@@ -68,6 +69,9 @@ export default function WorkPage() {
             modal={modal}
             showcaseGotSelected={workGotSelected}
             statText={statText}
+            naturalFlowCTA={
+                <NaturalFlowCTA url="/skill" text="Voir mes compétences" />
+            }
         />
     );
 }

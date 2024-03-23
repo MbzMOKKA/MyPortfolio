@@ -5,6 +5,7 @@ import skills, { Skill } from "../../data/content/skills";
 import { useParams } from "react-router-dom";
 import { SkillCard, SkillModal } from "../../components/showcases/skills";
 import { StyledShowcaseType } from "./style";
+import { NaturalFlowCTA } from "../../components/other";
 
 //Component of the skill page
 export default function SkillPage() {
@@ -47,6 +48,9 @@ export default function SkillPage() {
             modal={modal}
             showcaseGotSelected={skillGotSelected}
             statText={statText}
+            naturalFlowCTA={
+                <NaturalFlowCTA url="/contact" text="Me contacter" />
+            }
         />
     );
 }
