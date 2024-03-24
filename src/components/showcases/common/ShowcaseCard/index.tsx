@@ -1,11 +1,17 @@
 //Imports
 import React, { ReactNode } from "react";
-import { StyledCard, StyledSummary, StyledTitle } from "./style";
+import {
+    StyledCard,
+    StyledSkillFakeLink,
+    StyledSummary,
+    StyledTitle,
+} from "./style";
 import { Work } from "../../../../data/content/works";
 import { ICONS } from "../../../../assets/images";
 import { Skill } from "../../../../data/content/skills";
 import MainIllustration from "../MainIllustration";
 import { Link } from "react-router-dom";
+import { SHOWCASE_TYPES } from "../../../../data/miscTypes";
 
 //Types
 type ShowcaseCardProps = {
@@ -20,6 +26,22 @@ export default function ShowcaseCard({
     listPageRoute,
     children,
 }: ShowcaseCardProps) {
+    if (showcase.type === SHOWCASE_TYPES.hardSkill) {
+        return (
+            <StyledCard type={showcase.type}>
+                <StyledSkillFakeLink>
+                    <MainIllustration showcase={showcase} inCard={true} />
+                    <StyledSummary>
+                        <StyledTitle>
+                            <h2>{showcase.name}</h2>
+                        </StyledTitle>
+                        {children}
+                    </StyledSummary>
+                </StyledSkillFakeLink>
+            </StyledCard>
+        );
+    }
+
     return (
         <StyledCard type={showcase.type}>
             <Link to={`${listPageRoute}/${showcase.id}`}>

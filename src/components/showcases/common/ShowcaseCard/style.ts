@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { borders, breakpoints, colors, shadows } from "../../../../utils/style";
 import { getShowcaseTypeColor } from "../../../../utils/misc";
+import { SHOWCASE_TYPES } from "../../../../data/miscTypes";
 
 //Types
 type StyledCardProps = {
@@ -19,7 +20,11 @@ export const StyledCard = styled.li<StyledCardProps>`
         align-items: flex-start;
         @media (min-width: ${breakpoints.tabletMinWidth}) {
             background-color: ${colors.neutral.card};
-            box-shadow: ${shadows.cardLaptop};
+            ${({ type }) =>
+                type === SHOWCASE_TYPES.webSite
+                    ? `box-shadow: ${shadows.cardLaptop};`
+                    : null}
+
             border-top-right-radius: ${borders.radius.normal};
             border-bottom-right-radius: ${borders.radius.normal};
         }
@@ -32,8 +37,12 @@ export const StyledCard = styled.li<StyledCardProps>`
             transition-property: box-shadow;
             transition-duration: 200ms;
             :hover {
-                box-shadow: 0px 0px 64px
-                    ${({ type }) => getShowcaseTypeColor(type)};
+                ${({ type }) =>
+                    type === SHOWCASE_TYPES.webSite
+                        ? `box-shadow: 0px 0px 64px ${getShowcaseTypeColor(
+                              type
+                          )}`
+                        : null}
             }
         }
     }
@@ -76,5 +85,24 @@ export const StyledTitle = styled.div`
         img {
             display: none;
         }
+    }
+`;
+
+export const StyledSkillFakeLink = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (min-width: ${breakpoints.tabletMinWidth}) {
+        border-top-right-radius: ${borders.radius.normal};
+        border-bottom-right-radius: ${borders.radius.normal};
+    }
+    @media (min-width: ${breakpoints.laptopMinWidth}) {
+        flex-direction: column;
+        overflow: hidden;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: ${borders.radius.normal};
+        border-bottom-right-radius: ${borders.radius.normal};
     }
 `;
