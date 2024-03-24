@@ -3,6 +3,13 @@ import styled from "styled-components";
 import { borders, colors, breakpoints, paddings } from "../../../utils/style";
 
 //Local styles
+export const StyledSection = styled.section`
+    margin-bottom: 64px;
+    @media (min-width: ${breakpoints.laptopMinWidth}) {
+        margin-bottom: 128px;
+    }
+`;
+
 export const StyledMainPart = styled.div`
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         width: 100%;

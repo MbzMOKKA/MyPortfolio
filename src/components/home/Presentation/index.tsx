@@ -8,6 +8,7 @@ import {
     StyledNamePart,
     StyledSummary,
     StyledMainPart,
+    StyledSection,
 } from "./style";
 import { heavyDevCup, irlPic } from "../../../assets/images";
 import { renderComplexText } from "../../../utils/misc";
@@ -15,7 +16,7 @@ import { renderComplexText } from "../../../utils/misc";
 //Component of the presentation section in the home page
 export default function Presentation() {
     return (
-        <section>
+        <StyledSection>
             <StyledMainPart>
                 <StyledPicPart>
                     <StyledProfilePics>
@@ -39,6 +40,6 @@ export default function Presentation() {
 J'aime le travail bien fait, découvrir et progresser.`)}
                 </p>
             </StyledSummary>
-        </section>
+        </StyledSection>
     );
 }

@@ -23,7 +23,7 @@ export default function WorkCTAsSection({ ctas }: WorkCTAsSectionProps) {
                         target="_blank"
                     >
                         {text}
-                        <img src={cta.icon} alt={text} />
+                        <img src={cta.icon} alt={text} draggable={false} />
                     </Link>
                 );
             })}

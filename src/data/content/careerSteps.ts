@@ -10,7 +10,7 @@ const careerSteps: CareerStep[] = [
     //Middleschool
     {
         date: 2016,
-        name: `"Le collège`,
+        name: `Le collège`,
         description: `C'est là que j'ai commencé à apprendre l'algorithmie tout seul, en développant des jeux vidéos sur Scratch.`,
     },
     //Highschool

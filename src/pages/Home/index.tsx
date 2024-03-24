@@ -15,6 +15,7 @@ export default function HomePage() {
     return (
         <StyledMain>
             <Presentation />
+            <NaturalFlowCTA url="/work" text="Voir mes travaux" />
             <CareerHistory />
             <NaturalFlowCTA url="/work" text="Voir mes travaux" />
             <QrCode />
