@@ -32,10 +32,10 @@ export default function WorkModal({
         }
         return (
             <>
-                <MainIllustration showcase={work} />
                 <CoreInfos>
                     <h1>{work.name}</h1>
                 </CoreInfos>
+                <MainIllustration showcase={work} />
             </>
         );
     }

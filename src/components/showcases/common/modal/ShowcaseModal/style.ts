@@ -58,8 +58,8 @@ export const StyledModal = styled.div`
         width: 100%;
         position: relative;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         button {
             position: absolute;
             right: 5px;
@@ -76,10 +76,6 @@ export const StyledModal = styled.div`
     }
     @media (min-width: ${breakpoints.tabletMinWidth}) {
         max-width: ${widths.narrowContentTabletMaxWidth};
-        header {
-            padding-top: 28px;
-            padding-bottom: 54px;
-        }
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
         max-width: unset;
@@ -89,6 +85,9 @@ export const StyledModal = styled.div`
         border-radius: ${borders.radius.modal};
         padding: 28px;
         header {
+            flex-direction: row;
+            align-items: unset;
+            justify-content: center;
             margin-bottom: 16px;
             padding: 0;
         }

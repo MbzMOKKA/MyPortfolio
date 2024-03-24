@@ -1,19 +1,16 @@
 //Imports
 import styled from "styled-components";
-import { breakpoints } from "../../../../../utils/style";
+import { breakpoints, paddings } from "../../../../../utils/style";
 
 //Local styles
 export const StyledCoreInfos = styled.div`
+    width: 100%;
     h1 {
-        position: absolute;
-        left: 15px;
-        bottom: 10px;
-        text-shadow: 0px 1px 4px black;
+        padding: 12px ${paddings.mobile.mainHorizontal};
     }
     @media (min-width: ${breakpoints.mobileLargeMinWidth}) {
         h1 {
-            left: 36px;
-            bottom: 0;
+            padding: 12px 15%;
         }
     }
     @media (min-width: ${breakpoints.laptopMinWidth}) {
@@ -22,10 +19,8 @@ export const StyledCoreInfos = styled.div`
         margin-left: 14px;
         padding-top: 4px;
         h1 {
-            position: relative;
             width: 80%;
-            left: 0;
-            bottom: 0;
+            padding: 0;
             margin-bottom: 40px;
         }
         button {
