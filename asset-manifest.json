@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MyPortfolio/static/css/main.16129fa8.css",
-    "main.js": "/MyPortfolio/static/js/main.37c0e4af.js",
+    "main.js": "/MyPortfolio/static/js/main.92ae906b.js",
     "static/media/les-petits-plats-HQ.png": "/MyPortfolio/static/media/les-petits-plats-HQ.ba9a2ac12556cd2413c5.png",
     "static/media/direct-brico-HQ.png": "/MyPortfolio/static/media/direct-brico-HQ.6952c50990beab4f596b.png",
     "static/media/groupomania-HQ.png": "/MyPortfolio/static/media/groupomania-HQ.c684b79fbbe624fd058b.png",
@@ -25,10 +25,10 @@
     "static/media/next-js-HQ.png": "/MyPortfolio/static/media/next-js-HQ.1b0a93fa50849e0f9e4d.png",
     "index.html": "/MyPortfolio/index.html",
     "main.16129fa8.css.map": "/MyPortfolio/static/css/main.16129fa8.css.map",
-    "main.37c0e4af.js.map": "/MyPortfolio/static/js/main.37c0e4af.js.map"
+    "main.92ae906b.js.map": "/MyPortfolio/static/js/main.92ae906b.js.map"
   },
   "entrypoints": [
     "static/css/main.16129fa8.css",
-    "static/js/main.37c0e4af.js"
+    "static/js/main.92ae906b.js"
   ]
 }
