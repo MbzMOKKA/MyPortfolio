@@ -51,8 +51,7 @@ const works: Work[] = [
         Ici, j'ai contribué à la conception architecturale du projet, à la rédaction de tests unitaires et j'ai dû implémenter des sections importantes du site (par exemple : page d'accueil et page produit, y compris l'adaptation aux différentes tailles d'écran !).\n
         Pendant ma période chez DirectBrico, j'ai également participé à de nombreuses réunions, discussions, retours et clarifications au sein d'une équipe d'environ 10 personnes.\n\n
         Les nombreuses optimisations que j'ai apportées au code et à l'architecture du site ainsi que de l'application ont permis d'améliorer leur maintenabilité.\n
-        La migration du site vers Next.js a conduit à une amélioration de nos scores de performance Lighthouse, sur grand écran (85→98) comme sur mobile (60→92).\n
-        Malheureusement, la startup a dû fermer en août 2023, faute de ne pas avoir assez atteint son public cible.\n\n
+        La migration du site vers Next.js a conduit à une amélioration de nos scores de performance Lighthouse, sur grand écran (85→98) comme sur mobile (60→92).\n\n
         Au final, travailler chez DirectBrico m'a permis d'acquérir ou de renforcer mes connaissances en TypeScript, React Native, Next.js, Sass, Redux, Git et GitHub.\n
         Cela a également été ma première expérience professionnelle réelle, me familiarisant ainsi avec le monde du travail et le travail d'équipe impliquant autant de personnes.`,
         medias: [],
