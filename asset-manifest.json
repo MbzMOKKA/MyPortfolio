@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MyPortfolio/static/css/main.16129fa8.css",
-    "main.js": "/MyPortfolio/static/js/main.92ae906b.js",
+    "main.js": "/MyPortfolio/static/js/main.e8bcc2f5.js",
     "static/media/les-petits-plats-HQ.png": "/MyPortfolio/static/media/les-petits-plats-HQ.ba9a2ac12556cd2413c5.png",
     "static/media/direct-brico-HQ.png": "/MyPortfolio/static/media/direct-brico-HQ.6952c50990beab4f596b.png",
     "static/media/groupomania-HQ.png": "/MyPortfolio/static/media/groupomania-HQ.c684b79fbbe624fd058b.png",
@@ -15,8 +15,8 @@
     "static/media/oh-my-food.png": "/MyPortfolio/static/media/oh-my-food.28862c70accdd5f9c259.png",
     "static/media/styled-components-HQ.png": "/MyPortfolio/static/media/styled-components-HQ.3e609d37569875551e36.png",
     "static/media/portfolio.png": "/MyPortfolio/static/media/portfolio.b02b8ee7f334444b9b8b.png",
-    "static/media/irl-pic.jpg": "/MyPortfolio/static/media/irl-pic.9c1da94760674832344e.jpg",
     "static/media/vite-HQ.png": "/MyPortfolio/static/media/vite-HQ.926d5395ada87824c516.png",
+    "static/media/irl-pic.jpg": "/MyPortfolio/static/media/irl-pic.7fb0636d7dc3d9ea029c.jpg",
     "static/media/create-react-app-HQ.png": "/MyPortfolio/static/media/create-react-app-HQ.b18a14aba0b70ec92154.png",
     "static/media/redux-HQ.png": "/MyPortfolio/static/media/redux-HQ.66b79963f9b1fc5fd330.png",
     "static/media/hr-net.png": "/MyPortfolio/static/media/hr-net.863dd19639950c007670.png",
@@ -25,10 +25,10 @@
     "static/media/next-js-HQ.png": "/MyPortfolio/static/media/next-js-HQ.1b0a93fa50849e0f9e4d.png",
     "index.html": "/MyPortfolio/index.html",
     "main.16129fa8.css.map": "/MyPortfolio/static/css/main.16129fa8.css.map",
-    "main.92ae906b.js.map": "/MyPortfolio/static/js/main.92ae906b.js.map"
+    "main.e8bcc2f5.js.map": "/MyPortfolio/static/js/main.e8bcc2f5.js.map"
   },
   "entrypoints": [
     "static/css/main.16129fa8.css",
-    "static/js/main.92ae906b.js"
+    "static/js/main.e8bcc2f5.js"
   ]
 }
