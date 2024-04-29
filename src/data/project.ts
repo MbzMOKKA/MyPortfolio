@@ -1,2 +1,2 @@
-export const versionNumber = "2.0";
-export const versionReleaseDate = "2024-03-24";
+export const versionNumber = "2.1";
+export const versionReleaseDate = "2024-04-29";
